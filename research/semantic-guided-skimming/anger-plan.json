@@ -1,0 +1,224 @@
+{
+  "id": "anger",
+  "shortTitle": "Anger and Paper Disposal",
+  "opening": [
+    "opening-design",
+    "opening-discovery"
+  ],
+  "candidates": [
+    {
+      "id": "opening-design",
+      "role": "method",
+      "label": "Discarding versus keeping the written account",
+      "anchors": [
+        {
+          "page": 1,
+          "quote": "Half of the participants (disposal group) disposed of the paper in the trash can (Experiment 1) or in the shredder (Experiment 2), while the other half (retention group) kept it in a file on the desk."
+        }
+      ],
+      "related_to": [
+        "aim",
+        "groups1",
+        "exp2"
+      ]
+    },
+    {
+      "id": "opening-discovery",
+      "role": "result",
+      "label": "Disposal and retention across both experiments",
+      "anchors": [
+        {
+          "page": 1,
+          "quote": "However, the subjective anger for the disposal group decreased as low as the baseline period, while that of the retention group was still higher than that in the baseline period in both experiments."
+        }
+      ],
+      "related_to": [
+        "outcome1",
+        "outcome2"
+      ]
+    },
+    {
+      "id": "aim",
+      "role": "objective",
+      "label": "What might it mean to discard the note?",
+      "anchors": [
+        {
+          "page": 2,
+          "quote": "This study examined a method in which the disposal of a paper (object) on which participants wrote down their descriptions or thoughts about a provocative event could neutralise anger."
+        },
+        {
+          "page": 2,
+          "quote": "If the action of disposal is crucial to modifying emotions, anger would be reduced only in participants in Experiment 1 but not in Experiment 2, as predicted by the grounded separation ­procedure29. Nevertheless, if anger was modified by the meaning of disposal, the subjective ratings of anger would be eliminated in both experiments."
+        }
+      ],
+      "related_to": [
+        "groups1",
+        "exp2"
+      ]
+    },
+    {
+      "id": "groups1",
+      "role": "method",
+      "label": "Keep or discard the note after writing",
+      "anchors": [
+        {
+          "page": 3,
+          "quote": "For the retention group, the paper was turned over, put in a clear plastic folder, and placed on the right side of the desk. The participants in the disposal group rolled up the paper into a crumpled ball, stood up, threw the paper into the trash can held by the experimenter, and sat back in the chair."
+        }
+      ],
+      "related_to": [
+        "measure",
+        "outcome1"
+      ]
+    },
+    {
+      "id": "measure",
+      "role": "method",
+      "label": "Anger was measured at three times",
+      "anchors": [
+        {
+          "page": 3,
+          "quote": "In this experiment, participants’ subjective emotional states were measured at three time points (baseline, post- provocation, and post-writing)."
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "outcome1",
+      "role": "result",
+      "label": "Experiment 1 · Lower anger after discarding",
+      "anchors": [
+        {
+          "page": 4,
+          "quote": "Subjective ratings of disposal group at the post-writing period were significantly lower than those of retention group (p < 0.01)."
+        }
+      ],
+      "related_to": [
+        "groups1",
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "anger-ratings",
+      "role": "result",
+      "label": "Anger ratings in both experiments",
+      "anchors": [
+        {
+          "page": 4,
+          "region": "Figure 1 · Anger ratings in both experiments",
+          "box": [
+            0.20998663,
+            0.06263085,
+            0.93570041,
+            0.32849244
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "exp2",
+      "role": "method",
+      "label": "Match movement and distance in the follow-up",
+      "anchors": [
+        {
+          "page": 5,
+          "quote": "Participants of retention group put the paper into a clear box on the desk, and the disposal group put the paper into the shredder. Thus, the distance between the participants and the paper and the type of action were matched between the two groups."
+        }
+      ],
+      "related_to": [
+        "outcome2"
+      ]
+    },
+    {
+      "id": "outcome2",
+      "role": "result",
+      "label": "Experiment 2 · The difference returns",
+      "anchors": [
+        {
+          "page": 6,
+          "quote": "The subjective ratings of the disposal group in the post-writing period were significantly lower than those of the retention group (p < 0.05)."
+        }
+      ],
+      "related_to": [
+        "exp2",
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "scope",
+      "role": "caveat",
+      "label": "The intervention used physical paper",
+      "anchors": [
+        {
+          "page": 7,
+          "quote": "Another limitation is that we did not test a digital device, such as a word processor or smartphone, but used only papers."
+        }
+      ],
+      "related_to": []
+    }
+  ],
+  "route": [
+    {
+      "id": "aim",
+      "title": "Can discarding the written account reduce anger?",
+      "context": []
+    },
+    {
+      "id": "groups1",
+      "title": "How did Experiment 1 compare disposal and retention?",
+      "context": [
+        "measure"
+      ]
+    },
+    {
+      "id": "outcome1",
+      "title": "What changed when the note was thrown away?",
+      "context": [
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "exp2",
+      "title": "Why replace throwing with shredding?",
+      "context": []
+    },
+    {
+      "id": "outcome2",
+      "title": "Did the result hold when the movement was matched?",
+      "context": [
+        "anger-ratings"
+      ],
+      "note": "The lower reported anger after shredding shows the result did not require a throwing motion. It leaves open why discarding helped."
+    },
+    {
+      "id": "scope",
+      "title": "Where does the evidence stop?",
+      "context": []
+    }
+  ],
+  "semantic_regions": [
+    {
+      "id": "abstract",
+      "label": "The comparison and headline finding",
+      "target": "opening-design",
+      "page": 1,
+      "quote": "Half of the participants (disposal group) disposed of the paper in the trash can (Experiment 1) or in the shredder (Experiment 2), while the other half (retention group) kept it in a file on the desk. All the participants showed an increased subjective rating of anger after receiving the insulting feedback. However, the subjective anger for the disposal group decreased as low as the baseline period, while that of the retention group was still higher than that in the baseline period in both experiments."
+    },
+    {
+      "id": "aim",
+      "label": "The two experiments test different explanations",
+      "target": "aim",
+      "page": 2,
+      "quote": "This study examined a method in which the disposal of a paper (object) on which participants wrote down their descriptions or thoughts about a provocative event could neutralise anger. Participants threw the anger-written paper into a trash box in Experiment 1, and put the paper into a shredder in Experiment 2. If the action of disposal is crucial to modifying emotions, anger would be reduced only in participants in Experiment 1 but not in Experiment 2, as predicted by the grounded separation ­procedure29. Nevertheless, if anger was modified by the meaning of disposal, the subjective ratings of anger would be eliminated in both experiments."
+    },
+    {
+      "id": "follow-up",
+      "label": "How Experiment 2 matched physical action",
+      "target": "exp2",
+      "page": 5,
+      "quote": "Participants of retention group put the paper into a clear box on the desk, and the disposal group put the paper into the shredder. Thus, the distance between the participants and the paper and the type of action were matched between the two groups. If the sensorimotor experience of throwing the paper was critical to neutralise anger, we would not be able to replicate the results of Experiment 1. Nevertheless, if the meaning of the disposal of a physical entity plays a critical role in reducing anger, we anticipated obtaining similar results."
+    }
+  ],
+  "opening_note": "Participants reported less anger after disposal than after retention. The baseline comparison cannot establish that anger was fully eliminated."
+}

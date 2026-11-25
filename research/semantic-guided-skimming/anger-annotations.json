@@ -1,0 +1,548 @@
+{
+  "id": "anger",
+  "shortTitle": "Anger and Paper Disposal",
+  "opening": [
+    "opening-design",
+    "opening-discovery"
+  ],
+  "candidates": [
+    {
+      "id": "opening-design",
+      "role": "method",
+      "label": "Discarding versus keeping the written account",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "Half of the participants \n(disposal group) disposed of the paper in the trash can (Experiment 1) or in the shredder (Experiment \n2), while the other half (retention group) kept it in a file on the desk.",
+          "boxes": [
+            [
+              0.76858146,
+              0.39704861,
+              0.91922446,
+              0.41074942
+            ],
+            [
+              0.26190457,
+              0.41110602,
+              0.9174164,
+              0.42480683
+            ],
+            [
+              0.26190457,
+              0.42516343,
+              0.70395372,
+              0.43886424
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "aim",
+        "groups1",
+        "exp2"
+      ]
+    },
+    {
+      "id": "opening-discovery",
+      "role": "result",
+      "label": "Disposal and retention across both experiments",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "However, the subjective \nanger for the disposal group decreased as low as the baseline period, while that of the retention group \nwas still higher than that in the baseline period in both experiments.",
+          "boxes": [
+            [
+              0.74818758,
+              0.43922085,
+              0.90599417,
+              0.45292166
+            ],
+            [
+              0.26190457,
+              0.45327826,
+              0.92723317,
+              0.46697907
+            ],
+            [
+              0.26190457,
+              0.46733567,
+              0.70751585,
+              0.48103648
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "outcome1",
+        "outcome2"
+      ]
+    },
+    {
+      "id": "aim",
+      "role": "objective",
+      "label": "What might it mean to discard the note?",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "This study examined a method in which the disposal of a paper (object) on which participants wrote \ndown their descriptions or thoughts about a provocative event could neutralise anger.",
+          "boxes": [
+            [
+              0.31166368,
+              0.55996878,
+              0.93101642,
+              0.57548716
+            ],
+            [
+              0.26190692,
+              0.5727493,
+              0.79032646,
+              0.58826768
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "If the \naction of disposal is crucial to modifying emotions, anger would be reduced only in participants in Experiment \n1 but not in Experiment 2, as predicted by the grounded separation ­procedure29. Nevertheless, if anger was \nmodified by the meaning of disposal, the subjective ratings of anger would be eliminated in both experiments.",
+          "boxes": [
+            [
+              0.89893614,
+              0.58552982,
+              0.93094311,
+              0.6010482
+            ],
+            [
+              0.26190692,
+              0.59831034,
+              0.93120744,
+              0.61382872
+            ],
+            [
+              0.26190692,
+              0.61105174,
+              0.9309509,
+              0.62661439
+            ],
+            [
+              0.26190372,
+              0.62387653,
+              0.93091091,
+              0.63939491
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "groups1",
+        "exp2"
+      ]
+    },
+    {
+      "id": "groups1",
+      "role": "method",
+      "label": "Keep or discard the note after writing",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "For the retention group, the paper was turned over, put in a clear plastic folder, and placed on \nthe right side of the desk. The participants in the disposal group rolled up the paper into a crumpled ball, stood \nup, threw the paper into the trash can held by the experimenter, and sat back in the chair.",
+          "boxes": [
+            [
+              0.36870981,
+              0.35711943,
+              0.93091614,
+              0.37263781
+            ],
+            [
+              0.26190587,
+              0.36989994,
+              0.93101345,
+              0.38541833
+            ],
+            [
+              0.26190587,
+              0.38268046,
+              0.79304275,
+              0.39819884
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "measure",
+        "outcome1"
+      ]
+    },
+    {
+      "id": "measure",
+      "role": "method",
+      "label": "Anger was measured at three times",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "In this experiment, participants’ subjective emotional states were measured at three time points (baseline, post-\nprovocation, and post-writing).",
+          "boxes": [
+            [
+              0.26190931,
+              0.11427001,
+              0.93083627,
+              0.1297884
+            ],
+            [
+              0.26190931,
+              0.12705057,
+              0.4540117,
+              0.14256896
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "outcome1",
+      "role": "result",
+      "label": "Experiment 1 · Lower anger after discarding",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "Subjective ratings of disposal group at the post-writing \nperiod were significantly lower than those of retention group (p < 0.01).",
+          "boxes": [
+            [
+              0.58979117,
+              0.37456561,
+              0.9308902,
+              0.39008399
+            ],
+            [
+              0.26193481,
+              0.38719658,
+              0.69357589,
+              0.40286451
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "groups1",
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "anger-ratings",
+      "role": "result",
+      "label": "Anger ratings in both experiments",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "",
+          "boxes": [
+            [
+              0.20998663,
+              0.06263085,
+              0.93570041,
+              0.32849244
+            ]
+          ],
+          "region": "Figure 1 · Anger ratings in both experiments"
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "exp2",
+      "role": "method",
+      "label": "Match movement and distance in the follow-up",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "Participants of retention group put the paper into a clear box on the desk, and the \ndisposal group put the paper into the shredder. Thus, the distance between the participants and the paper and \nthe type of action were matched between the two groups.",
+          "boxes": [
+            [
+              0.44541942,
+              0.25580621,
+              0.93088549,
+              0.27132461
+            ],
+            [
+              0.26190457,
+              0.26858677,
+              0.93106451,
+              0.28410517
+            ],
+            [
+              0.26190457,
+              0.28136733,
+              0.6064827,
+              0.29688573
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "outcome2"
+      ]
+    },
+    {
+      "id": "outcome2",
+      "role": "result",
+      "label": "Experiment 2 · The difference returns",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "The subjective ratings of the disposal group \nin the post-writing period were significantly lower than those of the retention group (p < 0.05).",
+          "boxes": [
+            [
+              0.67387072,
+              0.62813956,
+              0.93100494,
+              0.64365794
+            ],
+            [
+              0.26201304,
+              0.64077053,
+              0.83410995,
+              0.65643846
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "exp2",
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "scope",
+      "role": "caveat",
+      "label": "The intervention used physical paper",
+      "anchors": [
+        {
+          "page": 7,
+          "text": "Another limitation is that we did not test a digital device, such as a word processor or smartphone, but used \nonly papers.",
+          "boxes": [
+            [
+              0.28205536,
+              0.5881239,
+              0.93092014,
+              0.60364228
+            ],
+            [
+              0.26190169,
+              0.60090442,
+              0.33640527,
+              0.6164228
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    }
+  ],
+  "route": [
+    {
+      "id": "aim",
+      "title": "Can discarding the written account reduce anger?",
+      "context": []
+    },
+    {
+      "id": "groups1",
+      "title": "How did Experiment 1 compare disposal and retention?",
+      "context": [
+        "measure"
+      ]
+    },
+    {
+      "id": "outcome1",
+      "title": "What changed when the note was thrown away?",
+      "context": [
+        "anger-ratings"
+      ]
+    },
+    {
+      "id": "exp2",
+      "title": "Why replace throwing with shredding?",
+      "context": []
+    },
+    {
+      "id": "outcome2",
+      "title": "Did the result hold when the movement was matched?",
+      "context": [
+        "anger-ratings"
+      ],
+      "note": "The lower reported anger after shredding shows the result did not require a throwing motion. It leaves open why discarding helped."
+    },
+    {
+      "id": "scope",
+      "title": "Where does the evidence stop?",
+      "context": []
+    }
+  ],
+  "semantic_regions": [
+    {
+      "id": "abstract",
+      "page": 1,
+      "label": "The comparison and headline finding",
+      "target": "opening-design",
+      "box": [
+        0.26190457,
+        0.39704861,
+        0.92723317,
+        0.48103648
+      ],
+      "anchor_index": 0
+    },
+    {
+      "id": "aim",
+      "page": 2,
+      "label": "The two experiments test different explanations",
+      "target": "aim",
+      "box": [
+        0.26190372,
+        0.55996878,
+        0.93120744,
+        0.63939491
+      ],
+      "anchor_index": 0
+    },
+    {
+      "id": "follow-up",
+      "page": 5,
+      "label": "How Experiment 2 matched physical action",
+      "target": "exp2",
+      "box": [
+        0.26190457,
+        0.25580621,
+        0.93106748,
+        0.33522738
+      ],
+      "anchor_index": 0
+    }
+  ],
+  "opening_note": "Participants reported less anger after disposal than after retention. The baseline comparison cannot establish that anger was fully eliminated.",
+  "blocks": [
+    {
+      "id": "p1-b6",
+      "page": 1,
+      "box": [
+        0.26190457,
+        0.31270413,
+        0.93348038,
+        0.4950939
+      ],
+      "candidate_ids": [
+        "opening-design",
+        "opening-discovery"
+      ]
+    },
+    {
+      "id": "p2-b7",
+      "page": 2,
+      "box": [
+        0.26189803,
+        0.52161821,
+        0.93463951,
+        0.69052089
+      ],
+      "candidate_ids": [
+        "aim"
+      ]
+    },
+    {
+      "id": "p3-b5",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.10133991,
+        0.93481556,
+        0.28317399
+      ],
+      "candidate_ids": [
+        "measure"
+      ]
+    },
+    {
+      "id": "p3-b6",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.28043615,
+        0.93462721,
+        0.4365404
+      ],
+      "candidate_ids": [
+        "groups1"
+      ]
+    },
+    {
+      "id": "p4-b4",
+      "page": 4,
+      "box": [
+        0.26190457,
+        0.34900457,
+        0.93448274,
+        0.40286451
+      ],
+      "candidate_ids": [
+        "outcome1"
+      ]
+    },
+    {
+      "id": "p5-b5",
+      "page": 5,
+      "box": [
+        0.26190457,
+        0.1259901,
+        0.93450601,
+        0.38636698
+      ],
+      "candidate_ids": [
+        "exp2"
+      ]
+    },
+    {
+      "id": "p6-b5",
+      "page": 6,
+      "box": [
+        0.2619979,
+        0.60257853,
+        0.93452631,
+        0.65643846
+      ],
+      "candidate_ids": [
+        "outcome2"
+      ]
+    },
+    {
+      "id": "p7-b9",
+      "page": 7,
+      "box": [
+        0.26190169,
+        0.5881239,
+        0.9344649,
+        0.65476436
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": {
+    "sha256": "206b47aa5fac05984b918b1e2bff8c27e9aa0efcb60a9d1c3a6eaa88f589c17c",
+    "pages": 10,
+    "extractor": "1.28.2"
+  },
+  "provenance": {
+    "skill": "academic-skimming/3"
+  }
+}

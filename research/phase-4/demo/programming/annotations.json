@@ -1,0 +1,1469 @@
+{
+  "schema_version": 1,
+  "id": "programming",
+  "title": "Computer programmers show distinct, expertise-dependent brain responses to violations in form and meaning when reading code",
+  "source": {
+    "sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
+    "pages": 10,
+    "extractor": "1.28.2"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 2,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 3,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 4,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 5,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 6,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 7,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 8,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 9,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    },
+    {
+      "page": 10,
+      "width": 595.2760009765625,
+      "height": 782.3619995117188
+    }
+  ],
+  "candidates": [
+    {
+      "id": "model",
+      "group_id": "model",
+      "role": "novelty",
+      "label": "A learning model for programming",
+      "purpose": "The proposed comparison is instructed second-language learning, not an assertion that code and natural language share identical brain substrates.",
+      "related_to": [
+        "questions",
+        "neural-limit"
+      ],
+      "rank": 1,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 1,
+          "text": "learning to code might resemble instructed (as opposed \nto immersed) second language (L2) learning.",
+          "boxes": [
+            [
+              0.59235208,
+              0.78787529,
+              0.93097213,
+              0.80339367
+            ],
+            [
+              0.26190413,
+              0.80065585,
+              0.5347634,
+              0.81617423
+            ]
+          ],
+          "offsets": [
+            3555,
+            3654
+          ]
+        }
+      ],
+      "block_ids": [
+        "p1-b8"
+      ]
+    },
+    {
+      "id": "task",
+      "group_id": "task",
+      "role": "method",
+      "label": "Online comprehension without a syntax-only instruction",
+      "purpose": "Incremental presentation addresses real-time processing; vague acceptability prevents the task from exclusively directing attention to syntax.",
+      "related_to": [
+        "questions",
+        "all-trials"
+      ],
+      "rank": 3,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 2,
+          "text": "read lines of code presented incre-\nmentally",
+          "boxes": [
+            [
+              0.7202567,
+              0.5344026,
+              0.93100709,
+              0.54992098
+            ],
+            [
+              0.26191538,
+              0.54718311,
+              0.3150996,
+              0.5627015
+            ]
+          ],
+          "offsets": [
+            4153,
+            4197
+          ]
+        },
+        {
+          "page": 2,
+          "text": "a \nbehavioral response about its “acceptability” (a term that was left intentionally vague to prevent biasing attention \ntoward syntactic versus semantic aspects of the code)",
+          "boxes": [
+            [
+              0.92429859,
+              0.57274415,
+              0.93093583,
+              0.58826253
+            ],
+            [
+              0.26191541,
+              0.58552467,
+              0.93107363,
+              0.60104305
+            ],
+            [
+              0.26191541,
+              0.59830519,
+              0.58623109,
+              0.61382357
+            ]
+          ],
+          "offsets": [
+            4520,
+            4694
+          ]
+        }
+      ],
+      "block_ids": [
+        "p2-b8"
+      ]
+    },
+    {
+      "id": "questions",
+      "group_id": "questions",
+      "role": "objective",
+      "label": "Two explicit research questions",
+      "purpose": "These distinguish sensitivity to form/meaning from the separate expertise question.",
+      "related_to": [
+        "semantic",
+        "syntax",
+        "expertise"
+      ],
+      "rank": 1,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 3,
+          "text": "This research was designed to answer two questions: (1) Do the P600 and N400 ERP components index \nsensitivity to form and meaning when programmers comprehend lines of code incrementally? and (2) Does \nsensitivity to form change as a function of programming proficiency?",
+          "boxes": [
+            [
+              0.28206328,
+              0.06059282,
+              0.93084386,
+              0.07611121
+            ],
+            [
+              0.26190962,
+              0.07337338,
+              0.93089246,
+              0.08889177
+            ],
+            [
+              0.26190962,
+              0.08615393,
+              0.68108671,
+              0.10167232
+            ]
+          ],
+          "offsets": [
+            145,
+            415
+          ]
+        }
+      ],
+      "block_ids": [
+        "p3-b4"
+      ]
+    },
+    {
+      "id": "prediction",
+      "group_id": "prediction",
+      "role": "objective",
+      "label": "Predicted dissociation",
+      "purpose": "Preserves the predicted mapping between manipulated information and neural response.",
+      "related_to": [
+        "semantic",
+        "syntax"
+      ],
+      "rank": 2,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 3,
+          "text": "we predicted that manipulations of semantic plausibility would elicit \nN400 responses, while violations of syntactic validity would result in P600 responses.",
+          "boxes": [
+            [
+              0.51188326,
+              0.09893449,
+              0.93106328,
+              0.11445288
+            ],
+            [
+              0.26190962,
+              0.11171505,
+              0.78531461,
+              0.12723344
+            ]
+          ],
+          "offsets": [
+            451,
+            608
+          ]
+        }
+      ],
+      "block_ids": [
+        "p3-b5"
+      ]
+    },
+    {
+      "id": "behavior",
+      "group_id": "behavior",
+      "role": "result",
+      "label": "Behavioral sensitivity changes with expertise",
+      "purpose": "Behavior supports the syntax-expertise relation, but should not be conflated with the online ERP measurement.",
+      "related_to": [
+        "questions",
+        "expertise"
+      ],
+      "rank": 4,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 3,
+          "text": "higher Python expertise being associated with lower acceptability judgments to code containing syntactic \nviolations",
+          "boxes": [
+            [
+              0.29255254,
+              0.30599477,
+              0.93099673,
+              0.32151317
+            ],
+            [
+              0.26190474,
+              0.31877533,
+              0.32141627,
+              0.33429371
+            ]
+          ],
+          "offsets": [
+            1907,
+            2023
+          ]
+        }
+      ],
+      "block_ids": [
+        "p3-b6"
+      ]
+    },
+    {
+      "id": "semantic",
+      "group_id": "semantic",
+      "role": "result",
+      "label": "Meaning violations elicit an N400 response",
+      "purpose": "Direct answer to the meaning component of the first question; the comparison direction matters more than a model intercept.",
+      "related_to": [
+        "questions",
+        "design"
+      ],
+      "rank": 1,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 4,
+          "text": "Code \ncontaining semantic implausibility resulted in larger negative deflections than did code without semantic implau-\nsibility.",
+          "boxes": [
+            [
+              0.89838442,
+              0.46084538,
+              0.93112469,
+              0.47636376
+            ],
+            [
+              0.26207126,
+              0.4736259,
+              0.93101037,
+              0.48914428
+            ],
+            [
+              0.26207126,
+              0.48640642,
+              0.30542058,
+              0.5019248
+            ]
+          ],
+          "offsets": [
+            255,
+            384
+          ]
+        }
+      ],
+      "block_ids": [
+        "p4-b4"
+      ]
+    },
+    {
+      "id": "syntax",
+      "group_id": "syntax",
+      "role": "result",
+      "label": "Form violations elicit a P600 response",
+      "purpose": "Direct answer to the form component. Retain the null semantic effect to avoid treating both ERP windows as interchangeable.",
+      "related_to": [
+        "questions",
+        "prediction"
+      ],
+      "rank": 3,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 4,
+          "text": "Code containing \nsyntactic anomalies resulted in larger positive deflections than code without syntactic anomalies.",
+          "boxes": [
+            [
+              0.83071822,
+              0.66788748,
+              0.93125399,
+              0.68340586
+            ],
+            [
+              0.26219245,
+              0.68066804,
+              0.84795307,
+              0.69618642
+            ]
+          ],
+          "offsets": [
+            1813,
+            1928
+          ]
+        },
+        {
+          "page": 4,
+          "text": "There was no \nsignificant effect of semantic plausibility or significant interaction between semantic plausibility and syntactic \nvalidity in the P600 window.",
+          "boxes": [
+            [
+              0.85131706,
+              0.68066804,
+              0.93127111,
+              0.69618642
+            ],
+            [
+              0.26219245,
+              0.6934486,
+              0.93125532,
+              0.70896698
+            ],
+            [
+              0.26219245,
+              0.70622908,
+              0.43737974,
+              0.72174746
+            ]
+          ],
+          "offsets": [
+            1929,
+            2087
+          ]
+        }
+      ],
+      "block_ids": [
+        "p4-b5"
+      ]
+    },
+    {
+      "id": "expertise",
+      "group_id": "expertise",
+      "role": "result",
+      "label": "Expertise moderates the syntax response",
+      "purpose": "Direct answer to the second question. This association is cross-sectional, not a demonstrated training effect.",
+      "related_to": [
+        "questions",
+        "cross-sectional"
+      ],
+      "rank": 2,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 4,
+          "text": "With increasing expertise, programmers exhibited \na stronger P600 effect to code containing syntactic anomalies than to code without syntactic anomalies (Fig. 4).",
+          "boxes": [
+            [
+              0.62552699,
+              0.86218897,
+              0.93107855,
+              0.87770735
+            ],
+            [
+              0.26201056,
+              0.87496953,
+              0.93106892,
+              0.89048791
+            ]
+          ],
+          "offsets": [
+            3230,
+            3392
+          ]
+        }
+      ],
+      "block_ids": [
+        "p4-b6"
+      ]
+    },
+    {
+      "id": "plot-groups",
+      "group_id": "plot-groups",
+      "role": "method",
+      "label": "Expert/novice labels are for visualization",
+      "purpose": "Prevents interpreting the plotted split as the continuous expertise predictor used in the models.",
+      "related_to": [
+        "expertise",
+        "proficiency"
+      ],
+      "rank": 4,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 5,
+          "text": "For visualization purposes, we also plotted the mean ERP responses of Python experts (N = 27) and Python \nnovices (N = 18) at the midline central electrode in Fig. 5.",
+          "boxes": [
+            [
+              0.28205823,
+              0.39039331,
+              0.93097787,
+              0.40606125
+            ],
+            [
+              0.26191971,
+              0.40317383,
+              0.5992557,
+              0.41884177
+            ]
+          ],
+          "offsets": [
+            306,
+            472
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Participants who scored 75% or higher on the Python \nknowledge test were considered experts, whereas participants who scored less than 75% were considered novices.",
+          "boxes": [
+            [
+              0.60071632,
+              0.41610391,
+              0.93086888,
+              0.43162229
+            ],
+            [
+              0.26193489,
+              0.42888443,
+              0.9310641,
+              0.44440281
+            ]
+          ],
+          "offsets": [
+            582,
+            745
+          ]
+        }
+      ],
+      "block_ids": [
+        "p5-b5"
+      ]
+    },
+    {
+      "id": "contribution",
+      "group_id": "contribution",
+      "role": "novelty",
+      "label": "Authors’ claimed contribution",
+      "purpose": "Marks the claimed empirical contribution while preserving the authors’ uncertainty about priority.",
+      "related_to": [
+        "questions",
+        "semantic",
+        "syntax"
+      ],
+      "rank": 2,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 5,
+          "text": "To the best of our knowledge, this is the first empirical data supporting the cognitive comparisons between read-\ning and code comprehension first outlined by Fedorenko et al.6.",
+          "boxes": [
+            [
+              0.26190457,
+              0.49535626,
+              0.93110173,
+              0.51087464
+            ],
+            [
+              0.26190457,
+              0.50809391,
+              0.64697705,
+              0.52365645
+            ]
+          ],
+          "offsets": [
+            979,
+            1156
+          ]
+        }
+      ],
+      "block_ids": [
+        "p5-b6"
+      ]
+    },
+    {
+      "id": "cross-sectional",
+      "group_id": "cross-sectional",
+      "role": "caveat",
+      "label": "Learning over time was not directly measured",
+      "purpose": "The expertise association does not establish within-person learning trajectories. Context: the sentence begins at the bottom of page 5.",
+      "related_to": [
+        "expertise"
+      ],
+      "rank": 1,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 5,
+          "text": "Although our analysis of expertise",
+          "boxes": [
+            [
+              0.72772394,
+              0.62317433,
+              0.93089963,
+              0.63869271
+            ]
+          ],
+          "offsets": [
+            2130,
+            2164
+          ]
+        },
+        {
+          "page": 6,
+          "text": "was cross-sectional",
+          "boxes": [
+            [
+              0.26190457,
+              0.06153273,
+              0.37840282,
+              0.07705112
+            ]
+          ],
+          "offsets": [
+            145,
+            164
+          ]
+        },
+        {
+          "page": 6,
+          "text": "we would expect to see a similar trend in which stronger P600 effects would emerge over time with increasing \nexposure to programming languages. We see this as an interesting area for future research.",
+          "boxes": [
+            [
+              0.26190926,
+              0.08709509,
+              0.93104144,
+              0.10261349
+            ],
+            [
+              0.26190926,
+              0.09987565,
+              0.80882112,
+              0.11539404
+            ]
+          ],
+          "offsets": [
+            376,
+            576
+          ]
+        }
+      ],
+      "block_ids": [
+        "p5-b7",
+        "p6-b4"
+      ]
+    },
+    {
+      "id": "meaning-scope",
+      "group_id": "meaning-scope",
+      "role": "caveat",
+      "label": "What semantics meant in this experiment",
+      "purpose": "The manipulation concerns pre-existing associations, not all aspects of program meaning.",
+      "related_to": [
+        "semantic",
+        "design"
+      ],
+      "rank": 3,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 6,
+          "text": "the manner in which we manipulated semantic plausibility reflected pre-existing semantic relations \n(e.g., categorical relations among variable names) rather than code-specific relations (e.g., substituting functions \nthat are related to, but not the intended, operation in a line of code).",
+          "boxes": [
+            [
+              0.33245618,
+              0.12543677,
+              0.93099171,
+              0.14095516
+            ],
+            [
+              0.26190926,
+              0.13821733,
+              0.93104769,
+              0.15373572
+            ],
+            [
+              0.26190926,
+              0.15099789,
+              0.68138087,
+              0.16651629
+            ]
+          ],
+          "offsets": [
+            699,
+            989
+          ]
+        }
+      ],
+      "block_ids": [
+        "p6-b5"
+      ]
+    },
+    {
+      "id": "neural-limit",
+      "group_id": "neural-limit",
+      "role": "caveat",
+      "label": "Similar ERP effects do not identify identical brain systems",
+      "purpose": "Essential limit on the paper’s language analogy.",
+      "related_to": [
+        "model",
+        "contribution"
+      ],
+      "rank": 2,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 6,
+          "text": "the observation of language-like responses to violations in lines \nof code does not, in and of itself, provide evidence that code comprehension relies on the same neural substrates \nas language comprehension.",
+          "boxes": [
+            [
+              0.55352783,
+              0.31716762,
+              0.93082499,
+              0.332686
+            ],
+            [
+              0.26190423,
+              0.32979862,
+              0.93094598,
+              0.34546656
+            ],
+            [
+              0.26190423,
+              0.3427287,
+              0.43155179,
+              0.35824708
+            ]
+          ],
+          "offsets": [
+            2343,
+            2551
+          ]
+        }
+      ],
+      "block_ids": [
+        "p6-b6"
+      ]
+    },
+    {
+      "id": "sample",
+      "group_id": "sample",
+      "role": "method",
+      "label": "Analyzed sample and exclusion",
+      "purpose": "Explains why the analyzed sample is smaller than the abstract’s recruited sample.",
+      "related_to": [
+        "questions"
+      ],
+      "rank": 6,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 6,
+          "text": "16 exceeded the maximum 25% rejection \nrate threshold for their averaged ERPs and were removed from all analyses",
+          "boxes": [
+            [
+              0.68103836,
+              0.66482887,
+              0.93093798,
+              0.68034725
+            ],
+            [
+              0.2619049,
+              0.67760942,
+              0.71003625,
+              0.69312781
+            ]
+          ],
+          "offsets": [
+            4949,
+            5061
+          ]
+        },
+        {
+          "page": 6,
+          "text": "The final sample \nconsisted of 45 English-speaking participants",
+          "boxes": [
+            [
+              0.83234475,
+              0.67760942,
+              0.93099796,
+              0.69312781
+            ],
+            [
+              0.2619049,
+              0.69038998,
+              0.53473126,
+              0.70590836
+            ]
+          ],
+          "offsets": [
+            5083,
+            5146
+          ]
+        }
+      ],
+      "block_ids": [
+        "p6-b8"
+      ]
+    },
+    {
+      "id": "proficiency",
+      "group_id": "proficiency",
+      "role": "method",
+      "label": "Independent measure of expertise",
+      "purpose": "The proficiency score operationalizes the central individual-difference predictor.",
+      "related_to": [
+        "expertise",
+        "plot-groups"
+      ],
+      "rank": 2,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 6,
+          "text": "72-question multiple-choice test as a quantitative measurement of their Python \n­proficiency3.",
+          "boxes": [
+            [
+              0.42408373,
+              0.7952072,
+              0.93081464,
+              0.81072558
+            ],
+            [
+              0.2619049,
+              0.80794602,
+              0.33822983,
+              0.82350863
+            ]
+          ],
+          "offsets": [
+            5699,
+            5793
+          ]
+        },
+        {
+          "page": 6,
+          "text": "Python proficiency was quantified as a percentage accuracy \nscore by dividing the total number of questions correct by 72 total possible questions.",
+          "boxes": [
+            [
+              0.56649578,
+              0.87189679,
+              0.93098863,
+              0.88741517
+            ],
+            [
+              0.26190464,
+              0.88467727,
+              0.78735199,
+              0.90019565
+            ]
+          ],
+          "offsets": [
+            6397,
+            6544
+          ]
+        }
+      ],
+      "block_ids": [
+        "p6-b9"
+      ]
+    },
+    {
+      "id": "design",
+      "group_id": "design",
+      "role": "method",
+      "label": "Crossed form and meaning manipulation",
+      "purpose": "Defines the factorial comparison underlying the dissociation.",
+      "related_to": [
+        "semantic",
+        "syntax"
+      ],
+      "rank": 1,
+      "default_selected": true,
+      "anchors": [
+        {
+          "page": 7,
+          "text": "crossing semantic plausibility and syntactic validity in a two by two design.",
+          "boxes": [
+            [
+              0.4862001,
+              0.07431329,
+              0.93083904,
+              0.08983168
+            ]
+          ],
+          "offsets": [
+            194,
+            271
+          ]
+        },
+        {
+          "page": 7,
+          "text": "a single item \nthat was either semantically plausible or semantically implausible given the global variable, as well as either \nsyntactically valid or syntactically invalid according to the syntax rules of Python 3.0.",
+          "boxes": [
+            [
+              0.85487822,
+              0.09987441,
+              0.93081658,
+              0.1153928
+            ],
+            [
+              0.26190457,
+              0.11265496,
+              0.93099181,
+              0.12817335
+            ],
+            [
+              0.26190457,
+              0.12543552,
+              0.77905808,
+              0.14095391
+            ]
+          ],
+          "offsets": [
+            490,
+            707
+          ]
+        }
+      ],
+      "block_ids": [
+        "p7-b4"
+      ]
+    },
+    {
+      "id": "imbalance",
+      "group_id": "imbalance",
+      "role": "caveat",
+      "label": "Stimulus types cannot be fully interchangeable",
+      "purpose": "The semantic-only condition uses variables; keywords cannot supply that cell. This is more consequential than presentation hardware details.",
+      "related_to": [
+        "design"
+      ],
+      "rank": 4,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 7,
+          "text": "keywords are built-in, they cannot be manipulated to be semantically implausible while remaining syntactically \nvalid according to Python syntax rules.",
+          "boxes": [
+            [
+              0.2618593,
+              0.36826602,
+              0.93111106,
+              0.3837844
+            ],
+            [
+              0.2618593,
+              0.38104654,
+              0.50041362,
+              0.39656492
+            ]
+          ],
+          "offsets": [
+            2740,
+            2891
+          ]
+        },
+        {
+          "page": 7,
+          "text": "In the semantically implausible condition, all 40 lines of code were manipulations of variables.",
+          "boxes": [
+            [
+              0.34069003,
+              0.4832907,
+              0.8982624,
+              0.49880908
+            ]
+          ],
+          "offsets": [
+            3715,
+            3811
+          ]
+        }
+      ],
+      "block_ids": [
+        "p7-b5",
+        "p7-b6"
+      ]
+    },
+    {
+      "id": "windows",
+      "group_id": "windows",
+      "role": "method",
+      "label": "ERP measurement windows",
+      "purpose": "Makes the two reported neural effects interpretable in time.",
+      "related_to": [
+        "semantic",
+        "syntax"
+      ],
+      "rank": 7,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 8,
+          "text": "300–500 ms (N400) and 500–800 ms \n(P600), with separate analyses conducted for each window.",
+          "boxes": [
+            [
+              0.71028141,
+              0.6596879,
+              0.93102267,
+              0.67520628
+            ],
+            [
+              0.26192274,
+              0.67246846,
+              0.61847219,
+              0.68798684
+            ]
+          ],
+          "offsets": [
+            4352,
+            4443
+          ]
+        }
+      ],
+      "block_ids": [
+        "p8-b8"
+      ]
+    },
+    {
+      "id": "all-trials",
+      "group_id": "all-trials",
+      "role": "method",
+      "label": "Why retain both response types?",
+      "purpose": "A consequential analysis decision: neural sensitivity can precede behavioral sensitivity, and acceptability was deliberately ambiguous.",
+      "related_to": [
+        "task",
+        "semantic",
+        "syntax"
+      ],
+      "rank": 5,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 8,
+          "text": "All trials (both acceptable and not acceptable judg-\nment responses) were included in the final analysis.",
+          "boxes": [
+            [
+              0.6218816,
+              0.67246846,
+              0.93097233,
+              0.68798684
+            ],
+            [
+              0.26192274,
+              0.68524902,
+              0.58304366,
+              0.7007674
+            ]
+          ],
+          "offsets": [
+            4444,
+            4549
+          ]
+        },
+        {
+          "page": 8,
+          "text": "neural sensitivity to anomalies sometimes precedes behavioral sensitivity",
+          "boxes": [
+            [
+              0.40566546,
+              0.6980295,
+              0.83454746,
+              0.71354788
+            ]
+          ],
+          "offsets": [
+            4631,
+            4704
+          ]
+        },
+        {
+          "page": 8,
+          "text": "the definition of “acceptable” was intentionally made ambiguous so that learners could decide how \nto treat semantically anomalous trials. This made deciding whether trials were correct or incorrect difficult in \nsome conditions.",
+          "boxes": [
+            [
+              0.33730743,
+              0.71084727,
+              0.93105948,
+              0.72636565
+            ],
+            [
+              0.26190423,
+              0.72362783,
+              0.93103385,
+              0.73914621
+            ],
+            [
+              0.26190423,
+              0.73640831,
+              0.36554217,
+              0.75192669
+            ]
+          ],
+          "offsets": [
+            4737,
+            4966
+          ]
+        }
+      ],
+      "block_ids": [
+        "p8-b8"
+      ]
+    },
+    {
+      "id": "model-analysis",
+      "group_id": "model-analysis",
+      "role": "method",
+      "label": "Continuous expertise in mixed models",
+      "purpose": "Links condition comparisons to individual differences while accounting for participant intercepts.",
+      "related_to": [
+        "expertise",
+        "proficiency"
+      ],
+      "rank": 8,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 8,
+          "text": "Participants (“Sub-\nject”) were included as a random effect in which the intercept was permitted to vary.",
+          "boxes": [
+            [
+              0.81237782,
+              0.86421998,
+              0.93081269,
+              0.87973836
+            ],
+            [
+              0.26191179,
+              0.87700054,
+              0.79074668,
+              0.89251892
+            ]
+          ],
+          "offsets": [
+            6040,
+            6145
+          ]
+        }
+      ],
+      "block_ids": [
+        "p8-b9"
+      ]
+    },
+    {
+      "id": "english",
+      "group_id": "english",
+      "role": "result",
+      "label": "Alternative predictor did not improve fit",
+      "purpose": "The supplementary-model comparison explains the focus on Python expertise; it is not evidence that English ability never matters.",
+      "related_to": [
+        "expertise"
+      ],
+      "rank": 5,
+      "default_selected": false,
+      "anchors": [
+        {
+          "page": 9,
+          "text": "Comparison of BIC values \nshowed that these models did not improve upon the models that did not include English proficiency (Supple-\nmentary Table S20). As such, we focused our discussion on the implications of Python expertise.",
+          "boxes": [
+            [
+              0.76767328,
+              0.12543927,
+              0.93095572,
+              0.14095766
+            ],
+            [
+              0.26190523,
+              0.13821983,
+              0.93095285,
+              0.15373822
+            ],
+            [
+              0.26190526,
+              0.15100038,
+              0.84598281,
+              0.16651878
+            ]
+          ],
+          "offsets": [
+            785,
+            1013
+          ]
+        }
+      ],
+      "block_ids": [
+        "p9-b4"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "p1-b8",
+      "page": 1,
+      "box": [
+        0.26190413,
+        0.6472453,
+        0.93448756,
+        0.81617423
+      ],
+      "candidate_ids": [
+        "model"
+      ]
+    },
+    {
+      "id": "p2-b8",
+      "page": 2,
+      "box": [
+        0.26191533,
+        0.52162208,
+        0.93456938,
+        0.65216513
+      ],
+      "candidate_ids": [
+        "task"
+      ]
+    },
+    {
+      "id": "p3-b4",
+      "page": 3,
+      "box": [
+        0.26190962,
+        0.06059282,
+        0.93432453,
+        0.10167232
+      ],
+      "candidate_ids": [
+        "questions"
+      ]
+    },
+    {
+      "id": "p3-b5",
+      "page": 3,
+      "box": [
+        0.26190962,
+        0.09893449,
+        0.93449535,
+        0.17835569
+      ],
+      "candidate_ids": [
+        "prediction"
+      ]
+    },
+    {
+      "id": "p3-b6",
+      "page": 3,
+      "box": [
+        0.26190457,
+        0.18895923,
+        0.93469006,
+        0.39819635
+      ],
+      "candidate_ids": [
+        "behavior"
+      ]
+    },
+    {
+      "id": "p4-b4",
+      "page": 4,
+      "box": [
+        0.26190457,
+        0.46069583,
+        0.93464792,
+        0.60416896
+      ],
+      "candidate_ids": [
+        "semantic"
+      ]
+    },
+    {
+      "id": "p4-b5",
+      "page": 4,
+      "box": [
+        0.26214708,
+        0.61661589,
+        0.93481453,
+        0.78565002
+      ],
+      "candidate_ids": [
+        "syntax"
+      ]
+    },
+    {
+      "id": "p4-b6",
+      "page": 4,
+      "box": [
+        0.26190454,
+        0.79749386,
+        0.93477188,
+        0.94160998
+      ],
+      "candidate_ids": [
+        "expertise"
+      ]
+    },
+    {
+      "id": "p5-b5",
+      "page": 5,
+      "box": [
+        0.26191971,
+        0.39039331,
+        0.93463828,
+        0.46996385
+      ],
+      "candidate_ids": [
+        "plot-groups"
+      ]
+    },
+    {
+      "id": "p5-b6",
+      "page": 5,
+      "box": [
+        0.26190457,
+        0.48056645,
+        0.93458363,
+        0.58755904
+      ],
+      "candidate_ids": [
+        "contribution"
+      ]
+    },
+    {
+      "id": "p5-b7",
+      "page": 5,
+      "box": [
+        0.26191031,
+        0.58482118,
+        0.93445567,
+        0.63869271
+      ],
+      "candidate_ids": [
+        "cross-sectional"
+      ]
+    },
+    {
+      "id": "p6-b4",
+      "page": 6,
+      "box": [
+        0.26190454,
+        0.06153273,
+        0.93447361,
+        0.11539404
+      ],
+      "candidate_ids": [
+        "cross-sectional"
+      ]
+    },
+    {
+      "id": "p6-b5",
+      "page": 6,
+      "box": [
+        0.2618987,
+        0.11265621,
+        0.93451729,
+        0.31990546
+      ],
+      "candidate_ids": [
+        "meaning-scope"
+      ]
+    },
+    {
+      "id": "p6-b6",
+      "page": 6,
+      "box": [
+        0.26189867,
+        0.31716762,
+        0.93446479,
+        0.46050021
+      ],
+      "candidate_ids": [
+        "neural-limit"
+      ]
+    },
+    {
+      "id": "p6-b8",
+      "page": 6,
+      "box": [
+        0.2619049,
+        0.58613517,
+        0.9345299,
+        0.75703044
+      ],
+      "candidate_ids": [
+        "sample"
+      ]
+    },
+    {
+      "id": "p6-b9",
+      "page": 6,
+      "box": [
+        0.26190464,
+        0.76885361,
+        0.93453872,
+        0.91297621
+      ],
+      "candidate_ids": [
+        "proficiency"
+      ]
+    },
+    {
+      "id": "p7-b4",
+      "page": 7,
+      "box": [
+        0.26190454,
+        0.06138319,
+        0.9345337,
+        0.1792956
+      ],
+      "candidate_ids": [
+        "design"
+      ]
+    },
+    {
+      "id": "p7-b5",
+      "page": 7,
+      "box": [
+        0.26185927,
+        0.17655776,
+        0.93454323,
+        0.43490648
+      ],
+      "candidate_ids": [
+        "imbalance"
+      ]
+    },
+    {
+      "id": "p7-b6",
+      "page": 7,
+      "box": [
+        0.26185937,
+        0.43216862,
+        0.93460414,
+        0.54993116
+      ],
+      "candidate_ids": [
+        "imbalance"
+      ]
+    },
+    {
+      "id": "p8-b8",
+      "page": 8,
+      "box": [
+        0.26190423,
+        0.62119683,
+        0.9345176,
+        0.75192669
+      ],
+      "candidate_ids": [
+        "windows",
+        "all-trials"
+      ]
+    },
+    {
+      "id": "p8-b9",
+      "page": 8,
+      "box": [
+        0.26190423,
+        0.74918879,
+        0.93465007,
+        0.93086052
+      ],
+      "candidate_ids": [
+        "model-analysis"
+      ]
+    },
+    {
+      "id": "p9-b4",
+      "page": 9,
+      "box": [
+        0.26190523,
+        0.06153273,
+        0.93445915,
+        0.16651878
+      ],
+      "candidate_ids": [
+        "english"
+      ]
+    }
+  ],
+  "provenance": {
+    "selection": "legacy-selected-pool-adaptation",
+    "ranking": "Editorial ordinal priority; not model confidence. Existing selections ranked by page-one availability, incoming source links, then source order within each facet.",
+    "pool_limit": "More reveals only stored candidates; unselected paper text has not been newly classified.",
+    "block_mapping": "PDF text blocks approximate paragraphs; multi-block candidate groups stay together.",
+    "gaps": [
+      "Supplementary tables and raw EEG were not supplied or analyzed. Selected text cues the main findings; full figures and numeric tables remain contextual support."
+    ]
+  }
+}

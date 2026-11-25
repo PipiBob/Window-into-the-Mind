@@ -1,0 +1,39 @@
+{
+  "papers": [
+    {
+      "id": "programming",
+      "title": "Computer programmers show distinct, expertise-dependent brain responses to violations in form and meaning when reading code",
+      "authors": "Chu-Hsuan Kuo and Chantel S. Prat",
+      "year": 2024,
+      "source_url": "https://doi.org/10.1038/s41598-024-56090-6",
+      "license": "CC BY 4.0",
+      "pdf_sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
+      "annotations_sha256": "63af1d70929697d3d877d9e5f406f97f509c217f291b2ce0e697282e40a8ad28",
+      "redistribution": true,
+      "pdf_path": "research/phase-4/demo/programming/source.pdf"
+    },
+    {
+      "id": "anger",
+      "title": "Anger is eliminated with the disposal of a paper written because of provocation",
+      "authors": "Yuta Kanaya and Nobuyuki Kawai",
+      "year": 2024,
+      "source_url": "https://doi.org/10.1038/s41598-024-57916-z",
+      "license": "CC BY 4.0",
+      "pdf_sha256": "206b47aa5fac05984b918b1e2bff8c27e9aa0efcb60a9d1c3a6eaa88f589c17c",
+      "annotations_sha256": "fdf31b402cba58dac06f4188b8f5bb4d4654e7bc6dae28a65829a18cad357386",
+      "redistribution": true,
+      "pdf_path": "research/phase-4/demo/anger/source.pdf"
+    },
+    {
+      "id": "ethereum",
+      "title": "Mining a Decade of Event Impacts on Contributor Dynamics in Ethereum: A Longitudinal Study",
+      "source_url": "https://arxiv.org/pdf/2502.05054v1",
+      "pdf_sha256": "9f2f2d74b74f81f1ecf619b16e99397e2badccacfb1b596ccb599f6b48caacfa",
+      "annotations_sha256": "c8d72dab815f24f51a5a909e769de27222a1f7a62691e9ff2cd0405500e8add9",
+      "redistribution": false,
+      "pdf_path": "research/phase-2.3/ethereum/source.pdf",
+      "license": "arXiv perpetual non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+    }
+  ]
+}

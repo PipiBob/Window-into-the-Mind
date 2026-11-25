@@ -1,0 +1,208 @@
+{
+  "id": "programming",
+  "shortTitle": "Programming and Brain Responses",
+  "opening": [
+    "opening-design",
+    "opening-discovery"
+  ],
+  "candidates": [
+    {
+      "id": "opening-design",
+      "role": "method",
+      "label": "Brain responses to form and meaning",
+      "anchors": [
+        {
+          "page": 1,
+          "quote": "The current study addressed this gap by recording electrophysiological brain responses as 62 Python programmers with varying skill levels read lines of code with manipulations of form (syntax) and meaning (semantics)."
+        }
+      ],
+      "related_to": [
+        "questions",
+        "design"
+      ]
+    },
+    {
+      "id": "opening-discovery",
+      "role": "result",
+      "label": "Distinct signals and an expertise association",
+      "anchors": [
+        {
+          "page": 1,
+          "quote": "At the group level, results showed that manipulations of form resulted in P600 effects, with syntactically invalid code generating more positive deflections in the 500–800 ms range than syntactically valid code. Meaning manipulations resulted in N400 effects, with semantically implausible code generating more negative deflections in the 300–500 ms range than semantically plausible code. Greater Python expertise within the group was associated with greater sensitivity to violations in form."
+        }
+      ],
+      "related_to": [
+        "responses",
+        "expertise"
+      ]
+    },
+    {
+      "id": "questions",
+      "role": "objective",
+      "label": "The two research questions",
+      "anchors": [
+        {
+          "page": 3,
+          "quote": "This research was designed to answer two questions: (1) Do the P600 and N400 ERP components index sensitivity to form and meaning when programmers comprehend lines of code incrementally? and (2) Does sensitivity to form change as a function of programming proficiency?"
+        }
+      ],
+      "related_to": [
+        "design",
+        "responses",
+        "expertise"
+      ]
+    },
+    {
+      "id": "responses",
+      "role": "result",
+      "label": "Different signals for invalid form and implausible meaning",
+      "anchors": [
+        {
+          "page": 4,
+          "quote": "Code containing semantic implausibility resulted in larger negative deflections than did code without semantic implau- sibility."
+        },
+        {
+          "page": 4,
+          "quote": "Code containing syntactic anomalies resulted in larger positive deflections than code without syntactic anomalies. There was no significant effect of semantic plausibility or significant interaction between semantic plausibility and syntactic validity in the P600 window."
+        }
+      ],
+      "related_to": [
+        "design",
+        "waveforms"
+      ]
+    },
+    {
+      "id": "waveforms",
+      "role": "result",
+      "label": "Brain-response waveforms",
+      "anchors": [
+        {
+          "page": 4,
+          "region": "Figure 3 · Waveforms across code conditions",
+          "box": [
+            0.25702363,
+            0.06263085,
+            0.91722159,
+            0.42691235
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "expertise",
+      "role": "result",
+      "label": "The form response varies with expertise",
+      "anchors": [
+        {
+          "page": 4,
+          "quote": "With increasing expertise, programmers exhibited a stronger P600 effect to code containing syntactic anomalies than to code without syntactic anomalies (Fig. 4)."
+        }
+      ],
+      "related_to": [
+        "sample",
+        "expertise-figure"
+      ]
+    },
+    {
+      "id": "expertise-figure",
+      "role": "result",
+      "label": "Form response across expertise",
+      "anchors": [
+        {
+          "page": 5,
+          "region": "Figure 4 · P600 amplitude and Python expertise",
+          "box": [
+            0.25702363,
+            0.06263085,
+            0.90042266,
+            0.33871788
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "sample",
+      "role": "method",
+      "label": "The sample in the analysis",
+      "anchors": [
+        {
+          "page": 6,
+          "quote": "The final sample consisted of 45 English-speaking participants (23 female, 21 male, 1 other) from various natural language back- grounds."
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "design",
+      "role": "method",
+      "label": "Separate form from meaning",
+      "anchors": [
+        {
+          "page": 7,
+          "quote": "Lines of Python code were created by crossing semantic plausibility and syntactic validity in a two by two design."
+        }
+      ],
+      "related_to": []
+    }
+  ],
+  "route": [
+    {
+      "id": "questions",
+      "title": "Do form and meaning produce distinct brain responses?",
+      "context": []
+    },
+    {
+      "id": "responses",
+      "title": "Separate signals for form and meaning",
+      "context": [
+        "design",
+        "waveforms"
+      ],
+      "note": "N400 and P600 are named for distinct changes in the electrical response over time. The study compared code that varied independently in syntax and plausibility."
+    },
+    {
+      "id": "expertise",
+      "title": "How does the form response vary with experience?",
+      "context": [
+        "expertise-figure"
+      ],
+      "note": "The stronger syntax response was associated with higher Python proficiency across people. Tracking the same learners over time would address how it develops."
+    },
+    {
+      "id": "sample",
+      "title": "Who was included in the analysis?",
+      "context": []
+    },
+    {
+      "id": "design",
+      "title": "How did the stimuli separate form and meaning?",
+      "context": []
+    }
+  ],
+  "semantic_regions": [
+    {
+      "id": "abstract",
+      "label": "The experiment and its main findings",
+      "target": "opening-design",
+      "page": 1,
+      "quote": "The current study addressed this gap by recording electrophysiological brain responses as 62 Python programmers with varying skill levels read lines of code with manipulations of form (syntax) and meaning (semantics). At the group level, results showed that manipulations of form resulted in P600 effects, with syntactically invalid code generating more positive deflections in the 500–800 ms range than syntactically valid code. Meaning manipulations resulted in N400 effects, with semantically implausible code generating more negative deflections in the 300–500 ms range than semantically plausible code. Greater Python expertise within the group was associated with greater sensitivity to violations in form."
+    },
+    {
+      "id": "questions",
+      "label": "Questions and predictions",
+      "target": "questions",
+      "page": 3,
+      "quote": "This research was designed to answer two questions: (1) Do the P600 and N400 ERP components index sensitivity to form and meaning when programmers comprehend lines of code incrementally? and (2) Does sensitivity to form change as a function of programming proficiency? Using L2 comprehension as a model, we predicted that manipulations of semantic plausibility would elicit N400 responses, while violations of syntactic validity would result in P600 responses. If evidence for increas- ing “grammaticalization” occurs when people learn a programming language, we would predict an interaction between Python expertise and the types of neural responses observed to our manipulations of well-formedness."
+    },
+    {
+      "id": "expertise",
+      "label": "The effect of Python proficiency",
+      "target": "expertise",
+      "page": 4,
+      "quote": "Effects of expertise on ERP responses Python expertise, along with its interaction with semantic plausibility and syntactic validity, were also included as fixed effects in the models predicting N400 and P600 responses. Within the P600 window, Python expertise significantly predicted ERP responses (b = 0.83, SE = 0.28, 95% CI [0.28, 1.38], t(43) = 2.94, p = 0.005). There was also a significant interaction between Python expertise and syntactic validity (b = 1.04, SE = 0.20, 95% CI [0.64, 1.43], t(488) = 5.18, p < 0.001), but not semantic plausibility. With increasing expertise, programmers exhibited a stronger P600 effect to code containing syntactic anomalies than to code without syntactic anomalies (Fig. 4)."
+    }
+  ],
+  "opening_note": "The analyzed sample was 45. Expertise was compared across participants at one point in time."
+}

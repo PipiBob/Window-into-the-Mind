@@ -1,0 +1,512 @@
+{
+  "id": "programming",
+  "shortTitle": "Programming and Brain Responses",
+  "opening": [
+    "opening-design",
+    "opening-discovery"
+  ],
+  "candidates": [
+    {
+      "id": "opening-design",
+      "role": "method",
+      "label": "Brain responses to form and meaning",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "The current study addressed this gap by recording \nelectrophysiological brain responses as 62 Python programmers with varying skill levels read lines of \ncode with manipulations of form (syntax) and meaning (semantics).",
+          "boxes": [
+            [
+              0.5970999,
+              0.36510692,
+              0.92352898,
+              0.37880773
+            ],
+            [
+              0.26190457,
+              0.37916434,
+              0.91612203,
+              0.39286515
+            ],
+            [
+              0.26190457,
+              0.39322175,
+              0.70309188,
+              0.40692256
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "questions",
+        "design"
+      ]
+    },
+    {
+      "id": "opening-discovery",
+      "role": "result",
+      "label": "Distinct signals and an expertise association",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "At the group level, results showed \nthat manipulations of form resulted in P600 effects, with syntactically invalid code generating more \npositive deflections in the 500–800 ms range than syntactically valid code. Meaning manipulations \nresulted in N400 effects, with semantically implausible code generating more negative deflections in \nthe 300–500 ms range than semantically plausible code. Greater Python expertise within the group \nwas associated with greater sensitivity to violations in form.",
+          "boxes": [
+            [
+              0.70551852,
+              0.39322175,
+              0.92819319,
+              0.40692256
+            ],
+            [
+              0.26190457,
+              0.40727916,
+              0.91155462,
+              0.42097997
+            ],
+            [
+              0.26190457,
+              0.42133658,
+              0.90268094,
+              0.43503739
+            ],
+            [
+              0.26190454,
+              0.43539399,
+              0.91722446,
+              0.4490948
+            ],
+            [
+              0.26190454,
+              0.4494514,
+              0.90672862,
+              0.46315221
+            ],
+            [
+              0.26190454,
+              0.46350882,
+              0.65408645,
+              0.47720963
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "responses",
+        "expertise"
+      ]
+    },
+    {
+      "id": "questions",
+      "role": "objective",
+      "label": "The two research questions",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "This research was designed to answer two questions: (1) Do the P600 and N400 ERP components index \nsensitivity to form and meaning when programmers comprehend lines of code incrementally? and (2) Does \nsensitivity to form change as a function of programming proficiency?",
+          "boxes": [
+            [
+              0.28206328,
+              0.06059282,
+              0.93084386,
+              0.07611121
+            ],
+            [
+              0.26190962,
+              0.07337338,
+              0.93089246,
+              0.08889177
+            ],
+            [
+              0.26190962,
+              0.08615393,
+              0.68108671,
+              0.10167232
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "design",
+        "responses",
+        "expertise"
+      ]
+    },
+    {
+      "id": "responses",
+      "role": "result",
+      "label": "Different signals for invalid form and implausible meaning",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "Code \ncontaining semantic implausibility resulted in larger negative deflections than did code without semantic implau-\nsibility.",
+          "boxes": [
+            [
+              0.89838442,
+              0.46084538,
+              0.93112469,
+              0.47636376
+            ],
+            [
+              0.26207126,
+              0.4736259,
+              0.93101037,
+              0.48914428
+            ],
+            [
+              0.26207126,
+              0.48640642,
+              0.30542058,
+              0.5019248
+            ]
+          ]
+        },
+        {
+          "page": 4,
+          "text": "Code containing \nsyntactic anomalies resulted in larger positive deflections than code without syntactic anomalies. There was no \nsignificant effect of semantic plausibility or significant interaction between semantic plausibility and syntactic \nvalidity in the P600 window.",
+          "boxes": [
+            [
+              0.83071822,
+              0.66788748,
+              0.93125399,
+              0.68340586
+            ],
+            [
+              0.26219245,
+              0.68066804,
+              0.93127111,
+              0.69618642
+            ],
+            [
+              0.26219245,
+              0.6934486,
+              0.93125532,
+              0.70896698
+            ],
+            [
+              0.26219245,
+              0.70622908,
+              0.43737974,
+              0.72174746
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "design",
+        "waveforms"
+      ]
+    },
+    {
+      "id": "waveforms",
+      "role": "result",
+      "label": "Brain-response waveforms",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "",
+          "boxes": [
+            [
+              0.25702363,
+              0.06263085,
+              0.91722159,
+              0.42691235
+            ]
+          ],
+          "region": "Figure 3 · Waveforms across code conditions"
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "expertise",
+      "role": "result",
+      "label": "The form response varies with expertise",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "With increasing expertise, programmers exhibited \na stronger P600 effect to code containing syntactic anomalies than to code without syntactic anomalies (Fig. 4).",
+          "boxes": [
+            [
+              0.62552699,
+              0.86218897,
+              0.93107855,
+              0.87770735
+            ],
+            [
+              0.26201056,
+              0.87496953,
+              0.93106892,
+              0.89048791
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "sample",
+        "expertise-figure"
+      ]
+    },
+    {
+      "id": "expertise-figure",
+      "role": "result",
+      "label": "Form response across expertise",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "",
+          "boxes": [
+            [
+              0.25702363,
+              0.06263085,
+              0.90042266,
+              0.33871788
+            ]
+          ],
+          "region": "Figure 4 · P600 amplitude and Python expertise"
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "sample",
+      "role": "method",
+      "label": "The sample in the analysis",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "The final sample \nconsisted of 45 English-speaking participants (23 female, 21 male, 1 other) from various natural language back-\ngrounds.",
+          "boxes": [
+            [
+              0.83234475,
+              0.67760942,
+              0.93099796,
+              0.69312781
+            ],
+            [
+              0.2619049,
+              0.69038998,
+              0.93095254,
+              0.70590836
+            ],
+            [
+              0.26190495,
+              0.70317046,
+              0.31585421,
+              0.71868884
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "design",
+      "role": "method",
+      "label": "Separate form from meaning",
+      "anchors": [
+        {
+          "page": 7,
+          "text": "Lines of Python code were created by crossing semantic plausibility and syntactic validity in a two by two design.",
+          "boxes": [
+            [
+              0.26190457,
+              0.07431329,
+              0.93083904,
+              0.08983168
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    }
+  ],
+  "route": [
+    {
+      "id": "questions",
+      "title": "Do form and meaning produce distinct brain responses?",
+      "context": []
+    },
+    {
+      "id": "responses",
+      "title": "Separate signals for form and meaning",
+      "context": [
+        "design",
+        "waveforms"
+      ],
+      "note": "N400 and P600 are named for distinct changes in the electrical response over time. The study compared code that varied independently in syntax and plausibility."
+    },
+    {
+      "id": "expertise",
+      "title": "How does the form response vary with experience?",
+      "context": [
+        "expertise-figure"
+      ],
+      "note": "The stronger syntax response was associated with higher Python proficiency across people. Tracking the same learners over time would address how it develops."
+    },
+    {
+      "id": "sample",
+      "title": "Who was included in the analysis?",
+      "context": []
+    },
+    {
+      "id": "design",
+      "title": "How did the stimuli separate form and meaning?",
+      "context": []
+    }
+  ],
+  "semantic_regions": [
+    {
+      "id": "abstract",
+      "page": 1,
+      "label": "The experiment and its main findings",
+      "target": "opening-design",
+      "box": [
+        0.26190454,
+        0.36510692,
+        0.92819319,
+        0.47720963
+      ],
+      "anchor_index": 0
+    },
+    {
+      "id": "questions",
+      "page": 3,
+      "label": "Questions and predictions",
+      "target": "questions",
+      "box": [
+        0.26190962,
+        0.06059282,
+        0.93106328,
+        0.15279456
+      ],
+      "anchor_index": 0
+    },
+    {
+      "id": "expertise",
+      "page": 4,
+      "label": "The effect of Python proficiency",
+      "target": "expertise",
+      "box": [
+        0.26190454,
+        0.79749386,
+        0.93107855,
+        0.89048791
+      ],
+      "anchor_index": 0
+    }
+  ],
+  "opening_note": "The analyzed sample was 45. Expertise was compared across participants at one point in time.",
+  "blocks": [
+    {
+      "id": "p1-b6",
+      "page": 1,
+      "box": [
+        0.26190454,
+        0.35104951,
+        0.93188846,
+        0.53343928
+      ],
+      "candidate_ids": [
+        "opening-design",
+        "opening-discovery"
+      ]
+    },
+    {
+      "id": "p3-b4",
+      "page": 3,
+      "box": [
+        0.26190962,
+        0.06059282,
+        0.93432453,
+        0.10167232
+      ],
+      "candidate_ids": [
+        "questions"
+      ]
+    },
+    {
+      "id": "p4-b4",
+      "page": 4,
+      "box": [
+        0.26190457,
+        0.46069583,
+        0.93464792,
+        0.60416896
+      ],
+      "candidate_ids": [
+        "responses"
+      ]
+    },
+    {
+      "id": "p4-b5",
+      "page": 4,
+      "box": [
+        0.26214708,
+        0.61661589,
+        0.93481453,
+        0.78565002
+      ],
+      "candidate_ids": [
+        "responses"
+      ]
+    },
+    {
+      "id": "p4-b6",
+      "page": 4,
+      "box": [
+        0.26190454,
+        0.79749386,
+        0.93477188,
+        0.94160998
+      ],
+      "candidate_ids": [
+        "expertise"
+      ]
+    },
+    {
+      "id": "p6-b8",
+      "page": 6,
+      "box": [
+        0.2619049,
+        0.58613517,
+        0.9345299,
+        0.75703044
+      ],
+      "candidate_ids": [
+        "sample"
+      ]
+    },
+    {
+      "id": "p7-b4",
+      "page": 7,
+      "box": [
+        0.26190454,
+        0.06138319,
+        0.9345337,
+        0.1792956
+      ],
+      "candidate_ids": [
+        "design"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": {
+    "sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
+    "pages": 10,
+    "extractor": "1.28.2"
+  },
+  "provenance": {
+    "skill": "academic-skimming/3"
+  }
+}
