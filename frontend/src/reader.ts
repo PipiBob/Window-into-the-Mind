@@ -8,7 +8,11 @@ export const asset = (path: string) => new URL(import.meta.env.BASE_URL + path.r
 export const initialSnapshot: Snapshot = {library: [], paper: '', data: null, selection: null, ready: false, page: 1, pages: 0, status: 'Opening original PDF…', original: ''};
 // PDF.js is the existing vendored runtime. These interfaces describe only its used surface.
 interface PageView {div: HTMLDivElement}
-interface PdfDocument {numPages: number; destroy(): Promise<void>}
+interface PdfDocument {
+  numPages: number;
+  getPage(page: number): Promise<{getTextContent(): Promise<{items: ({str: string} | object)[]}>}>;
+  destroy(): Promise<void>;
+}
 interface LoadingTask {promise: Promise<PdfDocument>; destroy(): Promise<void>}
 interface Viewer {currentPageNumber: number; currentScaleValue: string; setDocument(pdf: PdfDocument | null): void; getPageView(index: number): PageView | undefined; update(): void; cleanup(): void}
 interface LinkService {setViewer(viewer: Viewer): void; setDocument(pdf: PdfDocument | null): void}
@@ -17,6 +21,32 @@ const make = (tag: 'div' | 'span' | 'button', text?: string, cls?: string) => {c
 const color = (node: HTMLElement, role: Role) => node.style.setProperty('--facet', `var(--${role})`);
 function position(node: HTMLElement, box: Box) {node.style.left = `${box[0]*100}%`; node.style.top = `${box[1]*100}%`; node.style.width = `${(box[2]-box[0])*100}%`; node.style.height = `${(box[3]-box[1])*100}%`;}
 async function json<T>(url: string): Promise<T> {const response = await fetch(url); if(!response.ok) throw new Error(`Could not load ${url} (${response.status})`); return response.json();}
+
+async function restorePassages(pdf: PdfDocument, manifest: Manifest) {
+  const byPage = new Map<number, Promise<string>>();
+  for (const candidate of manifest.candidates) {
+    for (const anchor of candidate.anchors) {
+      if (!anchor.text_range) continue;
+      if (!byPage.has(anchor.page)) {
+        byPage.set(anchor.page, pdf.getPage(anchor.page).then(page => page.getTextContent()).then(
+          ({items}) => items.map(item => 'str' in item ? item.str : '').join(' ').replace(/\s+/gu, ' ').trim()
+        ));
+      }
+    }
+  }
+  const text = new Map(await Promise.all([...byPage].map(async ([page, pending]) => [page, await pending] as const)));
+  for (const candidate of manifest.candidates) {
+    for (const anchor of candidate.anchors) {
+      if (!anchor.text_range) continue;
+      const [start, end] = anchor.text_range;
+      const page = text.get(anchor.page)!;
+      if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || start >= end || end > page.length) {
+        throw new Error('Saved passage location does not match the PDF text.');
+      }
+      anchor.text = page.slice(start, end);
+    }
+  }
+}
 
 export class Reader {
   snapshot = {...initialSnapshot};
@@ -84,7 +114,7 @@ export class Reader {
       this.resize.observe(this.container);
       const library = await json<Paper[]>(asset('demo/papers.json'));
       if(this.disposed) return;
-      this.snapshot.library = library.map(entry => ({...entry, annotations: asset(entry.annotations), pdf: asset(entry.pdf)}));
+      this.snapshot.library = library.map(entry => ({...entry, annotations: asset(entry.annotations), pdf: /^https:\/\//.test(entry.pdf) ? entry.pdf : asset(entry.pdf)}));
       const requested = new URLSearchParams(location.search).get('paper');
       await this.openPaper(library.some(entry => entry.id === requested) ? requested! : library[0].id);
     } catch(error) {this.notify(`Unable to load library: ${error instanceof Error ? error.message : String(error)}`);}
@@ -109,6 +139,7 @@ export class Reader {
       const task = this.getDocument({data: bytes, cMapUrl: asset('vendor/pdfjs/cmaps/'), cMapPacked: true, standardFontDataUrl: asset('vendor/pdfjs/standard_fonts/'), wasmUrl: asset('vendor/pdfjs/wasm/'), isEvalSupported: false});
       this.loadingTask = task;
       const pdf = await task.promise;
+      if(token === this.generation && !this.disposed) await restorePassages(pdf, manifest);
       if(token !== this.generation || this.disposed) {await pdf.destroy(); return;}
       Object.assign(this.snapshot, {data: manifest, selection: this.sessions.get(id)?.state || defaultState(), original: entry.pdf, pages: pdf.numPages});
       this.links.setDocument(pdf); this.viewer.setDocument(pdf);

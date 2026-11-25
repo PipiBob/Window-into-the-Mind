@@ -1,6 +1,6 @@
 export type Role = 'objective' | 'novelty' | 'method' | 'result' | 'caveat';
 export type Box = [number, number, number, number];
-export interface Anchor {page: number; boxes: Box[]; text: string; region?: string}
+export interface Anchor {page: number; boxes: Box[]; text: string; text_range?: [number, number]; region?: string}
 export interface Candidate {id: string; role: Role; anchors: Anchor[]; label: string; purpose?: string; related_to: string[]}
 export interface Block {id: string; page: number; box: Box; candidate_ids: string[]}
 export interface SemanticRegion {id: string; page: number; label: string; target: string; box: Box; anchor_index: number}

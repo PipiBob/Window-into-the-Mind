@@ -162,7 +162,7 @@ async function verifyEthereum(page, requests) {
   await page.getByRole('button', {name: 'Show reading panel'}).click();
   assert.equal(await page.locator('.semantic-region').count(), 6);
   await text(page.locator('h1'), 'Explore highlights');
-  assert(requests.some(url => url.endsWith('/ethereum/academic-skimming-v3.json')));
+  assert(requests.some(url => /\/ethereum\/academic-skimming-v3(?:-reference)?\.json$/.test(url)));
   assert(!requests.some(url => /\/ethereum\/(guided-annotations|academic-skimming-v[12])\.json$/.test(url)));
 }
 
@@ -206,17 +206,18 @@ async function verifyEthereum(page, requests) {
       assert.equal(await page.locator('.highlight, .semantic-region').count(), 0);
       assert(requests.some(url => url.endsWith(`/${fixture.id}/academic-skimming-v3.json`)));
     }
-    if (process.env.PAGES_ONLY !== '1') {
-      await page.goto(new URL('?paper=ethereum', base).href);
-      await verifyEthereum(page, requests);
-    } else {
-      assert.equal(await page.locator('#paper option').count(), 2);
-      assert(!requests.some(url => /\/demo\/ethereum\//.test(url)));
+    await page.goto(new URL('?paper=ethereum', base).href);
+    await verifyEthereum(page, requests);
+    if (process.env.PAGES_ONLY === '1') {
+      assert.equal(await page.locator('#paper option').count(), 3);
+      assert(requests.includes('https://arxiv.org/pdf/2502.05054v1'));
+      assert(requests.some(url => url.endsWith('/ethereum/academic-skimming-v3-reference.json')));
+      assert(!requests.some(url => url.endsWith('/ethereum/source.pdf')));
     }
     const subpath = new URL(base).pathname;
     assert(requests.filter(url => /\/(demo|vendor)\//.test(url)).every(url => new URL(url).pathname.startsWith(subpath)));
     assert.deepEqual(errors, []);
-    console.log(`Browser smoke passed for ${process.env.PAGES_ONLY === '1' ? 'the two cleared Pages papers' : 'all three study papers'}.`);
+    console.log(`Browser smoke passed for ${process.env.PAGES_ONLY === '1' ? 'all three Pages papers' : 'all three study papers'}.`);
   } finally {
     await browser.close();
   }

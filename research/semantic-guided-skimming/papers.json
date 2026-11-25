@@ -33,7 +33,9 @@
       "redistribution": false,
       "pdf_path": "research/phase-2.3/ethereum/source.pdf",
       "license": "arXiv perpetual non-exclusive distribution license",
-      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "remote_pdf": "https://arxiv.org/pdf/2502.05054v1",
+      "references_sha256": "9f7e1db8e73bbf7cc4ff0cbe808258e9d6f378b17c00719b7b04d94a8870a207"
     }
   ]
 }
