@@ -4,12 +4,18 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const base = process.env.READER_URL || 'http://127.0.0.1:5173/';
 const output = process.env.TEST_OUTPUT;
+const pagesOnly = process.env.PAGES_ONLY === '1';
 
 async function text(locator, search) {
   await locator.filter({hasText: search}).waitFor({state: 'visible'});
 }
 async function pageNumber(page, number) {
   await page.waitForFunction(expected => Number(document.querySelector('#page-number').value) === expected, number);
+}
+
+async function verifyActiveStop(page, index, stop) {
+  await page.locator('.active-stop').getByRole('heading', {name: stop.title, exact: true}).waitFor();
+  assert.equal(await page.locator('#reading-progress').getAttribute('value'), String(index + 1));
 }
 
 async function verifyZoom(page, number, id, prefix, width = 595.276) {
@@ -102,8 +108,28 @@ async function verifyOpening(page, name, finding = 'opening-discovery') {
   }
 }
 
+async function verifyEvidence(page, stop) {
+  for (const visual of stop.visual ?? []) {
+    const figure = page.locator('.active-stop .finding-evidence').filter({hasText: visual.label});
+    const crop = figure.getByRole('img', {name: visual.label});
+    await crop.waitFor();
+    await page.waitForFunction(label => [...document.images].some(
+      image => image.alt === label && image.naturalWidth > 300), visual.label);
+    assert.match(await figure.getByRole('link', {name: 'Enlarge ↗'}).getAttribute('href'), /^blob:/);
+    await figure.getByRole('button', {name: `View in PDF · p. ${visual.page}`}).click();
+    await page.waitForFunction(({page, box}) => {
+      const sheet = document.querySelector(`.page[data-page-number="${page}"]`).getBoundingClientRect();
+      const viewport = document.querySelector('#pdf-container').getBoundingClientRect();
+      const top = sheet.top + box[1] * sheet.height;
+      return top >= viewport.top && top < viewport.bottom;
+    }, visual);
+  }
+}
+
 async function verifyEthereum(page, requests) {
-  const manifest = require('../../research/semantic-guided-skimming/ethereum-public-references.json');
+  const manifest = pagesOnly
+    ? require('../../research/finding-evidence-refinement/ethereum-public-references.json')
+    : require('../../research/finding-evidence-refinement/ethereum-final-annotations.json');
   const candidates = new Map(manifest.candidates.map(candidate => [candidate.id, candidate]));
   await verifyOpening(page, 'ethereum', manifest.opening.find(id => candidates.get(id).role === 'result'));
   assert.equal(await page.locator('.semantic-region, .semantic-topics').count(), 0);
@@ -114,22 +140,22 @@ async function verifyEthereum(page, requests) {
   assert.equal(legend.includes('Limitation'), roles.has('caveat'));
   const first = page.locator('.route-stop').first();
   await first.click();
-  await page.locator('.active-stop').waitFor();
+  await verifyActiveStop(page, 0, manifest.route[0]);
   await pageNumber(page, candidates.get(manifest.route[0].id).anchors[0].page);
   const currentPage = await page.getByLabel('Page number').inputValue();
-  await first.click();
+  await page.getByRole('button', {name: 'Overview', exact: true}).click();
   await page.locator('.active-stop').waitFor({state: 'hidden'});
-  assert.equal(await first.getAttribute('aria-expanded'), 'false');
+  await first.waitFor();
   assert.equal(await page.getByLabel('Page number').inputValue(), currentPage);
 
   for (const [index, stop] of manifest.route.entries()) {
     const candidate = candidates.get(stop.id);
-    const button = page.locator('.route-stop').nth(index);
-    await button.click();
-    assert.equal(await button.getAttribute('aria-expanded'), 'true');
-    assert.equal(await page.locator('.route-stop[aria-expanded=true]').count(), 1);
-    await page.locator('.active-stop > .source-quote .source-fragment').first().waitFor();
-    assert((await page.locator('.active-stop > .source-quote .source-fragment span').first().textContent()).trim());
+    if (index === 0) await first.click();
+    else await page.getByRole('button', {name: /^Next stop/}).click();
+    await verifyActiveStop(page, index, stop);
+    const quote = candidate.anchors[0].text;
+    if (quote) await text(page.locator('.active-stop > .source-quote'), quote.replace(/\s+/g, ' '));
+    else assert((await page.locator('.active-stop > .source-quote .source-fragment span').first().textContent()).trim());
     // PDF.js can report the next page when it occupies more of the viewport.
     // Verify the selected anchor itself arrived inside the reading surface.
     await page.waitForFunction(({page, boxes}) => {
@@ -139,6 +165,7 @@ async function verifyEthereum(page, requests) {
         sheet.top + sheet.height * boxes[0][3] <= viewport.bottom;
     }, candidate.anchors[0]);
     assert(await page.locator(`.stroke[data-candidate="${candidate.id}"]`).count());
+    await verifyEvidence(page, stop);
   }
 
   const zoomStop = manifest.route.findLastIndex(stop => {
@@ -148,8 +175,9 @@ async function verifyEthereum(page, requests) {
   assert(zoomStop >= 0, 'An essential finding should have visible source lines');
   const zoomCandidate = candidates.get(manifest.route[zoomStop].id);
   const number = zoomCandidate.anchors[0].page;
-  const zoomRow = page.locator('.route-stop').nth(zoomStop);
-  if (await zoomRow.getAttribute('aria-expanded') !== 'true') await zoomRow.click();
+  await page.getByRole('button', {name: 'Overview', exact: true}).click();
+  await page.locator('.route-stop').nth(zoomStop).click();
+  await verifyActiveStop(page, zoomStop, manifest.route[zoomStop]);
   await verifyZoom(page, number, zoomCandidate.id, 'ethereum', 612);
   await page.setViewportSize({width: 390, height: 844});
   const mobilePage = page.locator(`.page[data-page-number="${number}"]`);
@@ -172,7 +200,14 @@ async function verifyEthereum(page, requests) {
   await page.getByRole('button', {name: 'Show reading panel'}).click();
   assert.equal(await page.locator('.semantic-region, .semantic-topics, .highlight.region').count(), 0);
   await text(page.locator('h1'), 'Explore highlights');
-  assert(requests.some(url => url.endsWith('/ethereum/academic-skimming-v5-reference.json')));
+  const guide = `academic-skimming-v7${pagesOnly ? '-reference' : ''}.json`;
+  assert(requests.some(url => url.endsWith(`/ethereum/${guide}`)));
+  if (pagesOnly) {
+    const source = 'https://arxiv.org/pdf/2502.05054v1';
+    assert(requests.includes(source));
+    assert.equal(await page.getByRole('link', {name: /Original PDF/}).getAttribute('href'), source);
+    assert(!requests.some(url => url.endsWith('/ethereum/source.pdf')));
+  }
   assert(!requests.some(url => /\/ethereum\/(guided-annotations|academic-skimming-v[1-4])\.json$/.test(url)));
 }
 
@@ -187,39 +222,47 @@ async function verifyEthereum(page, requests) {
     if (process.env.ETHEREUM_ONLY === '1') {
       await page.goto(new URL('?paper=ethereum', base).href);
       await verifyEthereum(page, requests);
-      assert(!requests.some(url => /\/demo\/(programming|anger)\//.test(url)));
+      assert(!requests.some(url => /\/demo\/(similarity|anger)\//.test(url)));
       assert.deepEqual(errors, []);
       console.log('Ethereum only: current bundle, all guided stops, accordion navigation, five zoom levels, mobile alignment, and non-overlapping strokes passed.');
       return;
     }
-    for (const id of ['programming', 'anger']) {
-        await page.goto(new URL(`?paper=${id}`, base).href);
-        const manifest = require(`../../research/study-skimming-refinement/${id}-annotations.json`);
-        const candidates = new Map(manifest.candidates.map(candidate => [candidate.id, candidate]));
-        const finding = manifest.opening.find(id => candidates.get(id).role === 'result');
-        await verifyOpening(page, id, finding);
-        for (const [index, stop] of manifest.route.entries()) {
-          const row = page.locator('.route-stop').nth(index);
-          await row.click();
-          assert.equal(await row.getAttribute('aria-expanded'), 'true');
-          const quote = candidates.get(stop.id).anchors[0].text.replace(/\s+/g, ' ');
-          await text(page.locator('.active-stop > .source-quote'), quote);
-          await page.locator(`.stroke[data-candidate="${stop.id}"]`).first().waitFor();
-        }
-        await page.getByRole('button', {name: 'Explore', exact: true}).click();
-        assert.equal(await page.locator('.explore-item').count(), manifest.candidates.length);
-        await verifyNoOverlap(page);
-        await page.getByRole('button', {name: 'PDF only', exact: true}).click();
-        assert.equal(await page.locator('.highlight').count(), 0);
-        assert(requests.some(url => url.endsWith(`/${id}/academic-skimming-v6.json`)));
-        assert(!requests.some(url => url.endsWith(`/${id}/academic-skimming-v3.json`)));
+    const similarityOnly = process.env.SIMILARITY_ONLY === '1';
+    for (const id of similarityOnly ? ['similarity'] : process.env.NEW_STUDY_ONLY === '1' ? ['anger'] : ['anger', 'similarity']) {
+      await page.goto(new URL(`?paper=${id}`, base).href);
+      const manifest = id === 'similarity'
+        ? require('../../research/finding-evidence-refinement/similarity-annotations.json')
+        : require('../../research/finding-evidence-refinement/anger-final-annotations.json');
+      const candidates = new Map(manifest.candidates.map(candidate => [candidate.id, candidate]));
+      const finding = manifest.opening.find(id => candidates.get(id).role === 'result');
+      await verifyOpening(page, id, finding);
+      for (const [index, stop] of manifest.route.entries()) {
+        if (index === 0) await page.locator('.route-stop').first().click();
+        else await page.getByRole('button', {name: /^Next stop/}).click();
+        await verifyActiveStop(page, index, stop);
+        const quote = candidates.get(stop.id).anchors[0].text.replace(/\s+/g, ' ');
+        await text(page.locator('.active-stop > .source-quote'), quote);
+        await page.locator(`.stroke[data-candidate="${stop.id}"]`).first().waitFor();
+        await verifyEvidence(page, stop);
+      }
+      await page.getByRole('button', {name: 'Explore', exact: true}).click();
+      assert.equal(await page.locator('.explore-item').count(), manifest.candidates.length);
+      await verifyNoOverlap(page);
+      await page.getByRole('button', {name: 'PDF only', exact: true}).click();
+      assert.equal(await page.locator('.highlight').count(), 0);
+      assert(requests.some(url => url.endsWith(`/${id}/${manifest.provenance.skill.replace("/", "-v")}.json`)));
+      assert(!requests.some(url => url.endsWith(`/${id}/academic-skimming-v3.json`)));
     }
-    await page.goto(new URL('?paper=ethereum', base).href);
-    await verifyEthereum(page, requests);
+    if (!similarityOnly) {
+      await page.goto(new URL('?paper=ethereum', base).href);
+      await verifyEthereum(page, requests);
+      assert.deepEqual(await page.locator('#paper option').evaluateAll(options => options.map(option => option.value).sort()),
+        ['anger', 'ethereum', 'similarity']);
+    }
     const subpath = new URL(base).pathname;
     assert(requests.filter(url => /\/(demo|vendor)\//.test(url)).every(url => new URL(url).pathname.startsWith(subpath)));
     assert.deepEqual(errors, []);
-    console.log('Browser smoke passed for all three reader papers.');
+    console.log(`Browser smoke passed for ${similarityOnly ? 'Similarity' : pagesOnly ? 'all three Pages papers' : 'all three study papers'}.`);
   } finally {
     await browser.close();
   }

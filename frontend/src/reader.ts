@@ -3,7 +3,7 @@ import {LABELS, defaultState, selectedIds, blockChoices} from './selection';
 import {textStrokes} from './highlightGeometry';
 import {TranslationPopup} from './translationPopup';
 import {clearTextInk, textInkBounds} from './textInk';
-import type {Box, Manifest, Mode, Paper, Role, Selection, Snapshot} from './types';
+import type {Box, Manifest, Mode, Paper, Role, Selection, Snapshot, VisualEvidence} from './types';
 
 export const asset = (path: string) => new URL(import.meta.env.BASE_URL + path.replace(/^\//, ''), document.baseURI).href;
 export const initialSnapshot: Snapshot = {library: [], paper: '', data: null, selection: null, ready: false, page: 1, pages: 0, status: 'Opening original PDF…', original: ''};
@@ -11,7 +11,11 @@ export const initialSnapshot: Snapshot = {library: [], paper: '', data: null, se
 interface PageView {div: HTMLDivElement}
 interface PdfDocument {
   numPages: number;
-  getPage(page: number): Promise<{getTextContent(): Promise<{items: ({str: string} | object)[]}>}>;
+  getPage(page: number): Promise<{
+    getTextContent(): Promise<{items: ({str: string} | object)[]}>;
+    getViewport(options: {scale: number}): {width: number; height: number};
+    render(options: {canvas: HTMLCanvasElement; viewport: {width: number; height: number}; transform: number[]}): {promise: Promise<void>};
+  }>;
   destroy(): Promise<void>;
 }
 interface LoadingTask {promise: Promise<PdfDocument>; destroy(): Promise<void>}
@@ -54,6 +58,7 @@ export class Reader {
   private viewer!: Viewer;
   private links!: LinkService;
   private getDocument!: (options: object) => LoadingTask;
+  private pdf?: PdfDocument;
   private loadingTask: LoadingTask | null = null;
   private generation = 0;
   private translations = new TranslationPopup();
@@ -126,6 +131,7 @@ export class Reader {
     if (id === this.snapshot.paper && this.snapshot.ready) return;
     this.save(); const token = ++this.generation;
     this.translations.setPassages({});
+    this.pdf = undefined;
     Object.assign(this.snapshot, {ready: false, data: null, selection: null, paper: id, original: '', page: 1, pages: 0});
     this.container.scrollTop = 0; this.notify('Opening original PDF…');
     document.getElementById('markers')!.replaceChildren();
@@ -151,6 +157,7 @@ export class Reader {
           if (token === this.generation && !this.disposed) this.translations.setPassages(passages);
         }).catch(() => {});
       }
+      this.pdf = pdf;
       this.links.setDocument(pdf); this.viewer.setDocument(pdf);
       history.replaceState(null, '', `?paper=${encodeURIComponent(id)}`); this.publish();
     } catch(error) {if(token === this.generation && !this.disposed) this.notify(`Unable to open paper: ${error instanceof Error ? error.message : String(error)}`);}
@@ -204,9 +211,13 @@ export class Reader {
   private scrollToAnchor(id: string, index: number) {
     const anchor = this.snapshot.data?.candidates.find(candidate => candidate.id === id)?.anchors[index];
     if (!anchor) return;
-    const box = anchor.boxes[0];
-    this.viewer.currentPageNumber = anchor.page;
-    const page = this.viewer.getPageView(anchor.page - 1);
+    this.showPdfLocation(anchor.page, anchor.boxes[0]);
+  }
+
+  showPdfLocation(number: number, box: Box) {
+    if (!this.snapshot.ready) return;
+    this.viewer.currentPageNumber = number;
+    const page = this.viewer.getPageView(number - 1);
     if (!page) return;
     this.container.scrollTo({
       top: Math.max(0, page.div.offsetTop + box[1] * page.div.clientHeight - 70),
@@ -214,6 +225,21 @@ export class Reader {
       behavior: 'instant',
     });
     this.viewer.update();
+  }
+  async cropEvidence({page: number, box}: VisualEvidence) {
+    const page = await this.pdf?.getPage(number);
+    if (!page) throw new Error('Original PDF is unavailable.');
+    const viewport = page.getViewport({scale: 3});
+    const x = Math.floor(box[0] * viewport.width);
+    const y = Math.floor(box[1] * viewport.height);
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.ceil(box[2] * viewport.width) - x;
+    canvas.height = Math.ceil(box[3] * viewport.height) - y;
+    await page.render({canvas, viewport, transform: [1, 0, 0, 1, -x, -y]}).promise;
+    return new Promise<Blob>((resolve, reject) => canvas.toBlob(blob => {
+      if (blob) resolve(blob);
+      else reject(new Error('Could not display the PDF crop.'));
+    }));
   }
   private renderOverlays() {for(let n = 1; n <= this.snapshot.data!.pages.length; n++) this.overlay(n);}
   private overlay(pageNumber: number, retainControls = false) {

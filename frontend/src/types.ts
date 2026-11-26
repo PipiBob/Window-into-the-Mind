@@ -3,7 +3,8 @@ export type Box = [number, number, number, number];
 export interface Anchor {page: number; boxes: Box[]; text: string; text_range?: [number, number]; region?: string}
 export interface Candidate {id: string; role: Role; anchors: Anchor[]; label: string; purpose?: string; related_to: string[]}
 export interface Block {id: string; page: number; box: Box; candidate_ids: string[]}
-export interface Stop {id: string; title: string; context: string[]; note?: string}
+export interface VisualEvidence {label: string; page: number; box: Box; note?: string}
+export interface Stop {id: string; title: string; context: string[]; note?: string; visual?: VisualEvidence[]}
 export interface Paper {id: string; title: string; shortTitle: string; skill: string; annotations: string; translations?: string; pdf: string}
 export interface Manifest {id: string; candidates: Candidate[]; blocks: Block[]; pages: unknown[]; source: {sha256: string}; opening: string[]; opening_note?: string; route: Stop[]; provenance: {skill: string}}
 export type Mode = 'focus' | 'explore' | 'original';

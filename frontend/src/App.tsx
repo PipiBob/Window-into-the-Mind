@@ -1,6 +1,7 @@
-import {useEffect, useRef, useState, type CSSProperties} from 'react';
+import {useEffect, useLayoutEffect, useRef, useState, type CSSProperties} from 'react';
 import {ROLES, LABELS, selectedIds} from './selection';
 import {initialSnapshot, Reader} from './reader';
+import {EvidenceCrop} from './EvidenceCrop';
 import {overlappingRoles} from './highlightGeometry';
 import type {Anchor, Candidate, Mode, Role} from './types';
 
@@ -26,6 +27,7 @@ export default function App() {
   const container = useRef<HTMLDivElement>(null);
   const viewer = useRef<HTMLDivElement>(null);
   const panel = useRef<HTMLDivElement>(null);
+  const focusReadingHeading = useRef(false);
   const reader = useRef<Reader | null>(null);
   const [snapshot, setSnapshot] = useState(initialSnapshot);
   const [sidebar, setSidebar] = useState(true);
@@ -51,8 +53,15 @@ export default function App() {
   const mode = selection?.mode ?? 'focus';
   const paper = snapshot.library.find(entry => entry.id === snapshot.paper);
   const stopIndex = selection?.stopIndex ?? -1;
-  useEffect(() => {panel.current?.scrollTo(0, 0);}, [snapshot.paper, mode]);
+  useLayoutEffect(() => {
+    panel.current?.scrollTo(0, 0);
+    if (focusReadingHeading.current) {
+      focusReadingHeading.current = false;
+      panel.current?.querySelector<HTMLElement>('h1[tabindex="-1"]')?.focus({preventScroll: true});
+    }
+  }, [snapshot.paper, mode, stopIndex]);
   const stop = data?.route[stopIndex];
+  const nextStop = data?.route[stopIndex + 1];
   const candidates = new Map(data?.candidates.map(candidate => [candidate.id, candidate]));
   const primary = stop ? candidates.get(stop.id) : undefined;
   const companions = stop?.context.map(id => candidates.get(id)!) ?? [];
@@ -73,8 +82,12 @@ export default function App() {
     .sort((a, b) => a.anchors[0].page - b.anchors[0].page || a.anchors[0].boxes[0][1] - b.anchors[0].boxes[0][1]);
   const go = (index: number) => reader.current?.goToStop(index);
   const step = (index: number) => {
+    focusReadingHeading.current = true;
     go(index);
-    requestAnimationFrame(() => panel.current?.querySelector('[aria-current="step"]')?.scrollIntoView({block: 'nearest'}));
+  };
+  const overview = () => {
+    focusReadingHeading.current = true;
+    reader.current?.clearStop();
   };
   const jump = (id: string, index = 0) => {
     reader.current?.jumpTo(id, index);
@@ -105,10 +118,24 @@ export default function App() {
     </div>;
   };
 
-  const activeDetails = stop && data && <section className="active-stop" id="active-stop" aria-labelledby={`route-stop-${stopIndex}`}>
-    <div className="stop-progress" aria-live="polite">Stop {stopIndex + 1} of {data.route.length}</div>
+  const activeDetails = stop && data && <section className="active-stop" id="active-stop" aria-labelledby="active-stop-title">
+    <h1 id="active-stop-title" tabIndex={-1}>{stop.title}</h1>
+    <div className="stop-meta">
+      {primary && <span className="stop-category" style={facet(primary.role)}>
+        <i className="swatch" aria-hidden="true"/>{LABELS[primary.role]}
+      </span>}
+      <div className="reading-progress">
+        <label htmlFor="reading-progress">
+          <span>Reading progress</span>
+          <span>Key idea {stopIndex + 1} of {data.route.length}</span>
+        </label>
+        <progress id="reading-progress" value={stopIndex + 1} max={data.route.length} />
+      </div>
+    </div>
     {stop.note && <p className="reading-note">{stop.note}</p>}
     {primary && showPassage(primary)}
+    {stop.visual?.map(visual => <EvidenceCrop key={`${visual.page}-${visual.box.join(',')}`}
+      reader={reader.current!} visual={visual} />)}
     {evidence.length > 0 && <div className="context">
       <h2>See the evidence</h2>
       {evidence.map(showPassage)}
@@ -180,31 +207,20 @@ export default function App() {
         </div>}
         <div className="panel-content" ref={panel} key={snapshot.paper}>
           {snapshot.status.startsWith('Unable') ? <p className="message">{snapshot.status}</p> : !ready || !data ? <p className="message">Opening the original paper…</p> :
-            mode === 'focus' ? <>
+            mode === 'focus' ? (stop ? activeDetails : <>
               <nav className="route" aria-labelledby="reading-path-title">
-                <h1 id="reading-path-title">Reading path</h1>
+                <h1 id="reading-path-title" tabIndex={-1}>Reading path</h1>
                 <ol>{data.route.map((item, index) => {
                   const candidate = candidates.get(item.id)!;
-                  const expanded = index === stopIndex;
                   return <li key={item.id}>
-                    <button className="route-stop" id={`route-stop-${index}`} style={facet(candidate.role)}
-                      aria-expanded={expanded} aria-current={expanded ? 'step' : undefined}
-                      aria-controls={expanded ? 'active-stop' : undefined}
-                      onClick={event => {
-                        const row = event.currentTarget;
-                        const top = row.getBoundingClientRect().top;
-                        if (expanded) reader.current?.clearStop();
-                        else go(index);
-                        requestAnimationFrame(() => panel.current?.scrollBy(0, row.getBoundingClientRect().top - top));
-                      }}>
+                    <button className="route-stop" style={facet(candidate.role)} onClick={() => step(index)}>
                       <i className="swatch" aria-hidden="true"/><span>{item.title}</span>
-                      <small>p. {candidate.anchors[0].page} <span className="route-chevron" aria-hidden="true">{expanded ? '▾' : '▸'}</span></small>
+                      <small>p. {candidate.anchors[0].page} <span className="route-chevron" aria-hidden="true">▸</span></small>
                     </button>
-                    {expanded && activeDetails}
                   </li>;
                 })}</ol>
               </nav>
-              {!stop && <div className="intro">
+              <div className="intro">
                 <div className="context">
                   <h2>On the first page</h2>
                   {data.opening.map(id => {
@@ -220,9 +236,8 @@ export default function App() {
                 {selected && !data.opening.includes(selected.id) && <div className="standalone-source">
                   {showPassage(selected)}{related(selected)}
                 </div>}
-              </div>}
-
-            </> : mode === 'explore' ? <>
+              </div>
+            </>) : mode === 'explore' ? <>
               <h1>Explore highlights</h1>
               <p className="message">Browse the saved passages in page order or filter by what you want to find.</p>
               <div className="filters" role="group" aria-label="Highlight categories">
@@ -247,9 +262,13 @@ export default function App() {
             </> : null}
         </div>
         {ready && mode === 'focus' && stop && <nav className="stop-nav" aria-label="Reading stops">
-          <button onClick={() => stopIndex === 0 ? reader.current?.clearStop() : step(stopIndex - 1)}>← {stopIndex ? 'Previous' : 'Overview'}</button>
-          {data && stopIndex + 1 < data.route.length
-            ? <button className="primary" onClick={() => step(stopIndex + 1)}>Next stop →</button>
+          <button className="quiet" onClick={overview}>Overview</button>
+          <button onClick={() => step(stopIndex - 1)} disabled={stopIndex === 0}>← Previous</button>
+          {nextStop
+            ? <button className="primary stop-next" onClick={() => step(stopIndex + 1)}>
+              <span>Next stop →</span>
+              <small title={nextStop.title}>{nextStop.title}</small>
+            </button>
             : <button className="primary" onClick={() => setMode('explore')}>Explore more →</button>}
         </nav>}
       </aside>

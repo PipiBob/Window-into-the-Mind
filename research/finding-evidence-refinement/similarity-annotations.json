@@ -1,0 +1,2162 @@
+{
+  "id": "similarity",
+  "shortTitle": "Similarity and Relationship Satisfaction",
+  "opening": [
+    "overview",
+    "headline"
+  ],
+  "candidates": [
+    {
+      "id": "overview",
+      "role": "objective",
+      "label": "Can confidence explain the link between similarity and satisfaction?",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "The present work uncovers the potential mediating roles of one’s and\nthe partner’s attributional confidence in the effects of one’s and the partner’s per-\nceived general similarity on relationship satisfaction.",
+          "boxes": [
+            [
+              0.45385195,
+              0.3581897,
+              0.9131047,
+              0.36965038
+            ],
+            [
+              0.35261625,
+              0.37728549,
+              0.91309568,
+              0.38874617
+            ],
+            [
+              0.35261625,
+              0.39639274,
+              0.70200693,
+              0.40785342
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-design",
+        "measures"
+      ]
+    },
+    {
+      "id": "headline",
+      "role": "result",
+      "label": "Both studies found an indirect link through confidence",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "Across two studies, the indirect effect of perceived general\nsimilarity on relationship satisfaction via attributional confidence was significant.",
+          "boxes": [
+            [
+              0.52831682,
+              0.4727988,
+              0.91312254,
+              0.48425947
+            ],
+            [
+              0.35261474,
+              0.49189458,
+              0.89534289,
+              0.50335526
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-one-result",
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "measures",
+      "role": "method",
+      "label": "What similarity, confidence, and satisfaction mean",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "Perceived similarity refers to the extent to which one believes one-\nself similar to another, irrespective of actual similarity (Montoya et al.,\n2008; Sprecher, 2014).",
+          "boxes": [
+            [
+              0.07646705,
+              0.27745537,
+              0.4842933,
+              0.28764259
+            ],
+            [
+              0.07646705,
+              0.29400861,
+              0.48434297,
+              0.30419583
+            ],
+            [
+              0.07646705,
+              0.31056185,
+              0.21231635,
+              0.32074906
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "This study measured perceived general similarity to the partner using\na scale comprised of similarities in attitudes and values and overall\nsimilarity (Parks & Adelman, 1983).",
+          "boxes": [
+            [
+              0.51528324,
+              0.47611088,
+              0.92310983,
+              0.48629814
+            ],
+            [
+              0.51528324,
+              0.49266411,
+              0.92309465,
+              0.50285137
+            ],
+            [
+              0.51528324,
+              0.50921735,
+              0.71949237,
+              0.51940461
+            ]
+          ]
+        },
+        {
+          "page": 4,
+          "text": "The CL7 only assesses proactive attributions (confidence in predicting\nthe behaviour of the partner) and does not measure retroactive attri-\nbutions (explanations regarding the past events in the relationship).",
+          "boxes": [
+            [
+              0.0764688,
+              0.77357533,
+              0.48433928,
+              0.78376255
+            ],
+            [
+              0.0764688,
+              0.79012958,
+              0.48429114,
+              0.8003168
+            ],
+            [
+              0.0764688,
+              0.80668375,
+              0.48426843,
+              0.81687097
+            ]
+          ]
+        },
+        {
+          "page": 4,
+          "text": "A sample\nitem is ‘How well can you predict his/her feelings and emotions?’",
+          "boxes": [
+            [
+              0.86930773,
+              0.29197096,
+              0.92313792,
+              0.30215818
+            ],
+            [
+              0.51528345,
+              0.3085242,
+              0.8971368,
+              0.31871142
+            ]
+          ]
+        },
+        {
+          "page": 4,
+          "text": "The Chinese RAS (Lee & Ng, 2023), rated on a 5-point scale\nranging from 1 = low to 5 = high, was adopted. A sample item is ‘To\nwhat extent has your relationship met your original expectations?’",
+          "boxes": [
+            [
+              0.55804628,
+              0.37473704,
+              0.92315258,
+              0.3849243
+            ],
+            [
+              0.51528206,
+              0.39129028,
+              0.92311003,
+              0.40149716
+            ],
+            [
+              0.51528206,
+              0.40784352,
+              0.89805006,
+              0.41803077
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-design",
+        "study-two"
+      ]
+    },
+    {
+      "id": "study-design",
+      "role": "method",
+      "label": "Two studies, and why the authors chose unmarried couples",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "Two studies were performed to test the hypotheses. Study 1 recruited\n395 individuals to provide initial evidence of the links among perceived\ngeneral similarity, attributional confidence and relationship satisfac-\ntion. Study 2 recruited 227 couples, which complemented Study 1 by\nusing a dyadic approach that captured the actor and partner effects.",
+          "boxes": [
+            [
+              0.51528196,
+              0.31056286,
+              0.92312182,
+              0.32075008
+            ],
+            [
+              0.51528196,
+              0.3271161,
+              0.92312675,
+              0.33730333
+            ],
+            [
+              0.51528196,
+              0.34366927,
+              0.92311106,
+              0.35385653
+            ],
+            [
+              0.51528196,
+              0.36022251,
+              0.92312572,
+              0.37040977
+            ],
+            [
+              0.51528196,
+              0.37677574,
+              0.92312716,
+              0.386963
+            ]
+          ]
+        },
+        {
+          "page": 3,
+          "text": "Previous studies have suggested that couple-level similarity may have\ngreater impacts during earlier stages of relationships, compared with\nthe later steady stage (Luo, 2009; Watson et al., 2004). Therefore, the\npresent studies recruited unmarried dating couples to examine the role\nof similarity in the early stages of romantic relationships.",
+          "boxes": [
+            [
+              0.51528196,
+              0.39334119,
+              0.9230924,
+              0.40352845
+            ],
+            [
+              0.51528196,
+              0.40989442,
+              0.9230802,
+              0.42008168
+            ],
+            [
+              0.51528196,
+              0.42644762,
+              0.92313115,
+              0.43663488
+            ],
+            [
+              0.51528335,
+              0.44300086,
+              0.92307784,
+              0.45318811
+            ],
+            [
+              0.51528335,
+              0.45955409,
+              0.84283234,
+              0.46974135
+            ]
+          ]
+        },
+        {
+          "page": 4,
+          "text": "Only people\nwho were able to read Chinese and were currently in an unmarried\nopposite-gender relationship were included in the study.",
+          "boxes": [
+            [
+              0.41292648,
+              0.37626803,
+              0.48428545,
+              0.38645529
+            ],
+            [
+              0.07646581,
+              0.39282123,
+              0.4843135,
+              0.40300848
+            ],
+            [
+              0.07646581,
+              0.40937446,
+              0.41002511,
+              0.41956172
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "hypotheses-one",
+        "study-two"
+      ]
+    },
+    {
+      "id": "hypotheses-one",
+      "role": "objective",
+      "label": "Study 1 · The expected link through confidence",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "Perceived general similarity would positively predict relationship\nsatisfaction.\nH 2.\nPerceived general similarity would positively predict attributional\nconfidence.\nH 3. Attributional confidence would positively predict relationship satisfac-\ntion.\nH 4.\nAttributional confidence would mediate the relationship between\nperceived general similarity and relationship satisfaction.",
+          "boxes": [
+            [
+              0.5546079,
+              0.67475326,
+              0.92326516,
+              0.68494047
+            ],
+            [
+              0.51528335,
+              0.69130649,
+              0.58136028,
+              0.70149371
+            ],
+            [
+              0.51528335,
+              0.72438363,
+              0.54177601,
+              0.73457085
+            ],
+            [
+              0.55298917,
+              0.72441398,
+              0.92332658,
+              0.7346012
+            ],
+            [
+              0.51528335,
+              0.74097938,
+              0.57722043,
+              0.7511666
+            ],
+            [
+              0.51528335,
+              0.77405652,
+              0.92329992,
+              0.78427409
+            ],
+            [
+              0.51528335,
+              0.7906401,
+              0.53976094,
+              0.80082732
+            ],
+            [
+              0.51528335,
+              0.82371724,
+              0.54175996,
+              0.83390446
+            ],
+            [
+              0.55294365,
+              0.82374759,
+              0.92327142,
+              0.83393481
+            ],
+            [
+              0.51528335,
+              0.84030082,
+              0.82305863,
+              0.85048804
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "measures",
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "study-one-result",
+      "role": "result",
+      "label": "Study 1 · People who felt more similar also reported more confidence",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "Study 1 provided preliminary support for the hypotheses that per-\nceived general similarity positively predicted relationship satisfaction\nand attributional confidence and attributional confidence positively\npredicted relationship satisfaction. Moreover, Study 1 revealed that\nattributional confidence mediated the link between perceived general\nsimilarity and relationship satisfaction.",
+          "boxes": [
+            [
+              0.09319776,
+              0.61633555,
+              0.48428263,
+              0.6265228
+            ],
+            [
+              0.07646161,
+              0.63288878,
+              0.48428791,
+              0.64307604
+            ],
+            [
+              0.07646161,
+              0.64944198,
+              0.484328,
+              0.65962924
+            ],
+            [
+              0.07646161,
+              0.66599525,
+              0.48429191,
+              0.67618247
+            ],
+            [
+              0.07646161,
+              0.68254849,
+              0.48430273,
+              0.69273571
+            ],
+            [
+              0.07646161,
+              0.69910172,
+              0.30098699,
+              0.70928894
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "hypotheses-one",
+        "scope"
+      ]
+    },
+    {
+      "id": "study-two-hypotheses",
+      "role": "objective",
+      "label": "Study 2 · Predictions for oneself and one’s partner",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "H 5a. Perceived general similarity would positively predict own relationship\nsatisfaction (paths A1 and A2 in Figure 3).\nH 5b. Perceived general similarity would positively predict the partner’s\nrelationship satisfaction (paths B1 and B2 in Figure 3).",
+          "boxes": [
+            [
+              0.51528478,
+              0.65766032,
+              0.92326916,
+              0.66787789
+            ],
+            [
+              0.51528478,
+              0.67424398,
+              0.74245719,
+              0.6844312
+            ],
+            [
+              0.51528478,
+              0.70732104,
+              0.92327593,
+              0.71753861
+            ],
+            [
+              0.51528478,
+              0.72390462,
+              0.80905633,
+              0.73409184
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "text": "H 6a. Perceived general similarity would have positive actor effects on\nattributional confidence (paths C1 and C2 in Figure 3).\nH 6b. Perceived general similarity would have positive partner effects on\nattributional confidence (paths D1 and D2 in Figure 3).",
+          "boxes": [
+            [
+              0.07646751,
+              0.74070298,
+              0.48446776,
+              0.75092055
+            ],
+            [
+              0.07646751,
+              0.75728758,
+              0.37153914,
+              0.7674748
+            ],
+            [
+              0.07646751,
+              0.79036471,
+              0.48444776,
+              0.80058228
+            ],
+            [
+              0.07646751,
+              0.80694931,
+              0.37355014,
+              0.81713653
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "text": "H 7a. Attributional confidence would positively predict relationship satis-\nfaction of oneself (paths E1 and E2 in Figure 3).\nH 7b. Attributional confidence would positively predict relationship satis-\nfaction of the partner (paths F1 and F2 in Figure 3).",
+          "boxes": [
+            [
+              0.51528617,
+              0.85658335,
+              0.92330259,
+              0.86680092
+            ],
+            [
+              0.51528617,
+              0.87317911,
+              0.76964211,
+              0.88336632
+            ],
+            [
+              0.51528617,
+              0.90625624,
+              0.92330126,
+              0.91647381
+            ],
+            [
+              0.51528617,
+              0.92283983,
+              0.7920792,
+              0.93302705
+            ]
+          ]
+        },
+        {
+          "page": 7,
+          "text": "H 8. Attributional confidence of oneself and the partner would mediate\nthe relationship between one’s and the partner’s perceived general similarity\nand relationship satisfaction.",
+          "boxes": [
+            [
+              0.07646576,
+              0.47200426,
+              0.48447827,
+              0.48222183
+            ],
+            [
+              0.07646576,
+              0.48858781,
+              0.4844208,
+              0.49877506
+            ],
+            [
+              0.07646576,
+              0.50514104,
+              0.2332379,
+              0.5153283
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-two",
+        "study-two-direct",
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "study-two",
+      "role": "method",
+      "label": "Study 2 · Comparing both members of 227 couples",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "Taking account of the\ninterdependent nature of couples, Study 2 seeks to extend the previous\nfindings at the dyadic level by examining the actor (i.e., one’s predictor\non his or her own outcome variable) and partner effects (i.e., one’s pre-\ndictor on the partner’s outcome variable).",
+          "boxes": [
+            [
+              0.35716042,
+              0.84045326,
+              0.48430017,
+              0.85064048
+            ],
+            [
+              0.07646849,
+              0.8570065,
+              0.48421178,
+              0.86719372
+            ],
+            [
+              0.07646849,
+              0.87355966,
+              0.48429073,
+              0.88374688
+            ],
+            [
+              0.07646849,
+              0.89011297,
+              0.48432021,
+              0.90030019
+            ],
+            [
+              0.07646849,
+              0.90666613,
+              0.31826291,
+              0.91685335
+            ]
+          ]
+        },
+        {
+          "page": 7,
+          "text": "Two hundred and twenty-seven unmarried opposite-gender couples\nwere employed for the dyadic sample of Study 2, including 227 indi-\nviduals in Study 1 and their partners who did not participate in Study\n1.",
+          "boxes": [
+            [
+              0.0764671,
+              0.58027683,
+              0.48429745,
+              0.59046409
+            ],
+            [
+              0.0764671,
+              0.59683007,
+              0.48434041,
+              0.60701732
+            ],
+            [
+              0.0764671,
+              0.6133833,
+              0.48425198,
+              0.62357056
+            ],
+            [
+              0.0764671,
+              0.62993654,
+              0.08707247,
+              0.6401238
+            ]
+          ]
+        },
+        {
+          "page": 7,
+          "text": "The scales used in Study 2 were the same as those used in Study 1.",
+          "boxes": [
+            [
+              0.0764671,
+              0.90498976,
+              0.48431093,
+              0.91517698
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-design",
+        "measures",
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "study-two-direct",
+      "role": "result",
+      "label": "Study 2 · Similarity predicted own outcomes more clearly",
+      "anchors": [
+        {
+          "page": 8,
+          "text": "The\npartner effects of attributional confidence on relationship satisfaction\nwere significant and in the small range (paths F1 and F2).",
+          "boxes": [
+            [
+              0.90078152,
+              0.84045139,
+              0.92313833,
+              0.85063861
+            ],
+            [
+              0.51528263,
+              0.85700463,
+              0.92306225,
+              0.86719185
+            ],
+            [
+              0.51528263,
+              0.87355779,
+              0.84257057,
+              0.883745
+            ]
+          ]
+        },
+        {
+          "page": 9,
+          "text": "Contrary to prediction, only actor effects of perceived general simi-\nlarity on relationship satisfaction were significant, the partner effects\nwere non-significant in Study 2.",
+          "boxes": [
+            [
+              0.09320724,
+              0.70785965,
+              0.48429335,
+              0.71804687
+            ],
+            [
+              0.07647109,
+              0.72441288,
+              0.48429463,
+              0.7346001
+            ],
+            [
+              0.07647109,
+              0.74097837,
+              0.27106559,
+              0.75116559
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-two-hypotheses",
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "study-two-indirect",
+      "role": "result",
+      "label": "Study 2 · Whose confidence linked similarity to satisfaction?",
+      "anchors": [
+        {
+          "page": 10,
+          "text": "Furthermore, a significant mediation\nin the actor-route was revealed, indicating that actor attributional\nconfidence mediated the relationship between actor perceived general\nsimilarity and actor relationship satisfaction.",
+          "boxes": [
+            [
+              0.27232277,
+              0.59733376,
+              0.48429596,
+              0.60752102
+            ],
+            [
+              0.07646705,
+              0.613887,
+              0.48430263,
+              0.62407426
+            ],
+            [
+              0.07646705,
+              0.63044024,
+              0.48425316,
+              0.64062749
+            ],
+            [
+              0.07646705,
+              0.64699351,
+              0.34484787,
+              0.65718077
+            ]
+          ]
+        },
+        {
+          "page": 10,
+          "text": "In addition, a significant mediation\nin the partner-route was found, comprising the indirect effect of actor\nperceived general similarity on partner relationship satisfaction via\nactor attributional confidence.",
+          "boxes": [
+            [
+              0.27894627,
+              0.71320641,
+              0.48429191,
+              0.72339363
+            ],
+            [
+              0.07646705,
+              0.72975965,
+              0.48433739,
+              0.73994687
+            ],
+            [
+              0.07646705,
+              0.74631281,
+              0.48427858,
+              0.75650003
+            ],
+            [
+              0.07646705,
+              0.76286612,
+              0.25642879,
+              0.77305334
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-two-direct",
+        "scope"
+      ]
+    },
+    {
+      "id": "scope",
+      "role": "caveat",
+      "label": "What the results can tell us about cause and scope",
+      "anchors": [
+        {
+          "page": 10,
+          "text": "Second, the generalizability of current\nfindings to same-sex or married couples remains unknown, as the\nsample in this study was comprised of opposite-gender unmarried\ncouples.",
+          "boxes": [
+            [
+              0.68813828,
+              0.53468481,
+              0.92310993,
+              0.54487207
+            ],
+            [
+              0.51528335,
+              0.55123801,
+              0.9230845,
+              0.56142527
+            ],
+            [
+              0.51528335,
+              0.56779124,
+              0.92312203,
+              0.5779785
+            ],
+            [
+              0.51528335,
+              0.58434448,
+              0.56289838,
+              0.59453174
+            ]
+          ]
+        },
+        {
+          "page": 11,
+          "text": "Seventh, the cross-sectional design in our studies\nhampered causal inferences. Additional study using longitudinal design\nis needed for stronger causal evidence (Ng & Lee, 2024).",
+          "boxes": [
+            [
+              0.199629,
+              0.34366393,
+              0.48429883,
+              0.35385119
+            ],
+            [
+              0.07646842,
+              0.36021716,
+              0.48428263,
+              0.37040442
+            ],
+            [
+              0.07646842,
+              0.3767704,
+              0.40082828,
+              0.38695766
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "study-one-result",
+        "study-two-indirect"
+      ]
+    }
+  ],
+  "route": [
+    {
+      "id": "measures",
+      "title": "What similarity, confidence, and satisfaction mean",
+      "context": [
+        "study-design",
+        "study-two"
+      ],
+      "note": "The measures are self-reports. The confidence questions ask how well participants think they can predict their partner."
+    },
+    {
+      "id": "study-design",
+      "title": "Two studies, and why the authors chose unmarried couples",
+      "context": [
+        "hypotheses-one",
+        "study-two"
+      ],
+      "note": "The first survey used each person’s own answers to test the indirect link. The second reused the same questions and analyzed both partners together."
+    },
+    {
+      "id": "hypotheses-one",
+      "title": "Study 1 · The expected link through confidence",
+      "context": [
+        "measures",
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "study-one-result",
+      "title": "Study 1 · People who felt more similar also reported more confidence",
+      "context": [
+        "hypotheses-one",
+        "scope"
+      ],
+      "note": "The estimated indirect association was small (standardized β = .19, Figure 2 and the results on PDF page 5)."
+    },
+    {
+      "id": "study-two",
+      "title": "Study 2 · Comparing both members of 227 couples",
+      "context": [
+        "study-design",
+        "measures",
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "study-two-hypotheses",
+      "title": "Study 2 · Predictions for oneself and one’s partner",
+      "context": [
+        "study-two",
+        "study-two-direct",
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "study-two-direct",
+      "title": "Study 2 · Similarity predicted own outcomes more clearly",
+      "context": [
+        "study-two-hypotheses",
+        "study-two-indirect"
+      ],
+      "note": "Figure 4 shows that feeling similar was associated with one’s own confidence. It did not clearly predict the other partner’s confidence, either."
+    },
+    {
+      "id": "study-two-indirect",
+      "title": "Study 2 · Whose confidence linked similarity to satisfaction?",
+      "context": [
+        "study-two-direct",
+        "scope"
+      ],
+      "visual": [
+        {
+          "label": "Table 4 · The four indirect paths",
+          "page": 8,
+          "box": [
+            0.5073276933724861,
+            0.4831523003417855,
+            0.9289808424999497,
+            0.7196157277577387
+          ],
+          "note": "PGS = perceived general similarity, AC = attributional confidence, RS = relationship satisfaction. The first and last rows show the paths through the reporting person’s confidence (β = .20 and .09). The middle two rows use the other person’s confidence and their intervals include zero."
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "What the results can tell us about cause and scope",
+      "context": [
+        "study-one-result",
+        "study-two-indirect"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "p1-b12",
+      "page": 1,
+      "box": [
+        0.35261625,
+        0.3581897,
+        0.9131047,
+        0.36965038
+      ],
+      "candidate_ids": [
+        "overview"
+      ]
+    },
+    {
+      "id": "p1-b13",
+      "page": 1,
+      "box": [
+        0.35261625,
+        0.37728549,
+        0.91309568,
+        0.38874617
+      ],
+      "candidate_ids": [
+        "overview"
+      ]
+    },
+    {
+      "id": "p1-b14",
+      "page": 1,
+      "box": [
+        0.35261625,
+        0.39639274,
+        0.91311229,
+        0.40785342
+      ],
+      "candidate_ids": [
+        "overview"
+      ]
+    },
+    {
+      "id": "p1-b18",
+      "page": 1,
+      "box": [
+        0.35261474,
+        0.4727988,
+        0.91312254,
+        0.48425947
+      ],
+      "candidate_ids": [
+        "headline"
+      ]
+    },
+    {
+      "id": "p1-b19",
+      "page": 1,
+      "box": [
+        0.35261474,
+        0.49189458,
+        0.9131167,
+        0.50335526
+      ],
+      "candidate_ids": [
+        "headline"
+      ]
+    },
+    {
+      "id": "p2-b10",
+      "page": 2,
+      "box": [
+        0.07646705,
+        0.27745537,
+        0.4842933,
+        0.28764259
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p2-b11",
+      "page": 2,
+      "box": [
+        0.07646705,
+        0.29400861,
+        0.48434297,
+        0.30419583
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p2-b12",
+      "page": 2,
+      "box": [
+        0.07646705,
+        0.31056185,
+        0.48435097,
+        0.32074906
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p2-b75",
+      "page": 2,
+      "box": [
+        0.51528324,
+        0.47611088,
+        0.92310983,
+        0.48629814
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p2-b76",
+      "page": 2,
+      "box": [
+        0.51528324,
+        0.49266411,
+        0.92309465,
+        0.50285137
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p2-b77",
+      "page": 2,
+      "box": [
+        0.51528324,
+        0.50921735,
+        0.71949237,
+        0.51940461
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b10",
+      "page": 4,
+      "box": [
+        0.07646581,
+        0.37626803,
+        0.48428545,
+        0.38645529
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p4-b11",
+      "page": 4,
+      "box": [
+        0.07646581,
+        0.39282123,
+        0.4843135,
+        0.40300848
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p4-b12",
+      "page": 4,
+      "box": [
+        0.07646581,
+        0.40937446,
+        0.48430945,
+        0.41956172
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p4-b31",
+      "page": 4,
+      "box": [
+        0.0764688,
+        0.77357533,
+        0.48433928,
+        0.78376255
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b32",
+      "page": 4,
+      "box": [
+        0.0764688,
+        0.79012958,
+        0.48429114,
+        0.8003168
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b33",
+      "page": 4,
+      "box": [
+        0.0764688,
+        0.80668375,
+        0.48426843,
+        0.81687097
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b43",
+      "page": 4,
+      "box": [
+        0.51528345,
+        0.29197096,
+        0.92313792,
+        0.30215818
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b44",
+      "page": 4,
+      "box": [
+        0.51528345,
+        0.3085242,
+        0.92311936,
+        0.31871142
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b48",
+      "page": 4,
+      "box": [
+        0.51528206,
+        0.37473704,
+        0.92315258,
+        0.3849243
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b49",
+      "page": 4,
+      "box": [
+        0.51528206,
+        0.39129028,
+        0.92311003,
+        0.40149716
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p4-b50",
+      "page": 4,
+      "box": [
+        0.51528206,
+        0.40784352,
+        0.92309937,
+        0.41803077
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p3-b61",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.31056286,
+        0.92312182,
+        0.32075008
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b62",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.3271161,
+        0.92312675,
+        0.33730333
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b63",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.34366927,
+        0.92311106,
+        0.35385653
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b64",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.36022251,
+        0.92312572,
+        0.37040977
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b65",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.37677574,
+        0.92312716,
+        0.386963
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b66",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.39334119,
+        0.9230924,
+        0.40352845
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b67",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.40989442,
+        0.9230802,
+        0.42008168
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b68",
+      "page": 3,
+      "box": [
+        0.51528196,
+        0.42644762,
+        0.92313115,
+        0.43663488
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b69",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.44300086,
+        0.92307784,
+        0.45318811
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b70",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.45955409,
+        0.84283234,
+        0.46974135
+      ],
+      "candidate_ids": [
+        "study-design"
+      ]
+    },
+    {
+      "id": "p3-b79",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.67472291,
+        0.92326516,
+        0.68494047
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b80",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.69130649,
+        0.58136028,
+        0.70149371
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b81",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.72438363,
+        0.92332658,
+        0.7346012
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b82",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.74097938,
+        0.57722043,
+        0.7511666
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b83",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.77405652,
+        0.92329992,
+        0.78427409
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b84",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.7906401,
+        0.53976094,
+        0.80082732
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b85",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.82371724,
+        0.92327142,
+        0.83393481
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p3-b86",
+      "page": 3,
+      "box": [
+        0.51528335,
+        0.84030082,
+        0.82305863,
+        0.85048804
+      ],
+      "candidate_ids": [
+        "hypotheses-one"
+      ]
+    },
+    {
+      "id": "p5-b23",
+      "page": 5,
+      "box": [
+        0.09319776,
+        0.61633555,
+        0.48428263,
+        0.6265228
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b24",
+      "page": 5,
+      "box": [
+        0.07646161,
+        0.63288878,
+        0.48428791,
+        0.64307604
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b25",
+      "page": 5,
+      "box": [
+        0.07646161,
+        0.64944198,
+        0.484328,
+        0.65962924
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b26",
+      "page": 5,
+      "box": [
+        0.07646161,
+        0.66599525,
+        0.48429191,
+        0.67618247
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b27",
+      "page": 5,
+      "box": [
+        0.07646161,
+        0.68254849,
+        0.48430273,
+        0.69273571
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b28",
+      "page": 5,
+      "box": [
+        0.07646161,
+        0.69910172,
+        0.30098699,
+        0.70928894
+      ],
+      "candidate_ids": [
+        "study-one-result"
+      ]
+    },
+    {
+      "id": "p5-b34",
+      "page": 5,
+      "box": [
+        0.07646715,
+        0.84045326,
+        0.48430017,
+        0.85064048
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p5-b35",
+      "page": 5,
+      "box": [
+        0.07646849,
+        0.8570065,
+        0.48421178,
+        0.86719372
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p5-b36",
+      "page": 5,
+      "box": [
+        0.07646849,
+        0.87355966,
+        0.48429073,
+        0.88374688
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p5-b37",
+      "page": 5,
+      "box": [
+        0.07646849,
+        0.89011297,
+        0.48432021,
+        0.90030019
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p5-b38",
+      "page": 5,
+      "box": [
+        0.07646849,
+        0.90666613,
+        0.48429478,
+        0.91685335
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p5-b63",
+      "page": 5,
+      "box": [
+        0.51528478,
+        0.65766032,
+        0.92326916,
+        0.66787789
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p5-b64",
+      "page": 5,
+      "box": [
+        0.51528478,
+        0.67424398,
+        0.74245719,
+        0.6844312
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p5-b65",
+      "page": 5,
+      "box": [
+        0.51528478,
+        0.70732104,
+        0.92327593,
+        0.71753861
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p5-b66",
+      "page": 5,
+      "box": [
+        0.51528478,
+        0.72390462,
+        0.80905633,
+        0.73409184
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b20",
+      "page": 6,
+      "box": [
+        0.07646751,
+        0.74070298,
+        0.48446776,
+        0.75092055
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b21",
+      "page": 6,
+      "box": [
+        0.07646751,
+        0.75728758,
+        0.37153914,
+        0.7674748
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b22",
+      "page": 6,
+      "box": [
+        0.07646751,
+        0.79036471,
+        0.48444776,
+        0.80058228
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b23",
+      "page": 6,
+      "box": [
+        0.07646751,
+        0.80694931,
+        0.37355014,
+        0.81713653
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b52",
+      "page": 6,
+      "box": [
+        0.51528617,
+        0.85658335,
+        0.92330259,
+        0.86680092
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b53",
+      "page": 6,
+      "box": [
+        0.51528617,
+        0.87317911,
+        0.76964211,
+        0.88336632
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b54",
+      "page": 6,
+      "box": [
+        0.51528617,
+        0.90625624,
+        0.92330126,
+        0.91647381
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p6-b55",
+      "page": 6,
+      "box": [
+        0.51528617,
+        0.92283983,
+        0.7920792,
+        0.93302705
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p7-b20",
+      "page": 7,
+      "box": [
+        0.07646576,
+        0.47200426,
+        0.48447827,
+        0.48222183
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p7-b21",
+      "page": 7,
+      "box": [
+        0.07646576,
+        0.48858781,
+        0.4844208,
+        0.49877506
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p7-b22",
+      "page": 7,
+      "box": [
+        0.07646576,
+        0.50514104,
+        0.2332379,
+        0.5153283
+      ],
+      "candidate_ids": [
+        "study-two-hypotheses"
+      ]
+    },
+    {
+      "id": "p7-b24",
+      "page": 7,
+      "box": [
+        0.0764671,
+        0.58027683,
+        0.48429745,
+        0.59046409
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p7-b25",
+      "page": 7,
+      "box": [
+        0.0764671,
+        0.59683007,
+        0.48434041,
+        0.60701732
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p7-b26",
+      "page": 7,
+      "box": [
+        0.0764671,
+        0.6133833,
+        0.48425198,
+        0.62357056
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p7-b27",
+      "page": 7,
+      "box": [
+        0.0764671,
+        0.62993654,
+        0.48431755,
+        0.64014342
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p7-b41",
+      "page": 7,
+      "box": [
+        0.0764671,
+        0.90498976,
+        0.48431093,
+        0.91517698
+      ],
+      "candidate_ids": [
+        "study-two"
+      ]
+    },
+    {
+      "id": "p8-b36",
+      "page": 8,
+      "box": [
+        0.51528263,
+        0.84045139,
+        0.92313833,
+        0.85063861
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p8-b37",
+      "page": 8,
+      "box": [
+        0.51528263,
+        0.85700463,
+        0.92306225,
+        0.86719185
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p8-b38",
+      "page": 8,
+      "box": [
+        0.51528263,
+        0.87355779,
+        0.84257057,
+        0.883745
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p9-b33",
+      "page": 9,
+      "box": [
+        0.09320724,
+        0.70785965,
+        0.48429335,
+        0.71804687
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p9-b34",
+      "page": 9,
+      "box": [
+        0.07647109,
+        0.72441288,
+        0.48429463,
+        0.7346001
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p9-b35",
+      "page": 9,
+      "box": [
+        0.07647109,
+        0.74097837,
+        0.48432683,
+        0.75116559
+      ],
+      "candidate_ids": [
+        "study-two-direct"
+      ]
+    },
+    {
+      "id": "p10-b27",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.59733376,
+        0.48429596,
+        0.60752102
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b28",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.613887,
+        0.48430263,
+        0.62407426
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b29",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.63044024,
+        0.48425316,
+        0.64062749
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b30",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.64699351,
+        0.48423983,
+        0.65718077
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b34",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.71320641,
+        0.48429191,
+        0.72339363
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b35",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.72975965,
+        0.48433739,
+        0.73994687
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b36",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.74631281,
+        0.48427858,
+        0.75650003
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b37",
+      "page": 10,
+      "box": [
+        0.07646705,
+        0.76286612,
+        0.48429207,
+        0.77305334
+      ],
+      "candidate_ids": [
+        "study-two-indirect"
+      ]
+    },
+    {
+      "id": "p10-b72",
+      "page": 10,
+      "box": [
+        0.51528335,
+        0.53468481,
+        0.92310993,
+        0.54487207
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p10-b73",
+      "page": 10,
+      "box": [
+        0.51528335,
+        0.55123801,
+        0.9230845,
+        0.56142527
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p10-b74",
+      "page": 10,
+      "box": [
+        0.51528335,
+        0.56779124,
+        0.92312203,
+        0.5779785
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p10-b75",
+      "page": 10,
+      "box": [
+        0.51528335,
+        0.58434448,
+        0.9230764,
+        0.59453174
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p11-b18",
+      "page": 11,
+      "box": [
+        0.07646842,
+        0.34366393,
+        0.48429883,
+        0.35385119
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p11-b19",
+      "page": 11,
+      "box": [
+        0.07646842,
+        0.36021716,
+        0.48428263,
+        0.37040442
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "p11-b20",
+      "page": 11,
+      "box": [
+        0.07646842,
+        0.3767704,
+        0.40082828,
+        0.38695766
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "source": {
+    "sha256": "a7e9af58bd50336152cf35fb02514a3cd70b189a08653ac27b8ac4e0fba971cf",
+    "pages": 14,
+    "extractor": "1.28.2"
+  },
+  "provenance": {
+    "skill": "academic-skimming/7"
+  }
+}

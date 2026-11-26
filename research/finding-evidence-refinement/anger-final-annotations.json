@@ -1,0 +1,776 @@
+{
+  "id": "anger",
+  "shortTitle": "Anger and Paper Disposal",
+  "opening": [
+    "opening-question",
+    "opening-result"
+  ],
+  "candidates": [
+    {
+      "id": "opening-question",
+      "role": "objective",
+      "label": "Can disposing of written thoughts reduce anger?",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "This study shows that physical disposal of a piece of paper containing one’s written thoughts on the cause of a provocative event neutralises anger, while holding the paper did not.",
+          "boxes": [
+            [
+              0.369886967773394,
+              0.3432157360739019,
+              0.9094045490200139,
+              0.3547193622725158
+            ],
+            [
+              0.261904565813169,
+              0.3572731672886081,
+              0.8870176218393759,
+              0.36877679348722203
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "opening-result",
+      "role": "result",
+      "label": "Disposal and retention led to different ratings",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "All the participants showed an increased subjective rating of anger after receiving the insulting feedback. However, the subjective anger for the disposal group decreased as low as the baseline period, while that of the retention group was still higher than that in the baseline period in both experiments.",
+          "boxes": [
+            [
+              0.7069414386159961,
+              0.4275603233621392,
+              0.904413754879946,
+              0.4390639495607532
+            ],
+            [
+              0.261904565813169,
+              0.44161775457684543,
+              0.9059936942463191,
+              0.4531213807754594
+            ],
+            [
+              0.261904565813169,
+              0.45567518579155164,
+              0.9272329177181585,
+              0.4671788119901656
+            ],
+            [
+              0.261904565813169,
+              0.4697326170062579,
+              0.7063546310251654,
+              0.48123624320487185
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "prediction",
+      "role": "objective",
+      "label": "Why compare throwing away and shredding?",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "If the action of disposal is crucial to modifying emotions, anger would be reduced only in participants in Experiment 1 but not in Experiment 2, as predicted by the grounded separation procedure 29 . Nevertheless, if anger was modified by the meaning of disposal, the subjective ratings of anger would be eliminated in both experiments.",
+          "boxes": [
+            [
+              0.8988364724536871,
+              0.5855298424309975,
+              0.9309424536192098,
+              0.6010482341729276
+            ],
+            [
+              0.2619069137677313,
+              0.5983103711376576,
+              0.9312070368109671,
+              0.6138287628795878
+            ],
+            [
+              0.2619069137677313,
+              0.6110908998443176,
+              0.7517788387235502,
+              0.6266092915862479
+            ],
+            [
+              0.7519737012276658,
+              0.6110517314082228,
+              0.7615357363172713,
+              0.6211386860404774
+            ],
+            [
+              0.761663487014427,
+              0.6110960125670725,
+              0.930951346763518,
+              0.6266144043090027
+            ],
+            [
+              0.2619037117169179,
+              0.6238765412737326,
+              0.9309105253745762,
+              0.6393949330156629
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "throw",
+        "shred",
+        "result-two"
+      ]
+    },
+    {
+      "id": "population",
+      "role": "method",
+      "label": "Who took part in the two experiments?",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "A total of 57 students (women = 21, mean age = 21.11, SD = 1.05) from a local university participated in this experiment.",
+          "boxes": [
+            [
+              0.261904565813169,
+              0.7285378106094109,
+              0.9310277931207578,
+              0.7442057494919232
+            ],
+            [
+              0.261949919976616,
+              0.7414678864566531,
+              0.3379178830406142,
+              0.7569862781985832
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "Our final analysis included 50 participants",
+          "boxes": [
+            [
+              0.8759338572119775,
+              0.7670340565927282,
+              0.930956702489266,
+              0.7825524483346583
+            ],
+            [
+              0.2619030470420444,
+              0.7798145852993883,
+              0.4632860163254631,
+              0.7953329770413184
+            ]
+          ]
+        },
+        {
+          "page": 5,
+          "text": "A total of 48 participants (women = 24, mean age = 26.81, SD = 9.42) were participated through worker dispatch- ing company and a local university. There was no overlap between the participants of the two experiments.",
+          "boxes": [
+            [
+              0.261904565813169,
+              0.42438526043442804,
+              0.9308856706394935,
+              0.4400531993169403
+            ],
+            [
+              0.26190455934222096,
+              0.4373153362816702,
+              0.9308599683570011,
+              0.4528337280236004
+            ]
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Our final analysis included 46 participants",
+          "boxes": [
+            [
+              0.5537612073937213,
+              0.5395659568383947,
+              0.8093652559438097,
+              0.5550843485803248
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "measures",
+      "role": "method",
+      "label": "How self-reported anger was measured",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "Angry feelings were assessed with five adjective items: angry, bothered, annoyed, hostile, and irritated. These adjectives were previously used as measures of self-reported anger 39 . In this study, each response scale ranged from 1 (not at all) to 6 (extremely). As was the case in a previous study on anger 40 , scores on these five adjectives were averaged to form an anger experience composite, which was the score used in the analysis",
+          "boxes": [
+            [
+              0.2619057289307817,
+              0.8846177326915162,
+              0.9308157808368335,
+              0.9001361244334464
+            ],
+            [
+              0.2619057289307817,
+              0.8973982613981764,
+              0.6665380339513739,
+              0.9129166531401065
+            ],
+            [
+              0.6666063957189606,
+              0.8973641959335958,
+              0.6760848981279273,
+              0.9074511505658506
+            ],
+            [
+              0.6761297199383144,
+              0.8974084868436861,
+              0.9309444613356275,
+              0.9129268785856163
+            ],
+            [
+              0.2618983381927039,
+              0.9101890155503463,
+              0.7377972450248927,
+              0.9257074072922764
+            ],
+            [
+              0.7378280053454196,
+              0.9101460028209447,
+              0.7472721119447113,
+              0.9202329574531993
+            ],
+            [
+              0.7472872979979035,
+              0.910190293731035,
+              0.9309261478846067,
+              0.9257086854729651
+            ],
+            [
+              0.2619057270963386,
+              0.9229708224376951,
+              0.8508772058877083,
+              0.9384892141796253
+            ]
+          ]
+        },
+        {
+          "page": 3,
+          "text": "In this experiment, participants’ subjective emotional states were measured at three time points (baseline, post- provocation, and post-writing).",
+          "boxes": [
+            [
+              0.26190928231778204,
+              0.11427001700363769,
+              0.9308359650896507,
+              0.12978840874556788
+            ],
+            [
+              0.26190928231778204,
+              0.1270505457102978,
+              0.45448541938600817,
+              0.142568937452228
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "provocation",
+      "role": "method",
+      "label": "The provocation and common writing task",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "In this study, participants wrote brief opinions about social problems and received a handwritten, insulting comment consisting of low evaluations about their composition from a confederate. Then, the participants wrote the cause and their thoughts about the provocative event.",
+          "boxes": [
+            [
+              0.8901454646749698,
+              0.3572731672886081,
+              0.9303670941482128,
+              0.36877679348722203
+            ],
+            [
+              0.261904565813169,
+              0.3713305985033143,
+              0.9133007248913645,
+              0.38283422470192824
+            ],
+            [
+              0.261904565813169,
+              0.38538802971802055,
+              0.8762500123066881,
+              0.3968916559166345
+            ],
+            [
+              0.261904565813169,
+              0.39944546093272676,
+              0.7655100833380726,
+              0.4109490871313407
+            ]
+          ]
+        },
+        {
+          "page": 3,
+          "text": "We added guide questions (‘Why were you feeling this way?’, ‘What made you feel this way?’) to induce analytical rumination.",
+          "boxes": [
+            [
+              0.7684093598260358,
+              0.30599712031387016,
+              0.9311107561172902,
+              0.3215155120558004
+            ],
+            [
+              0.261905882945054,
+              0.3187776490205303,
+              0.8737628525493195,
+              0.3342960407624605
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    },
+    {
+      "id": "throw",
+      "role": "method",
+      "label": "Experiment 1 · Keep the page or throw it away",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "For the retention group, the paper was turned over, put in a clear plastic folder, and placed on the right side of the desk. The participants in the disposal group rolled up the paper into a crumpled ball, stood up, threw the paper into the trash can held by the experimenter, and sat back in the chair.",
+          "boxes": [
+            [
+              0.36830993310057103,
+              0.35711923514051064,
+              0.9309157204390788,
+              0.3726376268824409
+            ],
+            [
+              0.261905882945054,
+              0.36989976384717077,
+              0.9310124822656893,
+              0.38541815558910103
+            ],
+            [
+              0.261905882945054,
+              0.3826802925538309,
+              0.792695499564075,
+              0.3981986842957611
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "provocation",
+        "result-one"
+      ]
+    },
+    {
+      "id": "result-one",
+      "role": "result",
+      "label": "Experiment 1 · Lower anger after disposal",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "The provocation treatments evoked anger in both the groups similarly. Nevertheless, the retention group still showed significantly higher anger compared to levels at the baseline period, while the dis- posal group completely eliminated their anger after the disposal of the anger-written paper.",
+          "boxes": [
+            [
+              0.3996740599172578,
+              0.6864429749962293,
+              0.9310098070697567,
+              0.7019613667381596
+            ],
+            [
+              0.26190471961241507,
+              0.6992235037028894,
+              0.9309886403945471,
+              0.7147418954448196
+            ],
+            [
+              0.26190471961241507,
+              0.7120040324095496,
+              0.8047114727170435,
+              0.7275224241514797
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "measures",
+        "result-two"
+      ]
+    },
+    {
+      "id": "shred",
+      "role": "method",
+      "label": "Experiment 2 · Match the action and distance",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "We set up the second experiment: (1) to replicate the results of Experiment 1; (2) to exclude the embodied explanation as much as possible; and (3) to explore another version of the disposal method using a shredder on the desk.",
+          "boxes": [
+            [
+              0.29227128884711817,
+              0.2046838555630259,
+              0.9310731531864043,
+              0.22020224730495613
+            ],
+            [
+              0.261904565813169,
+              0.217464384269686,
+              0.9307874034233645,
+              0.23298277601161624
+            ],
+            [
+              0.261904565813169,
+              0.23024491297634614,
+              0.3155448804132227,
+              0.24576330471827637
+            ]
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Participants of retention group put the paper into a clear box on the desk, and the disposal group put the paper into the shredder. Thus, the distance between the participants and the paper and the type of action were matched between the two groups.",
+          "boxes": [
+            [
+              0.4458513502323806,
+              0.25580597038966635,
+              0.9308856771422065,
+              0.2713243621315966
+            ],
+            [
+              0.261904565813169,
+              0.2685864990963265,
+              0.9310640817525677,
+              0.28410489083825674
+            ],
+            [
+              0.261904565813169,
+              0.2813670278029866,
+              0.6066005624230542,
+              0.2968854195449168
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "population",
+        "prediction",
+        "result-two"
+      ]
+    },
+    {
+      "id": "result-two",
+      "role": "result",
+      "label": "Experiment 2 · The pattern persisted without throwing",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "The results were essentially the same as those of Experiment 1. The disposal group significantly reduced their anger after disposing of the anger-written paper into the shredder.",
+          "boxes": [
+            [
+              0.26190471961241507,
+              0.9144635092195174,
+              0.9309251404208984,
+              0.9299819009614475
+            ],
+            [
+              0.26190471961241507,
+              0.9272440379261775,
+              0.6728697031905467,
+              0.9427624296681076
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "shred",
+        "scope"
+      ]
+    },
+    {
+      "id": "scope",
+      "role": "caveat",
+      "label": "The result concerns self-reported anger",
+      "anchors": [
+        {
+          "page": 8,
+          "text": "It should be mentioned that although provocation was effective in both the subjective anger score and the PANAS negative score, the revealed emotion regulation strategy in this study seemed specific to anger (as no significant interaction effect for the PANAS negative score was observed).",
+          "boxes": [
+            [
+              0.2820582424270423,
+              0.08709378856079414,
+              0.9309234747207547,
+              0.10261218030272434
+            ],
+            [
+              0.261904565813169,
+              0.09987431726745426,
+              0.9309219627796281,
+              0.11539270900938446
+            ],
+            [
+              0.261904565813169,
+              0.11265484597411439,
+              0.6983211014414822,
+              0.12817323771604458
+            ]
+          ]
+        }
+      ],
+      "related_to": []
+    }
+  ],
+  "route": [
+    {
+      "id": "provocation",
+      "title": "The provocation and common writing task",
+      "context": []
+    },
+    {
+      "id": "population",
+      "title": "Who took part in the two experiments?",
+      "context": [],
+      "note": "Both experiments excluded participants who guessed the study’s purpose and did not show an increase in anger after the insult."
+    },
+    {
+      "id": "measures",
+      "title": "How self-reported anger was measured",
+      "context": []
+    },
+    {
+      "id": "prediction",
+      "title": "Why compare throwing away and shredding?",
+      "context": [
+        "throw",
+        "shred",
+        "result-two"
+      ]
+    },
+    {
+      "id": "throw",
+      "title": "Experiment 1 · Keep the page or throw it away",
+      "context": [
+        "provocation",
+        "result-one"
+      ]
+    },
+    {
+      "id": "result-one",
+      "title": "Experiment 1 · Lower anger after disposal",
+      "context": [
+        "measures",
+        "result-two"
+      ]
+    },
+    {
+      "id": "shred",
+      "title": "Experiment 2 · Match the action and distance",
+      "context": [
+        "population",
+        "prediction",
+        "result-two"
+      ]
+    },
+    {
+      "id": "result-two",
+      "title": "Experiment 2 · The pattern persisted without throwing",
+      "context": [
+        "shred",
+        "scope"
+      ],
+      "note": "The matched action supports the narrower conclusion that throwing is unnecessary. The perceived meaning of disposal is an interpretation, and these are immediate self-reports.",
+      "visual": [
+        {
+          "label": "Figure 1 · Self-reported anger in both experiments",
+          "page": 4,
+          "box": [
+            0.2133464141003501,
+            0.06135267305927435,
+            0.9340205215731863,
+            0.325936075627395
+          ],
+          "note": "Both panels use the same three measurements and 1–6 scale. Compare the groups at the end: disposal means were 1.87 and 1.98, versus 2.64 and 2.75 for retention."
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "The result concerns self-reported anger",
+      "context": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "p1-b6",
+      "page": 1,
+      "box": [
+        0.26190457,
+        0.31270413,
+        0.93348038,
+        0.4950939
+      ],
+      "candidate_ids": [
+        "opening-question",
+        "opening-result",
+        "provocation"
+      ]
+    },
+    {
+      "id": "p3-b5",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.10133991,
+        0.93481556,
+        0.28317399
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p3-b6",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.28043615,
+        0.93462721,
+        0.4365404
+      ],
+      "candidate_ids": [
+        "provocation",
+        "throw"
+      ]
+    },
+    {
+      "id": "p2-b7",
+      "page": 2,
+      "box": [
+        0.26189803,
+        0.52161821,
+        0.93463951,
+        0.69052089
+      ],
+      "candidate_ids": [
+        "prediction"
+      ]
+    },
+    {
+      "id": "p2-b8",
+      "page": 2,
+      "box": [
+        0.26187291,
+        0.70233376,
+        0.93448735,
+        0.85924074
+      ],
+      "candidate_ids": [
+        "population"
+      ]
+    },
+    {
+      "id": "p2-b9",
+      "page": 2,
+      "box": [
+        0.26189834,
+        0.87168763,
+        0.93437528,
+        0.93848919
+      ],
+      "candidate_ids": [
+        "measures"
+      ]
+    },
+    {
+      "id": "p5-b5",
+      "page": 5,
+      "box": [
+        0.26190457,
+        0.1259901,
+        0.93450601,
+        0.38636698
+      ],
+      "candidate_ids": [
+        "shred"
+      ]
+    },
+    {
+      "id": "p5-b6",
+      "page": 5,
+      "box": [
+        0.26190044,
+        0.39818129,
+        0.93447115,
+        0.56786481
+      ],
+      "candidate_ids": [
+        "population"
+      ]
+    },
+    {
+      "id": "p8-b5",
+      "page": 8,
+      "box": [
+        0.261903,
+        0.08709385,
+        0.93443127,
+        0.23042283
+      ],
+      "candidate_ids": [
+        "scope"
+      ]
+    },
+    {
+      "id": "fresh-result-one-0",
+      "page": 4,
+      "box": [
+        0.26190471961241507,
+        0.6864429749962293,
+        0.9310098070697567,
+        0.7275224241514797
+      ],
+      "candidate_ids": [
+        "result-one"
+      ]
+    },
+    {
+      "id": "fresh-result-two-0",
+      "page": 6,
+      "box": [
+        0.26190471961241507,
+        0.9144635092195174,
+        0.9309251404208984,
+        0.9427624296681076
+      ],
+      "candidate_ids": [
+        "result-two"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": {
+    "sha256": "206b47aa5fac05984b918b1e2bff8c27e9aa0efcb60a9d1c3a6eaa88f589c17c",
+    "pages": 10,
+    "extractor": "PDF.js"
+  },
+  "provenance": {
+    "skill": "academic-skimming/7"
+  }
+}

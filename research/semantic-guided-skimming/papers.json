@@ -1,20 +1,25 @@
 {
   "papers": [
     {
-      "id": "programming",
-      "title": "Computer programmers show distinct, expertise-dependent brain responses to violations in form and meaning when reading code",
-      "authors": "Chu-Hsuan Kuo and Chantel S. Prat",
-      "year": 2024,
-      "source_url": "https://doi.org/10.1038/s41598-024-56090-6",
-      "license": "CC BY 4.0",
-      "pdf_sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
-      "annotations_sha256": "63af1d70929697d3d877d9e5f406f97f509c217f291b2ce0e697282e40a8ad28",
-      "redistribution": true,
-      "pdf_path": "research/phase-4/demo/programming/source.pdf",
+      "id": "ethereum",
+      "title": "Mining a Decade of Event Impacts on Contributor Dynamics in Ethereum: A Longitudinal Study",
+      "source_url": "https://arxiv.org/pdf/2502.05054v1",
+      "pdf_sha256": "9f2f2d74b74f81f1ecf619b16e99397e2badccacfb1b596ccb599f6b48caacfa",
+      "annotations_sha256": "c8d72dab815f24f51a5a909e769de27222a1f7a62691e9ff2cd0405500e8add9",
+      "redistribution": false,
+      "pdf_path": "research/phase-2.3/ethereum/source.pdf",
+      "license": "arXiv perpetual non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "local_guide": {
-        "path": "research/study-skimming-refinement/programming-annotations.json",
-        "sha256": "d6dd03705b5e35d266e8656336438fd3cd44143099bbccc677153350e3b8ecf4",
-        "skill": "academic-skimming/6"
+        "path": "research/finding-evidence-refinement/ethereum-final-annotations.json",
+        "sha256": "75dd161fa2e4d3aa420ea586fbde4c57d46cc2535b3742f77a93f85b81df0145",
+        "skill": "academic-skimming/7"
+      },
+      "remote_pdf": "https://arxiv.org/pdf/2502.05054v1",
+      "remote_guide": {
+        "path": "research/finding-evidence-refinement/ethereum-public-references.json",
+        "sha256": "c52b0c2fb99f72d8a5201781d17e5186a431a16e20f553497c9b2887f8e223ca",
+        "skill": "academic-skimming/7"
       }
     },
     {
@@ -29,27 +34,25 @@
       "redistribution": true,
       "pdf_path": "research/phase-4/demo/anger/source.pdf",
       "local_guide": {
-        "path": "research/study-skimming-refinement/anger-annotations.json",
-        "sha256": "65fcf621767f425c2bc2a1942ad2a5b07a09b5145548cec18ba6eed9e7927300",
-        "skill": "academic-skimming/6"
+        "path": "research/finding-evidence-refinement/anger-final-annotations.json",
+        "sha256": "bd0392b82fbf7c5e5bb8ccbe32787530b55b975f5ef82847561e494aeba56e83",
+        "skill": "academic-skimming/7"
       }
     },
     {
-      "id": "ethereum",
-      "title": "Mining a Decade of Event Impacts on Contributor Dynamics in Ethereum: A Longitudinal Study",
-      "source_url": "https://arxiv.org/pdf/2502.05054v1",
-      "pdf_sha256": "9f2f2d74b74f81f1ecf619b16e99397e2badccacfb1b596ccb599f6b48caacfa",
-      "annotations_sha256": "c8d72dab815f24f51a5a909e769de27222a1f7a62691e9ff2cd0405500e8add9",
-      "redistribution": false,
-      "pdf_path": "research/phase-2.3/ethereum/source.pdf",
-      "license": "arXiv perpetual non-exclusive distribution license",
-      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "remote_pdf": "https://arxiv.org/pdf/2502.05054v1",
-      "references_sha256": "9f7e1db8e73bbf7cc4ff0cbe808258e9d6f378b17c00719b7b04d94a8870a207",
-      "remote_guide": {
-        "path": "research/semantic-guided-skimming/ethereum-public-references.json",
-        "sha256": "d31a572f9662610c834ce4aece1dee932b34b3e0a6dae2fcfd91dddf3676ee4d",
-        "skill": "academic-skimming/5"
+      "id": "similarity",
+      "title": "Perceived general similarity and relationship satisfaction: The role of attributional confidence",
+      "authors": "Ting Hin Lee and Ting Kin Ng",
+      "year": 2024,
+      "source_url": "https://doi.org/10.1002/ejsp.3085",
+      "license": "Creative Commons Attribution License",
+      "pdf_sha256": "a7e9af58bd50336152cf35fb02514a3cd70b189a08653ac27b8ac4e0fba971cf",
+      "redistribution": true,
+      "pdf_path": "research/phase-4/demo/similarity/source.pdf",
+      "local_guide": {
+        "path": "research/finding-evidence-refinement/similarity-annotations.json",
+        "sha256": "bb44b5d110becb3cfa19fb05a794e6cfdd2507aeca90291df1a02328fd321a67",
+        "skill": "academic-skimming/7"
       }
     }
   ]

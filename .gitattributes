@@ -1,4 +1,6 @@
 # The reader verifies the exact bytes against the paper catalog.
 research/semantic-guided-skimming/*-annotations.json text eol=lf
 research/semantic-guided-skimming/ethereum-references.json text eol=lf
+research/finding-evidence-refinement/*-annotations*.json text eol=lf
+research/finding-evidence-refinement/*-references.json text eol=lf
 *.pdf -text
