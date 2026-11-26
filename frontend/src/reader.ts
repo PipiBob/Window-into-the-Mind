@@ -1,8 +1,9 @@
 import {sha256} from '../../research/phase-4/web/sha256.mjs';
 import {LABELS, defaultState, selectedIds, blockChoices} from './selection';
 import {textStrokes} from './highlightGeometry';
+import {TranslationPopup} from './translationPopup';
 import {clearTextInk, textInkBounds} from './textInk';
-import type {Box, Manifest, Mode, Paper, Role, Selection, SemanticRegion, Snapshot} from './types';
+import type {Box, Manifest, Mode, Paper, Role, Selection, Snapshot} from './types';
 
 export const asset = (path: string) => new URL(import.meta.env.BASE_URL + path.replace(/^\//, ''), document.baseURI).href;
 export const initialSnapshot: Snapshot = {library: [], paper: '', data: null, selection: null, ready: false, page: 1, pages: 0, status: 'Opening original PDF…', original: ''};
@@ -55,6 +56,7 @@ export class Reader {
   private getDocument!: (options: object) => LoadingTask;
   private loadingTask: LoadingTask | null = null;
   private generation = 0;
+  private translations = new TranslationPopup();
   private disposed = false;
   private lifecycle = new AbortController();
   private zoom = 'auto';
@@ -100,6 +102,7 @@ export class Reader {
       eventBus.on('pagechanging', event => {this.snapshot.page = event.pageNumber; this.save(); this.publish();});
       eventBus.on('scalechanging', () => requestAnimationFrame(() => {if(this.snapshot.ready && !this.disposed) this.renderMarkers();}));
       this.container.addEventListener('scroll', this.updateViewport, {passive: true});
+      this.translations.listen(this.container, this.lifecycle.signal);
       this.resize = new ResizeObserver(() => {
         clearTimeout(this.resizeTimer);
         this.resizeTimer = setTimeout(() => {
@@ -122,6 +125,7 @@ export class Reader {
   async openPaper(id: string) {
     if (id === this.snapshot.paper && this.snapshot.ready) return;
     this.save(); const token = ++this.generation;
+    this.translations.setPassages({});
     Object.assign(this.snapshot, {ready: false, data: null, selection: null, paper: id, original: '', page: 1, pages: 0});
     this.container.scrollTop = 0; this.notify('Opening original PDF…');
     document.getElementById('markers')!.replaceChildren();
@@ -142,6 +146,11 @@ export class Reader {
       if(token === this.generation && !this.disposed) await restorePassages(pdf, manifest);
       if(token !== this.generation || this.disposed) {await pdf.destroy(); return;}
       Object.assign(this.snapshot, {data: manifest, selection: this.sessions.get(id)?.state || defaultState(), original: entry.pdf, pages: pdf.numPages});
+      if (entry.translations) {
+        void json<{passages: Record<string, string[]>}>(asset(entry.translations)).then(({passages}) => {
+          if (token === this.generation && !this.disposed) this.translations.setPassages(passages);
+        }).catch(() => {});
+      }
       this.links.setDocument(pdf); this.viewer.setDocument(pdf);
       history.replaceState(null, '', `?paper=${encodeURIComponent(id)}`); this.publish();
     } catch(error) {if(token === this.generation && !this.disposed) this.notify(`Unable to open paper: ${error instanceof Error ? error.message : String(error)}`);}
@@ -162,30 +171,25 @@ export class Reader {
     } else state.enabled.add(role);
   });}
   reset() {this.change(state => {state.enabled = defaultState().enabled; state.overrides.clear();});}
-  goToStop(index: number, anchorIndex = 0, location?: Box) {
+  goToStop(index: number) {
     const {data, selection, ready} = this.snapshot;
     const stop = data?.route[index];
     if (!ready || !stop || !selection) return;
     selection.stopIndex = index;
     selection.mode = 'focus';
-    this.jumpTo(stop.id, anchorIndex, location);
-  }
-  goToRegion(region: SemanticRegion) {
-    const {data, selection} = this.snapshot;
-    const stop = data?.route.findIndex(item => item.id === region.target) ?? -1;
-    if (selection?.mode === 'focus' && stop >= 0) this.goToStop(stop, region.anchor_index, region.box);
-    else this.jumpTo(region.target, region.anchor_index, region.box);
+    this.jumpTo(stop.id);
   }
   clearStop() {this.change(state => {state.stopIndex = -1; state.selected = null;});}
-  setZoom(value: string) {this.zoom = value; if(this.snapshot.ready) this.viewer.currentScaleValue = value;}
+  setZoom(value: string) {this.translations.close(); this.zoom = value; if(this.snapshot.ready) this.viewer.currentScaleValue = value;}
   page(number: number) {if(this.snapshot.ready) {this.viewer.currentPageNumber = Math.max(1, Math.min(this.snapshot.pages, number || 1)); this.snapshot.page = this.viewer.currentPageNumber; this.publish();}}
   private refresh() {
+    this.translations.close();
     if(!this.snapshot.ready) return;
     this.renderOverlays(); this.renderMarkers(); this.save();
     const count = this.visible().size;
     this.notify(count ? `${count} passage groups highlighted.` : 'Original PDF.');
   }
-  jumpTo(id: string, anchorIndex = 0, location?: Box) {
+  jumpTo(id: string, anchorIndex = 0) {
     const {data, selection, ready} = this.snapshot;
     if(!data || !selection || !ready) return;
     const candidate = data.candidates.find(c => c.id === id);
@@ -194,13 +198,13 @@ export class Reader {
     selection.selected = id;
     this.lastAnchor = anchorIndex;
     this.refresh();
-    this.scrollToAnchor(id, anchorIndex, location);
+    this.scrollToAnchor(id, anchorIndex);
     this.notify(`${candidate.label} · PDF page ${anchor.page}.`);
   }
-  private scrollToAnchor(id: string, index: number, location?: Box) {
+  private scrollToAnchor(id: string, index: number) {
     const anchor = this.snapshot.data?.candidates.find(candidate => candidate.id === id)?.anchors[index];
     if (!anchor) return;
-    const box = location ?? anchor.boxes[0];
+    const box = anchor.boxes[0];
     this.viewer.currentPageNumber = anchor.page;
     const page = this.viewer.getPageView(anchor.page - 1);
     if (!page) return;
@@ -231,18 +235,29 @@ export class Reader {
     const align = canvas?.dataset.renderedInk === 'true' || (retainControls && canvas)
       ? (box: Box) => textInkBounds(canvas, box) : undefined;
     if (retainControls && canvas) canvas.dataset.renderedInk = 'true';
+    const aspect = page.clientWidth ? page.clientHeight / page.clientWidth : 1;
     for (const stroke of textStrokes(candidates, pageNumber, primary, selection.selected, align)) {
       const mark = make('span', undefined, `highlight stroke${stroke.focused ? ' focused' : ''}`);
       mark.dataset.candidate = stroke.id;
+      mark.dataset.anchor = String(stroke.anchorIndex);
+      mark.classList.toggle('stroke-start', stroke.start);
+      mark.classList.toggle('stroke-end', stroke.end);
       color(mark, stroke.role);
+      if (stroke.start || stroke.end) {
+        const [left, top, right, bottom] = stroke.box;
+        const cap = 35 * aspect * (bottom - top) / (right - left);
+        mark.style.setProperty('--stroke-cap', `${Math.min(50, cap)}%`);
+      }
       position(mark, stroke.box);
       layer.append(mark);
     }
     for (const candidate of candidates) {
-      for (const anchor of candidate.anchors.filter(anchor => anchor.region && anchor.page === pageNumber)) {
+      for (const [index, anchor] of candidate.anchors.entries()) {
+        if (!anchor.region || anchor.page !== pageNumber) continue;
         for (const box of anchor.boxes) {
           const mark = make('span', undefined, `highlight region${selection.selected === candidate.id ? ' focused' : ''}`);
           mark.dataset.candidate = candidate.id;
+          mark.dataset.anchor = String(index);
           color(mark, candidate.role);
           position(mark, box);
           layer.append(mark);
@@ -250,14 +265,6 @@ export class Reader {
       }
     }
     if (reuse) return;
-    for (const region of data.semantic_regions ?? []) {
-      if (region.page !== pageNumber) continue;
-      const outline = make('span', undefined, 'semantic-region');
-      outline.dataset.region = region.id;
-      outline.setAttribute('aria-hidden', 'true');
-      position(outline, region.box);
-      layer.prepend(outline);
-    }
     for(const block of selection.mode === 'explore' ? data.blocks.filter(b => b.page === pageNumber) : []) {
       const group = make('div', undefined, 'paragraph-control'); group.dataset.block = block.id; group.style.left = `${Math.max(.07, block.box[0] - .015)*100}%`; group.style.top = `${block.box[1]*100}%`;
       const choices = blockChoices(block, data, selection);
@@ -278,5 +285,5 @@ export class Reader {
     } this.updateViewport();
   }
   private updateViewport = () => {const marker = document.getElementById('viewport-marker'); if(!marker) return; marker.style.top = `${100*this.container.scrollTop/this.container.scrollHeight}%`; marker.style.height = `${Math.min(100, 100*this.container.clientHeight/this.container.scrollHeight)}%`;};
-  dispose() {this.disposed = true; this.lifecycle.abort(); this.generation++; this.resize?.disconnect(); clearTimeout(this.resizeTimer); this.container.removeEventListener('scroll', this.updateViewport); this.viewer?.setDocument(null); this.links?.setDocument(null); void this.loadingTask?.destroy();}
+  dispose() {this.disposed = true; this.lifecycle.abort(); this.translations.close(); this.generation++; this.resize?.disconnect(); clearTimeout(this.resizeTimer); this.container.removeEventListener('scroll', this.updateViewport); this.viewer?.setDocument(null); this.links?.setDocument(null); void this.loadingTask?.destroy();}
 }

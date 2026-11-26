@@ -51,26 +51,33 @@ export default function App() {
   const mode = selection?.mode ?? 'focus';
   const paper = snapshot.library.find(entry => entry.id === snapshot.paper);
   const stopIndex = selection?.stopIndex ?? -1;
-  useEffect(() => {panel.current?.scrollTo(0, 0);}, [snapshot.paper, mode, stopIndex]);
+  useEffect(() => {panel.current?.scrollTo(0, 0);}, [snapshot.paper, mode]);
   const stop = data?.route[stopIndex];
   const candidates = new Map(data?.candidates.map(candidate => [candidate.id, candidate]));
   const primary = stop ? candidates.get(stop.id) : undefined;
   const companions = stop?.context.map(id => candidates.get(id)!) ?? [];
   const evidence = companions.filter(candidate => candidate.anchors.some(anchor => anchor.region));
-  const context = companions.filter(candidate => !evidence.includes(candidate));
+  const connectionRoles = ['objective', 'method', 'result'] as const;
+  const evidenceIds = new Set(evidence.map(candidate => candidate.id));
+  const linked = primary && stop ? [...candidates.values()].filter(candidate =>
+    candidate.id !== primary.id && !evidenceIds.has(candidate.id) &&
+    (stop.context.includes(candidate.id) || primary.related_to.includes(candidate.id) || candidate.related_to.includes(primary.id))
+  ) : [];
   const selected = selection?.selected ? candidates.get(selection.selected) : undefined;
   const detour = stop && selected && selected !== primary ? selected : undefined;
-  const detourIsCompanion = Boolean(detour && stop?.context.includes(detour.id));
+  const detourIsEvidence = Boolean(detour && evidenceIds.has(detour.id));
   const shown = data && selection ? selectedIds(data, selection) : new Set<string>();
   const availableRoles = ROLES.filter(role => data?.candidates.some(candidate => candidate.role === role));
   const legendRoles = availableRoles.filter(role => data?.candidates.some(candidate => candidate.role === role && shown.has(candidate.id)));
-  const pageRegions = data?.semantic_regions?.filter(region => region.page === snapshot.page) ?? [];
   const explore = (data?.candidates ?? []).filter(candidate => shown.has(candidate.id))
     .sort((a, b) => a.anchors[0].page - b.anchors[0].page || a.anchors[0].boxes[0][1] - b.anchors[0].boxes[0][1]);
   const go = (index: number) => reader.current?.goToStop(index);
+  const step = (index: number) => {
+    go(index);
+    requestAnimationFrame(() => panel.current?.querySelector('[aria-current="step"]')?.scrollIntoView({block: 'nearest'}));
+  };
   const jump = (id: string, index = 0) => {
     reader.current?.jumpTo(id, index);
-    if (mode === 'focus' && id !== primary?.id) panel.current?.scrollTo(0, 0);
   };
   const navigate = (number: number) => {
     reader.current?.page(number);
@@ -97,6 +104,36 @@ export default function App() {
       {links.map(id => <button key={id} onClick={() => jump(id)}>{candidates.get(id)!.label} <span aria-hidden="true">↗</span></button>)}
     </div>;
   };
+
+  const activeDetails = stop && data && <section className="active-stop" id="active-stop" aria-labelledby={`route-stop-${stopIndex}`}>
+    <div className="stop-progress" aria-live="polite">Stop {stopIndex + 1} of {data.route.length}</div>
+    {stop.note && <p className="reading-note">{stop.note}</p>}
+    {primary && showPassage(primary)}
+    {evidence.length > 0 && <div className="context">
+      <h2>See the evidence</h2>
+      {evidence.map(showPassage)}
+    </div>}
+    {linked.length > 0 && <nav className="research-links context" aria-label="Connected passages">
+      <h2>How this passage connects</h2>
+      {[...connectionRoles, 'novelty', 'caveat'].flatMap(role => linked.filter(candidate => candidate.role === role).map(candidate =>
+        <div key={candidate.id}>
+          <button style={facet(candidate.role)} onClick={() => jump(candidate.id)}
+            aria-current={selected?.id === candidate.id ? 'location' : undefined}>
+            <i className="swatch" aria-hidden="true"/><span><small>{roles[candidate.role]}</small>{candidate.label}</span>
+            <small>p. {candidate.anchors[0].page} ↗</small>
+          </button>
+          {detour?.id === candidate.id && <div className="detour">
+            {showPassage(candidate)}
+            <button className="quiet" onClick={() => go(stopIndex)}>← Back to this stop</button>
+          </div>}
+        </div>))}
+    </nav>}
+    {detour && !linked.some(candidate => candidate.id === detour.id) && <div className="detour">
+      {!detourIsEvidence && <><h2>{detour.label}</h2>{showPassage(detour)}</>}
+      <button className="quiet" onClick={() => go(stopIndex)}>← Back to this stop</button>
+    </div>}
+    {primary?.purpose && <details className="why"><summary>Why this passage?</summary><p>{primary.purpose}</p></details>}
+  </section>;
 
   const tools = (<div className="pdf-toolbar">
           <nav aria-label="PDF navigation">
@@ -141,17 +178,33 @@ export default function App() {
         {ready && legendRoles.length > 0 && <div className="legend" aria-label="Highlight colors">
           {legendRoles.map(role => <span key={role} style={facet(role)} title={roles[role]}><i className="swatch"/>{LABELS[role]}</span>)}
         </div>}
-        {ready && mode !== 'original' && pageRegions.length > 0 && <nav className="semantic-topics" aria-label="Topics on this page">
-          {pageRegions.map(region => <button key={region.id} data-topic={region.id}
-            onClick={() => reader.current?.goToRegion(region)}>{region.label}</button>)}
-        </nav>}
         <div className="panel-content" ref={panel} key={snapshot.paper}>
           {snapshot.status.startsWith('Unable') ? <p className="message">{snapshot.status}</p> : !ready || !data ? <p className="message">Opening the original paper…</p> :
             mode === 'focus' ? <>
-              {!stop ? <div className="intro">
-                <h1>{paper?.shortTitle}</h1>
-                <p>Follow the study’s question, methods and findings through selected passages in the original paper.</p>
-                <button className="primary" onClick={() => go(0)}>Start skimming <span aria-hidden="true">→</span></button>
+              <nav className="route" aria-labelledby="reading-path-title">
+                <h1 id="reading-path-title">Reading path</h1>
+                <ol>{data.route.map((item, index) => {
+                  const candidate = candidates.get(item.id)!;
+                  const expanded = index === stopIndex;
+                  return <li key={item.id}>
+                    <button className="route-stop" id={`route-stop-${index}`} style={facet(candidate.role)}
+                      aria-expanded={expanded} aria-current={expanded ? 'step' : undefined}
+                      aria-controls={expanded ? 'active-stop' : undefined}
+                      onClick={event => {
+                        const row = event.currentTarget;
+                        const top = row.getBoundingClientRect().top;
+                        if (expanded) reader.current?.clearStop();
+                        else go(index);
+                        requestAnimationFrame(() => panel.current?.scrollBy(0, row.getBoundingClientRect().top - top));
+                      }}>
+                      <i className="swatch" aria-hidden="true"/><span>{item.title}</span>
+                      <small>p. {candidate.anchors[0].page} <span className="route-chevron" aria-hidden="true">{expanded ? '▾' : '▸'}</span></small>
+                    </button>
+                    {expanded && activeDetails}
+                  </li>;
+                })}</ol>
+              </nav>
+              {!stop && <div className="intro">
                 <div className="context">
                   <h2>On the first page</h2>
                   {data.opening.map(id => {
@@ -167,37 +220,8 @@ export default function App() {
                 {selected && !data.opening.includes(selected.id) && <div className="standalone-source">
                   {showPassage(selected)}{related(selected)}
                 </div>}
-              </div> : <section className="active-stop" aria-labelledby="active-title">
-                <div className="stop-progress" aria-live="polite">Stop {stopIndex + 1} of {data.route.length}</div>
-                <h1 id="active-title">{stop.title}</h1>
-                {detour && <div className="detour">
-                  <button className="quiet" onClick={() => go(stopIndex)}>← Back to this stop</button>
-                  {!detourIsCompanion && <><h2>{detour.label}</h2>{showPassage(detour)}</>}
-                </div>}
-                {stop.note && <p className="reading-note">{stop.note}</p>}
-                {primary && showPassage(primary)}
-                {evidence.length > 0 && <div className="context">
-                  <h2>See the evidence</h2>
-                  {evidence.map(showPassage)}
-                </div>}
-                {context.length > 0 && <div className="context">
-                  <h2>Read alongside</h2>
-                  {context.map(showPassage)}
-                </div>}
-                {primary?.purpose && <details className="why"><summary>Why this passage?</summary><p>{primary.purpose}</p></details>}
-                {primary && related(primary, stop.context)}
-              </section>}
-              <details className="route" open={stopIndex < 0 || undefined}>
-                <summary>Reading path</summary>
-                <ol>{data.route.map((item, index) => {
-                  const candidate = candidates.get(item.id)!;
-                  return <li key={item.id}>
-                    <button style={facet(candidate.role)} aria-current={index === stopIndex ? 'step' : undefined} onClick={() => go(index)}>
-                      <i className="swatch"/><span>{item.title}</span><small>p. {candidate.anchors[0].page}</small>
-                    </button>
-                  </li>;
-                })}</ol>
-              </details>
+              </div>}
+
             </> : mode === 'explore' ? <>
               <h1>Explore highlights</h1>
               <p className="message">Browse the saved passages in page order or filter by what you want to find.</p>
@@ -223,9 +247,9 @@ export default function App() {
             </> : null}
         </div>
         {ready && mode === 'focus' && stop && <nav className="stop-nav" aria-label="Reading stops">
-          <button onClick={() => stopIndex === 0 ? reader.current?.clearStop() : go(stopIndex - 1)}>← {stopIndex ? 'Previous' : 'Overview'}</button>
+          <button onClick={() => stopIndex === 0 ? reader.current?.clearStop() : step(stopIndex - 1)}>← {stopIndex ? 'Previous' : 'Overview'}</button>
           {data && stopIndex + 1 < data.route.length
-            ? <button className="primary" onClick={() => go(stopIndex + 1)}>Next stop →</button>
+            ? <button className="primary" onClick={() => step(stopIndex + 1)}>Next stop →</button>
             : <button className="primary" onClick={() => setMode('explore')}>Explore more →</button>}
         </nav>}
       </aside>

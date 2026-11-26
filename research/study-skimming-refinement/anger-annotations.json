@@ -1,0 +1,850 @@
+{
+  "id": "anger",
+  "shortTitle": "Anger and Paper Disposal",
+  "opening": [
+    "anger-overview",
+    "anger-summary"
+  ],
+  "candidates": [
+    {
+      "id": "anger-overview",
+      "role": "objective",
+      "label": "Can discarding what you wrote reduce anger?",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "This study shows that physical disposal of a piece of paper containing one’s written \nthoughts on the cause of a provocative event neutralises anger, while holding the paper did not.",
+          "boxes": [
+            [
+              0.36910763,
+              0.34081895,
+              0.90940451,
+              0.35451977
+            ],
+            [
+              0.26190457,
+              0.35487637,
+              0.88701499,
+              0.36857718
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-prediction",
+        "anger-write"
+      ]
+    },
+    {
+      "id": "anger-summary",
+      "role": "result",
+      "label": "Anger after disposal versus retention",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "However, the subjective \nanger for the disposal group decreased as low as the baseline period, while that of the retention group \nwas still higher than that in the baseline period in both experiments.",
+          "boxes": [
+            [
+              0.74818758,
+              0.43922085,
+              0.90599417,
+              0.45292166
+            ],
+            [
+              0.26190457,
+              0.45327826,
+              0.92723317,
+              0.46697907
+            ],
+            [
+              0.26190457,
+              0.46733567,
+              0.70751585,
+              0.48103648
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-result",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-write",
+      "role": "method",
+      "label": "Shared task · Provocation and guided writing",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "In this \nstudy, participants wrote brief opinions about social problems and received a handwritten, insulting \ncomment consisting of low evaluations about their composition from a confederate. Then, the \nparticipants wrote the cause and their thoughts about the provocative event.",
+          "boxes": [
+            [
+              0.89010686,
+              0.35487637,
+              0.93036739,
+              0.36857718
+            ],
+            [
+              0.26190457,
+              0.36893378,
+              0.91330116,
+              0.38263459
+            ],
+            [
+              0.26190457,
+              0.38299119,
+              0.87625041,
+              0.39669201
+            ],
+            [
+              0.26190457,
+              0.39704861,
+              0.76548959,
+              0.41074942
+            ]
+          ]
+        },
+        {
+          "page": 3,
+          "text": "We added guide questions \n(‘Why were you feeling this way?’, ‘What made you feel this way?’) to induce analytical rumination.",
+          "boxes": [
+            [
+              0.76931446,
+              0.30599727,
+              0.93111075,
+              0.32151567
+            ],
+            [
+              0.26190587,
+              0.31877783,
+              0.87456426,
+              0.33429621
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-action",
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-prediction",
+      "role": "objective",
+      "label": "Why compare throwing and shredding?",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "If the \naction of disposal is crucial to modifying emotions, anger would be reduced only in participants in Experiment \n1 but not in Experiment 2, as predicted by the grounded separation ­procedure29. Nevertheless, if anger was \nmodified by the meaning of disposal, the subjective ratings of anger would be eliminated in both experiments.",
+          "boxes": [
+            [
+              0.89893614,
+              0.58552982,
+              0.93094311,
+              0.6010482
+            ],
+            [
+              0.26190692,
+              0.59831034,
+              0.93120744,
+              0.61382872
+            ],
+            [
+              0.26190692,
+              0.61105174,
+              0.9309509,
+              0.62661439
+            ],
+            [
+              0.26190372,
+              0.62387653,
+              0.93091091,
+              0.63939491
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-action",
+        "anger-two-action",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-one-sample",
+      "role": "method",
+      "label": "Experiment 1 · Local university students",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "A total of 57 students (women = 21, mean age = 21.11, SD = 1.05) from a local university participated in this \nexperiment. The data from seven participants were excluded from the final analysis because they correctly \nguessed the purpose of the experiment and they did not express induced anger by insult (subjective ratings of \nanger were lower or the same compared to those of the baseline), as was the case in a previous",
+          "boxes": [
+            [
+              0.26190457,
+              0.72853779,
+              0.93102821,
+              0.74420573
+            ],
+            [
+              0.26194999,
+              0.74146791,
+              0.93097018,
+              0.75698629
+            ],
+            [
+              0.26194999,
+              0.75424839,
+              0.93097243,
+              0.76976677
+            ],
+            [
+              0.26194999,
+              0.76702887,
+              0.82360626,
+              0.78254725
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "Our final \nanalysis included 50 participants (women = 16, mean age = 21.10, SD = 1.08).",
+          "boxes": [
+            [
+              0.87574349,
+              0.76703402,
+              0.93095695,
+              0.7825524
+            ],
+            [
+              0.26190305,
+              0.77966502,
+              0.73059326,
+              0.79533296
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-two-sample",
+        "anger-one-action"
+      ]
+    },
+    {
+      "id": "anger-rating",
+      "role": "method",
+      "label": "Five anger ratings, taken at three points",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "Angry feelings were assessed with five adjective items: angry, bothered, annoyed, hostile, and irritated. These \nadjectives were previously used as measures of self-reported ­anger39. In this study, each response scale ranged \nfrom 1 (not at all) to 6 (extremely).",
+          "boxes": [
+            [
+              0.26190572,
+              0.88461775,
+              0.93081597,
+              0.90013613
+            ],
+            [
+              0.26190572,
+              0.89736421,
+              0.93094475,
+              0.91292683
+            ],
+            [
+              0.26189834,
+              0.91018901,
+              0.47044894,
+              0.92570739
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "scores on these five adjectives \nwere  averaged to form an anger experience composite, which was the score used in the analysis",
+          "boxes": [
+            [
+              0.75385656,
+              0.91019025,
+              0.9309266,
+              0.92570863
+            ],
+            [
+              0.26190572,
+              0.92297081,
+              0.85424288,
+              0.93848919
+            ]
+          ]
+        },
+        {
+          "page": 3,
+          "text": "In this experiment, participants’ subjective emotional states were measured at three time points (baseline, post-\nprovocation, and post-writing).",
+          "boxes": [
+            [
+              0.26190931,
+              0.11427001,
+              0.93083627,
+              0.1297884
+            ],
+            [
+              0.26190931,
+              0.12705057,
+              0.4540117,
+              0.14256896
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-result",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-one-action",
+      "role": "method",
+      "label": "Experiment 1 · Throw it away or keep it on the desk",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "For the retention group, the paper was turned over, put in a clear plastic folder, and placed on \nthe right side of the desk. The participants in the disposal group rolled up the paper into a crumpled ball, stood \nup, threw the paper into the trash can held by the experimenter, and sat back in the chair.",
+          "boxes": [
+            [
+              0.36870981,
+              0.35711943,
+              0.93091614,
+              0.37263781
+            ],
+            [
+              0.26190587,
+              0.36989994,
+              0.93101345,
+              0.38541833
+            ],
+            [
+              0.26190587,
+              0.38268046,
+              0.79304275,
+              0.39819884
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-sample",
+        "anger-one-result",
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-one-result",
+      "role": "result",
+      "label": "Experiment 1 · Discarding lowered self-reported anger",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "Subjective ratings at the post-writing decreased from the post-provocation, however those of retention group \nwere still higher than the baseline (Mretention = 2.64, SD = 0.95, 95% CI [2.26, 3.02]), while those of disposal group \neliminated at the same level of the baseline (Mdisposal = 1.87, SD = 0.71, 95% CI [1.59, 2.16]).",
+          "boxes": [
+            [
+              0.26194109,
+              0.81216174,
+              0.93107958,
+              0.82768012
+            ],
+            [
+              0.26194109,
+              0.82479274,
+              0.9310722,
+              0.84131454
+            ],
+            [
+              0.26191702,
+              0.8375758,
+              0.80521561,
+              0.85409635
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-action",
+        "anger-rating",
+        "anger-ratings-figure"
+      ]
+    },
+    {
+      "id": "anger-ratings-figure",
+      "role": "result",
+      "label": "Figure 1 · Three time points in both experiments",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "Self-reported anger during Experiment 1 (left) and Experiment 2 (right). Significant differences \nemerged at the end of time due to experimental manipulations. Possible values for anger range from 1 to 6. Each \nvertical line illustrates the 95% confidence intervals for each group.",
+          "boxes": [
+            [
+              0.32638692,
+              0.28401176,
+              0.89340656,
+              0.29953016
+            ],
+            [
+              0.26190423,
+              0.29679232,
+              0.92847556,
+              0.31231072
+            ],
+            [
+              0.26190423,
+              0.30957288,
+              0.65998679,
+              0.32509128
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-one-result",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-two-action",
+      "role": "method",
+      "label": "Experiment 2 · Same placement, different outcome for the paper",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "Participants of retention group put the paper into a clear box on the desk, and the \ndisposal group put the paper into the shredder. Thus, the distance between the participants and the paper and \nthe type of action were matched between the two groups.",
+          "boxes": [
+            [
+              0.44541942,
+              0.25580621,
+              0.93088549,
+              0.27132461
+            ],
+            [
+              0.26190457,
+              0.26858677,
+              0.93106451,
+              0.28410517
+            ],
+            [
+              0.26190457,
+              0.28136733,
+              0.6064827,
+              0.29688573
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-prediction",
+        "anger-two-sample",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-two-sample",
+      "role": "method",
+      "label": "Experiment 2 · Separate university and agency sample",
+      "anchors": [
+        {
+          "page": 5,
+          "text": "A total of 48 participants (women = 24, mean age = 26.81, SD = 9.42) were participated through worker dispatch-\ning company and a local university. There was no overlap between the participants of the two experiments.",
+          "boxes": [
+            [
+              0.26190457,
+              0.42438524,
+              0.930886,
+              0.44005318
+            ],
+            [
+              0.26190462,
+              0.43731532,
+              0.93085995,
+              0.4528337
+            ]
+          ]
+        },
+        {
+          "page": 5,
+          "text": "As in Experiment 1, the data of two participants were excluded from the final analysis because they \ncorrectly guessed the purpose of the experiment and did not express anger by insult (subjective ratings of anger \nwere lower or the same as those at the baseline). Our final analysis included 46 participants (women = 23, mean \nage = 26.39, SD = 9.14).",
+          "boxes": [
+            [
+              0.32726313,
+              0.51400487,
+              0.93103016,
+              0.52952325
+            ],
+            [
+              0.26190052,
+              0.52678539,
+              0.93080038,
+              0.54230377
+            ],
+            [
+              0.26190052,
+              0.53956591,
+              0.9309346,
+              0.55508429
+            ],
+            [
+              0.26190044,
+              0.55219688,
+              0.3993098,
+              0.56786481
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-two-result",
+      "role": "result",
+      "label": "Experiment 2 · The effect persisted with shredding",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "However, those of the retention group were still higher than those of the baseline (Mretention = 2.75, \nSD = 1.05, 95% CI [2.31, 3.19]), while those of the disposal group were eliminated at the same level as the base-\nline (Mdisposal = 1.98, SD = 0.87, 95% CI [1.62, 2.35]).",
+          "boxes": [
+            [
+              0.34225039,
+              0.4234914,
+              0.93097807,
+              0.44001175
+            ],
+            [
+              0.261923,
+              0.43627321,
+              0.93098576,
+              0.45194114
+            ],
+            [
+              0.26193817,
+              0.44905373,
+              0.57067793,
+              0.46557537
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-two-action",
+        "anger-prediction",
+        "anger-scope",
+        "anger-ratings-figure"
+      ]
+    },
+    {
+      "id": "anger-scope",
+      "role": "result",
+      "label": "The effect was specific to reported anger",
+      "anchors": [
+        {
+          "page": 8,
+          "text": "It should be mentioned that although provocation was effective in both the subjective anger score and the \nPANAS negative score, the revealed emotion regulation strategy in this study seemed specific to anger (as no \nsignificant interaction effect for the PANAS negative score was observed).",
+          "boxes": [
+            [
+              0.28205823,
+              0.08709385,
+              0.93092383,
+              0.10261224
+            ],
+            [
+              0.26190457,
+              0.09987441,
+              0.93092219,
+              0.1153928
+            ],
+            [
+              0.26190457,
+              0.11265496,
+              0.69883273,
+              0.12817335
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "anger-rating",
+        "anger-two-result"
+      ]
+    }
+  ],
+  "route": [
+    {
+      "id": "anger-write",
+      "title": "Shared task · Provocation and guided writing",
+      "context": [
+        "anger-one-action",
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-prediction",
+      "title": "Why compare throwing and shredding?",
+      "context": [
+        "anger-one-action",
+        "anger-two-action",
+        "anger-two-result"
+      ],
+      "note": "The second experiment tests whether the effect persists when both groups put the paper into a container at the same distance."
+    },
+    {
+      "id": "anger-one-sample",
+      "title": "Experiment 1 · Local university students",
+      "context": [
+        "anger-two-sample",
+        "anger-one-action"
+      ]
+    },
+    {
+      "id": "anger-rating",
+      "title": "Five anger ratings, taken at three points",
+      "context": [
+        "anger-one-result",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-one-action",
+      "title": "Experiment 1 · Throw it away or keep it on the desk",
+      "context": [
+        "anger-one-sample",
+        "anger-one-result",
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-one-result",
+      "title": "Experiment 1 · Discarding lowered self-reported anger",
+      "context": [
+        "anger-one-action",
+        "anger-rating",
+        "anger-ratings-figure"
+      ],
+      "note": "After writing, average anger was 1.87 in the disposal group and 2.64 in the retention group on the 1–6 scale. Figure 1 shows the change from baseline through all three measurements."
+    },
+    {
+      "id": "anger-two-action",
+      "title": "Experiment 2 · Same placement, different outcome for the paper",
+      "context": [
+        "anger-prediction",
+        "anger-two-sample",
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "anger-two-sample",
+      "title": "Experiment 2 · Separate university and agency sample",
+      "context": [
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "anger-two-result",
+      "title": "Experiment 2 · The effect persisted with shredding",
+      "context": [
+        "anger-two-action",
+        "anger-prediction",
+        "anger-scope",
+        "anger-ratings-figure"
+      ],
+      "note": "The groups averaged 1.98 (shred) and 2.75 (keep). The pattern persisted without throwing. Whether the perceived meaning of disposal caused the change remains an interpretation."
+    },
+    {
+      "id": "anger-scope",
+      "title": "The effect was specific to reported anger",
+      "context": [
+        "anger-rating",
+        "anger-two-result"
+      ],
+      "note": "These were immediate ratings after the intervention. The broader negative-affect scale did not show the same group-by-time pattern."
+    }
+  ],
+  "blocks": [
+    {
+      "id": "p1-b6",
+      "page": 1,
+      "box": [
+        0.26190457,
+        0.31270413,
+        0.93348038,
+        0.4950939
+      ],
+      "candidate_ids": [
+        "anger-overview",
+        "anger-summary",
+        "anger-write"
+      ]
+    },
+    {
+      "id": "p3-b5",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.10133991,
+        0.93481556,
+        0.28317399
+      ],
+      "candidate_ids": [
+        "anger-rating"
+      ]
+    },
+    {
+      "id": "p3-b6",
+      "page": 3,
+      "box": [
+        0.26190587,
+        0.28043615,
+        0.93462721,
+        0.4365404
+      ],
+      "candidate_ids": [
+        "anger-write",
+        "anger-one-action"
+      ]
+    },
+    {
+      "id": "p3-b11",
+      "page": 3,
+      "box": [
+        0.26189849,
+        0.734681,
+        0.93468883,
+        0.94271388
+      ],
+      "candidate_ids": [
+        "anger-one-result"
+      ]
+    },
+    {
+      "id": "p2-b7",
+      "page": 2,
+      "box": [
+        0.26189803,
+        0.52161821,
+        0.93463951,
+        0.69052089
+      ],
+      "candidate_ids": [
+        "anger-prediction"
+      ]
+    },
+    {
+      "id": "p2-b8",
+      "page": 2,
+      "box": [
+        0.26187291,
+        0.70233376,
+        0.93448735,
+        0.85924074
+      ],
+      "candidate_ids": [
+        "anger-one-sample"
+      ]
+    },
+    {
+      "id": "p2-b9",
+      "page": 2,
+      "box": [
+        0.26189834,
+        0.87168763,
+        0.93437528,
+        0.93848919
+      ],
+      "candidate_ids": [
+        "anger-rating"
+      ]
+    },
+    {
+      "id": "p4-b9",
+      "page": 4,
+      "box": [
+        0.26190423,
+        0.28360913,
+        0.93190753,
+        0.32509128
+      ],
+      "candidate_ids": [
+        "anger-ratings-figure"
+      ]
+    },
+    {
+      "id": "p5-b5",
+      "page": 5,
+      "box": [
+        0.26190457,
+        0.1259901,
+        0.93450601,
+        0.38636698
+      ],
+      "candidate_ids": [
+        "anger-two-action"
+      ]
+    },
+    {
+      "id": "p5-b6",
+      "page": 5,
+      "box": [
+        0.26190044,
+        0.39818129,
+        0.93447115,
+        0.56786481
+      ],
+      "candidate_ids": [
+        "anger-two-sample"
+      ]
+    },
+    {
+      "id": "p6-b4",
+      "page": 6,
+      "box": [
+        0.26185778,
+        0.33337833,
+        0.93452734,
+        0.60531639
+      ],
+      "candidate_ids": [
+        "anger-two-result"
+      ]
+    },
+    {
+      "id": "p8-b5",
+      "page": 8,
+      "box": [
+        0.261903,
+        0.08709385,
+        0.93443127,
+        0.23042283
+      ],
+      "candidate_ids": [
+        "anger-scope"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": {
+    "sha256": "206b47aa5fac05984b918b1e2bff8c27e9aa0efcb60a9d1c3a6eaa88f589c17c",
+    "pages": 10,
+    "extractor": "1.28.2"
+  },
+  "provenance": {
+    "skill": "academic-skimming/6"
+  }
+}

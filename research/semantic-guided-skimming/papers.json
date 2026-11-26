@@ -10,7 +10,12 @@
       "pdf_sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
       "annotations_sha256": "63af1d70929697d3d877d9e5f406f97f509c217f291b2ce0e697282e40a8ad28",
       "redistribution": true,
-      "pdf_path": "research/phase-4/demo/programming/source.pdf"
+      "pdf_path": "research/phase-4/demo/programming/source.pdf",
+      "local_guide": {
+        "path": "research/study-skimming-refinement/programming-annotations.json",
+        "sha256": "d6dd03705b5e35d266e8656336438fd3cd44143099bbccc677153350e3b8ecf4",
+        "skill": "academic-skimming/6"
+      }
     },
     {
       "id": "anger",
@@ -22,7 +27,12 @@
       "pdf_sha256": "206b47aa5fac05984b918b1e2bff8c27e9aa0efcb60a9d1c3a6eaa88f589c17c",
       "annotations_sha256": "fdf31b402cba58dac06f4188b8f5bb4d4654e7bc6dae28a65829a18cad357386",
       "redistribution": true,
-      "pdf_path": "research/phase-4/demo/anger/source.pdf"
+      "pdf_path": "research/phase-4/demo/anger/source.pdf",
+      "local_guide": {
+        "path": "research/study-skimming-refinement/anger-annotations.json",
+        "sha256": "65fcf621767f425c2bc2a1942ad2a5b07a09b5145548cec18ba6eed9e7927300",
+        "skill": "academic-skimming/6"
+      }
     },
     {
       "id": "ethereum",
@@ -35,7 +45,12 @@
       "license": "arXiv perpetual non-exclusive distribution license",
       "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "remote_pdf": "https://arxiv.org/pdf/2502.05054v1",
-      "references_sha256": "9f7e1db8e73bbf7cc4ff0cbe808258e9d6f378b17c00719b7b04d94a8870a207"
+      "references_sha256": "9f7e1db8e73bbf7cc4ff0cbe808258e9d6f378b17c00719b7b04d94a8870a207",
+      "remote_guide": {
+        "path": "research/semantic-guided-skimming/ethereum-public-references.json",
+        "sha256": "d31a572f9662610c834ce4aece1dee932b34b3e0a6dae2fcfd91dddf3676ee4d",
+        "skill": "academic-skimming/5"
+      }
     }
   ]
 }

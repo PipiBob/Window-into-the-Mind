@@ -1,0 +1,722 @@
+{
+  "id": "programming",
+  "shortTitle": "Programming and Brain Responses",
+  "opening": [
+    "code-overview",
+    "code-distinct"
+  ],
+  "candidates": [
+    {
+      "id": "code-overview",
+      "role": "objective",
+      "label": "Brain responses during Python reading",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "The current study addressed this gap by recording \nelectrophysiological brain responses as 62 Python programmers with varying skill levels read lines of \ncode with manipulations of form (syntax) and meaning (semantics).",
+          "boxes": [
+            [
+              0.5970999,
+              0.36510692,
+              0.92352898,
+              0.37880773
+            ],
+            [
+              0.26190457,
+              0.37916434,
+              0.91612203,
+              0.39286515
+            ],
+            [
+              0.26190457,
+              0.39322175,
+              0.70309188,
+              0.40692256
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-questions",
+        "code-population"
+      ]
+    },
+    {
+      "id": "code-distinct",
+      "role": "result",
+      "label": "Different brain responses to syntax and meaning",
+      "anchors": [
+        {
+          "page": 1,
+          "text": "At the group level, results showed \nthat manipulations of form resulted in P600 effects, with syntactically invalid code generating more \npositive deflections in the 500–800 ms range than syntactically valid code. Meaning manipulations \nresulted in N400 effects, with semantically implausible code generating more negative deflections in \nthe 300–500 ms range than semantically plausible code.",
+          "boxes": [
+            [
+              0.70551852,
+              0.39322175,
+              0.92819319,
+              0.40692256
+            ],
+            [
+              0.26190457,
+              0.40727916,
+              0.91155462,
+              0.42097997
+            ],
+            [
+              0.26190457,
+              0.42133658,
+              0.90268094,
+              0.43503739
+            ],
+            [
+              0.26190454,
+              0.43539399,
+              0.91722446,
+              0.4490948
+            ],
+            [
+              0.26190454,
+              0.4494514,
+              0.62680711,
+              0.46315221
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-questions",
+        "code-erps",
+        "code-stimulus"
+      ]
+    },
+    {
+      "id": "code-trial",
+      "role": "method",
+      "label": "What programmers did in each trial",
+      "anchors": [
+        {
+          "page": 2,
+          "text": "Each trial began with the presentation of a global variable on the screen for 15 s. Afterward, \na single line of code was presented incrementally, on an item-by-item basis.",
+          "boxes": [
+            [
+              0.3707044,
+              0.54718311,
+              0.93105313,
+              0.5627015
+            ],
+            [
+              0.26191541,
+              0.55996363,
+              0.72229504,
+              0.57548202
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "text": "Participants were asked to read the code for comprehension and make a \nbehavioral response about its “acceptability” (a term that was left intentionally vague to prevent biasing attention \ntoward syntactic versus semantic aspects of the code) afterward.",
+          "boxes": [
+            [
+              0.48545796,
+              0.57274415,
+              0.93093583,
+              0.58826253
+            ],
+            [
+              0.26191541,
+              0.58552467,
+              0.93107363,
+              0.60104305
+            ],
+            [
+              0.26191541,
+              0.59830519,
+              0.65175404,
+              0.61382357
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-stimulus",
+        "code-erps"
+      ]
+    },
+    {
+      "id": "code-questions",
+      "role": "objective",
+      "label": "Do brain responses differ by violation and expertise?",
+      "anchors": [
+        {
+          "page": 3,
+          "text": "This research was designed to answer two questions: (1) Do the P600 and N400 ERP components index \nsensitivity to form and meaning when programmers comprehend lines of code incrementally? and (2) Does \nsensitivity to form change as a function of programming proficiency?",
+          "boxes": [
+            [
+              0.28206328,
+              0.06059282,
+              0.93084386,
+              0.07611121
+            ],
+            [
+              0.26190962,
+              0.07337338,
+              0.93089246,
+              0.08889177
+            ],
+            [
+              0.26190962,
+              0.08615393,
+              0.68108671,
+              0.10167232
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-distinct",
+        "code-expertise",
+        "code-stimulus"
+      ]
+    },
+    {
+      "id": "code-expertise",
+      "role": "result",
+      "label": "Syntax sensitivity grew with expertise",
+      "anchors": [
+        {
+          "page": 4,
+          "text": "With increasing expertise, programmers exhibited \na stronger P600 effect to code containing syntactic anomalies than to code without syntactic anomalies (Fig. 4).",
+          "boxes": [
+            [
+              0.62552699,
+              0.86218897,
+              0.93107855,
+              0.87770735
+            ],
+            [
+              0.26201056,
+              0.87496953,
+              0.93106892,
+              0.89048791
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "text": "In \ncontrast, programmers of varying skill levels exhibit similar neural sensitivity to the pre-existing semantic rela-\ntions among items in the code",
+          "boxes": [
+            [
+              0.91760055,
+              0.4961039,
+              0.930878,
+              0.51162229
+            ],
+            [
+              0.26189867,
+              0.50888442,
+              0.93077547,
+              0.52440281
+            ],
+            [
+              0.26189867,
+              0.52166494,
+              0.44933247,
+              0.53718332
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-score",
+        "code-distinct"
+      ]
+    },
+    {
+      "id": "code-population",
+      "role": "method",
+      "label": "Python experience and the analyzed sample",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "All participants had a \nminimum of the equivalent of one academic quarter’s worth of Python instruction, either through a live course \ntaught by an instructor or self-taught via an online course.",
+          "boxes": [
+            [
+              0.79846016,
+              0.62648735,
+              0.93083176,
+              0.64200573
+            ],
+            [
+              0.2619049,
+              0.63926787,
+              0.93100309,
+              0.65478629
+            ],
+            [
+              0.2619049,
+              0.65204839,
+              0.62044984,
+              0.66756677
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "text": "Of the remaining 61 individuals, 16 exceeded the maximum 25% rejection \nrate threshold for their averaged ERPs and were removed from all analyses (see Data analysis). The final sample \nconsisted of 45 English-speaking participants (23 female, 21 male, 1 other) from various natural language back-\ngrounds.",
+          "boxes": [
+            [
+              0.47989434,
+              0.66482887,
+              0.93093798,
+              0.68034725
+            ],
+            [
+              0.2619049,
+              0.67760942,
+              0.93099796,
+              0.69312781
+            ],
+            [
+              0.2619049,
+              0.69038998,
+              0.93095254,
+              0.70590836
+            ],
+            [
+              0.26190495,
+              0.70317046,
+              0.31585421,
+              0.71868884
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-overview",
+        "code-score"
+      ]
+    },
+    {
+      "id": "code-score",
+      "role": "method",
+      "label": "How the researchers measured Python expertise",
+      "anchors": [
+        {
+          "page": 6,
+          "text": "Participants completed a 72-question multiple-choice test as a quantitative measurement of their Python \n­proficiency3.",
+          "boxes": [
+            [
+              0.2619049,
+              0.7952072,
+              0.93081464,
+              0.81072558
+            ],
+            [
+              0.2619049,
+              0.80794602,
+              0.33822983,
+              0.82350863
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "text": "Python proficiency was quantified as a percentage accuracy \nscore by dividing the total number of questions correct by 72 total possible questions.",
+          "boxes": [
+            [
+              0.56649578,
+              0.87189679,
+              0.93098863,
+              0.88741517
+            ],
+            [
+              0.26190464,
+              0.88467727,
+              0.78735199,
+              0.90019565
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-expertise"
+      ]
+    },
+    {
+      "id": "code-stimulus",
+      "role": "method",
+      "label": "Four code conditions, one reading task",
+      "anchors": [
+        {
+          "page": 7,
+          "text": "Lines of Python code were created by crossing semantic plausibility and syntactic validity in a two by two design.",
+          "boxes": [
+            [
+              0.26190457,
+              0.07431329,
+              0.93083904,
+              0.08983168
+            ]
+          ]
+        },
+        {
+          "page": 7,
+          "text": "Each line of code contained a single item \nthat was either semantically plausible or semantically implausible given the global variable, as well as either \nsyntactically valid or syntactically invalid according to the syntax rules of Python 3.0. This resulted in four dif-\nferent code conditions: (1) well-formed, (2) semantically implausible, (3) syntactically invalid, and (4) doubly \nanomalous (semantically implausible and syntactically invalid).",
+          "boxes": [
+            [
+              0.68486893,
+              0.09987441,
+              0.93081658,
+              0.1153928
+            ],
+            [
+              0.26190457,
+              0.11265496,
+              0.93099181,
+              0.12817335
+            ],
+            [
+              0.26190457,
+              0.12543552,
+              0.93095213,
+              0.14095391
+            ],
+            [
+              0.26190454,
+              0.13821608,
+              0.93110152,
+              0.15373447
+            ],
+            [
+              0.26190454,
+              0.15099664,
+              0.6356548,
+              0.16651504
+            ]
+          ]
+        },
+        {
+          "page": 7,
+          "text": "Participants \nsaw 160 lines of code, with 40 lines from each condition.",
+          "boxes": [
+            [
+              0.85862773,
+              0.44494914,
+              0.93117196,
+              0.46046752
+            ],
+            [
+              0.26185937,
+              0.45772966,
+              0.60769412,
+              0.47324804
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-trial",
+        "code-distinct"
+      ]
+    },
+    {
+      "id": "code-erps",
+      "role": "method",
+      "label": "How electrical responses were compared",
+      "anchors": [
+        {
+          "page": 8,
+          "text": "ERPs time-locked to the onset of the critical item of code in each line of code were averaged offline at each elec-\ntrode site in each condition.",
+          "boxes": [
+            [
+              0.26192274,
+              0.6341269,
+              0.93085298,
+              0.64964528
+            ],
+            [
+              0.26192274,
+              0.64690742,
+              0.42880059,
+              0.6624258
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "text": "As is standard, the following time windows were chosen for analysis: 300–500 ms (N400) and 500–800 ms \n(P600), with separate analyses conducted for each window.",
+          "boxes": [
+            [
+              0.2967525,
+              0.6596879,
+              0.93102267,
+              0.67520628
+            ],
+            [
+              0.26192274,
+              0.67246846,
+              0.61847219,
+              0.68798684
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "text": "ERP responses (“Amplitude”) were predicted from fixed effects of semantic plausibility (“Seman-\ntics”), syntactic validity (“Syntax”), Python expertise (“Expertise”), and electrode (“Electrode”) for each time \nwindow.",
+          "boxes": [
+            [
+              0.33635792,
+              0.76197575,
+              0.93101806,
+              0.77749413
+            ],
+            [
+              0.26191179,
+              0.77475631,
+              0.93066289,
+              0.79027469
+            ],
+            [
+              0.26191179,
+              0.78753686,
+              0.31327116,
+              0.80305525
+            ]
+          ]
+        }
+      ],
+      "related_to": [
+        "code-distinct",
+        "code-expertise"
+      ]
+    }
+  ],
+  "route": [
+    {
+      "id": "code-trial",
+      "title": "What programmers did in each trial",
+      "context": [
+        "code-stimulus",
+        "code-erps"
+      ]
+    },
+    {
+      "id": "code-questions",
+      "title": "Do brain responses differ by violation and expertise?",
+      "context": [
+        "code-distinct",
+        "code-expertise",
+        "code-stimulus"
+      ]
+    },
+    {
+      "id": "code-expertise",
+      "title": "Syntax sensitivity grew with expertise",
+      "context": [
+        "code-score",
+        "code-distinct"
+      ],
+      "note": "Expertise was measured across participants at one point in time. The comparison does not track how an individual’s brain response changes during training."
+    },
+    {
+      "id": "code-population",
+      "title": "Python experience and the analyzed sample",
+      "context": [
+        "code-overview",
+        "code-score"
+      ],
+      "note": "The paper recruited 62 people. One did not return for the recording session, and 45 participants remained in the analysis after EEG quality exclusions."
+    },
+    {
+      "id": "code-score",
+      "title": "How the researchers measured Python expertise",
+      "context": [
+        "code-expertise"
+      ]
+    },
+    {
+      "id": "code-stimulus",
+      "title": "Four code conditions, one reading task",
+      "context": [
+        "code-trial",
+        "code-distinct"
+      ],
+      "note": "All participants judged acceptability under the same task. Table 1 shows how a mismatched variable name changed meaning and adding quotation marks changed syntax."
+    },
+    {
+      "id": "code-erps",
+      "title": "How electrical responses were compared",
+      "context": [
+        "code-distinct",
+        "code-expertise"
+      ],
+      "note": "Each response was aligned to the appearance of the critical code item. Figure 3 plots negative voltage upward."
+    }
+  ],
+  "blocks": [
+    {
+      "id": "p1-b6",
+      "page": 1,
+      "box": [
+        0.26190454,
+        0.35104951,
+        0.93188846,
+        0.53343928
+      ],
+      "candidate_ids": [
+        "code-overview",
+        "code-distinct"
+      ]
+    },
+    {
+      "id": "p2-b8",
+      "page": 2,
+      "box": [
+        0.26191533,
+        0.52162208,
+        0.93456938,
+        0.65216513
+      ],
+      "candidate_ids": [
+        "code-trial"
+      ]
+    },
+    {
+      "id": "p3-b4",
+      "page": 3,
+      "box": [
+        0.26190962,
+        0.06059282,
+        0.93432453,
+        0.10167232
+      ],
+      "candidate_ids": [
+        "code-questions"
+      ]
+    },
+    {
+      "id": "p4-b6",
+      "page": 4,
+      "box": [
+        0.26190454,
+        0.79749386,
+        0.93477188,
+        0.94160998
+      ],
+      "candidate_ids": [
+        "code-expertise"
+      ]
+    },
+    {
+      "id": "p6-b7",
+      "page": 6,
+      "box": [
+        0.26189867,
+        0.45776235,
+        0.93455789,
+        0.57552488
+      ],
+      "candidate_ids": [
+        "code-expertise"
+      ]
+    },
+    {
+      "id": "p6-b8",
+      "page": 6,
+      "box": [
+        0.2619049,
+        0.58613517,
+        0.9345299,
+        0.75703044
+      ],
+      "candidate_ids": [
+        "code-population"
+      ]
+    },
+    {
+      "id": "p6-b9",
+      "page": 6,
+      "box": [
+        0.26190464,
+        0.76885361,
+        0.93453872,
+        0.91297621
+      ],
+      "candidate_ids": [
+        "code-score"
+      ]
+    },
+    {
+      "id": "p7-b4",
+      "page": 7,
+      "box": [
+        0.26190454,
+        0.06138319,
+        0.9345337,
+        0.1792956
+      ],
+      "candidate_ids": [
+        "code-stimulus"
+      ]
+    },
+    {
+      "id": "p7-b6",
+      "page": 7,
+      "box": [
+        0.26185937,
+        0.43216862,
+        0.93460414,
+        0.54993116
+      ],
+      "candidate_ids": [
+        "code-stimulus"
+      ]
+    },
+    {
+      "id": "p8-b8",
+      "page": 8,
+      "box": [
+        0.26190423,
+        0.62119683,
+        0.9345176,
+        0.75192669
+      ],
+      "candidate_ids": [
+        "code-erps"
+      ]
+    },
+    {
+      "id": "p8-b9",
+      "page": 8,
+      "box": [
+        0.26190423,
+        0.74918879,
+        0.93465007,
+        0.93086052
+      ],
+      "candidate_ids": [
+        "code-erps"
+      ]
+    }
+  ],
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": {
+    "sha256": "9cd5d318b0a528552a1e3d64efedb7ac59a40215299449577ddef9e8585849ea",
+    "pages": 10,
+    "extractor": "1.28.2"
+  },
+  "provenance": {
+    "skill": "academic-skimming/6"
+  }
+}

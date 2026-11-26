@@ -1,19 +1,18 @@
 import type {Box, Candidate, Role} from './types';
 
-interface TextBox {box: Box; id: string; role: Role; priority: number}
-interface Stroke {box: Box; id: string; role: Role; focused: boolean}
+interface TextBox {box: Box; id: string; role: Role; priority: number; anchorIndex: number; start: boolean; end: boolean}
+interface Stroke {box: Box; id: string; role: Role; focused: boolean; anchorIndex: number; start: boolean; end: boolean; source: Box}
 const height = ({box}: TextBox) => box[3] - box[1];
 const center = ({box}: TextBox) => (box[1] + box[3]) / 2;
 const sameLine = (a: TextBox, b: TextBox) =>
   Math.abs(center(a) - center(b)) <= Math.min(height(a), height(b)) * .24;
 
 function textBoxes(candidates: Candidate[], page: number, primary: Set<string>, focused: string | null) {
-  return candidates.flatMap((candidate, index) => candidate.anchors
-    .filter(anchor => anchor.page === page && !anchor.region)
-    .flatMap(anchor => anchor.boxes.map(box => ({
-      box, id: candidate.id, role: candidate.role,
+  return candidates.flatMap((candidate, index) => candidate.anchors.flatMap((anchor, anchorIndex) =>
+    anchor.page === page && !anchor.region ? anchor.boxes.map((box, line) => ({
+      box, id: candidate.id, role: candidate.role, anchorIndex, start: line === 0, end: line === anchor.boxes.length - 1,
       priority: index + (candidate.id === focused ? 0 : primary.has(candidate.id) ? 1 : 2) * candidates.length,
-    }))));
+    })) : []));
 }
 
 export function overlappingRoles(candidate: Candidate, candidates: Candidate[]) {
@@ -56,14 +55,18 @@ export function textStrokes(candidates: Candidate[], page: number, primary: Set<
       if (!winner) continue;
       const active = winner.id === focused;
       const last = strokes.at(-1);
-      if (last?.role === winner.role && last.focused === active && left - last.box[2] <= .0035) {
+      const start = winner.start && left === winner.box[0];
+      const end = winner.end && right === winner.box[2];
+      if (last?.source === winner.box && last.box[2] === left) {
         last.box[2] = right;
+        last.end = end;
       } else {
-        strokes.push({box: [left, top, right, bottom], id: winner.id, role: winner.role, focused: active});
+        strokes.push({box: [left, top, right, bottom], id: winner.id, role: winner.role,
+          focused: active, anchorIndex: winner.anchorIndex, start, end, source: winner.box});
       }
     }
-    for (const {box} of strokes) {
-      const fitted = inkBounds?.([box[0], middle - typicalHeight / 2, box[2], middle + typicalHeight / 2]);
+    for (const {box, source} of strokes) {
+      const fitted = inkBounds?.([box[0], source[1], box[2], source[3]]);
       if (fitted) [box[1], box[3]] = fitted;
       // In a multi-column PDF, only a neighbouring row in the same x-range can collide.
       for (const [otherIndex, other] of rows.entries()) {
